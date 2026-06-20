@@ -23,9 +23,7 @@ const cityCatalog = [
   { label: "北京", note: "北京市", lng: 116.4074, lat: 39.9042, chinaNames: ["北京市"], aliases: ["北京", "北京市"] },
   { label: "天津", note: "天津市", lng: 117.2009, lat: 39.0842, chinaNames: ["天津市"], aliases: ["天津", "天津市"] },
   { label: "大连", note: "大连市", lng: 121.6147, lat: 38.914, chinaNames: ["大连市"], aliases: ["大连", "大连市"] },
-  { label: "长春/济南", note: "同一条双地点记录，填长春与济南", lng: 123.08, lat: 40.76, chinaNames: ["长春市", "济南市"], aliases: ["长春/济南", "长春与济南", "长春，济南"] },
   { label: "广西柳州", note: "柳州市", lng: 109.4281, lat: 24.3264, chinaNames: ["柳州市"], aliases: ["广西柳州", "柳州", "柳州市"] },
-  { label: "常州/北京", note: "同一条双地点记录，填常州与北京", lng: 118.2, lat: 35.9, chinaNames: ["常州市", "北京市"], aliases: ["常州/北京", "常州与北京", "常州，北京"] },
   { label: "秦皇岛", note: "秦皇岛市", lng: 119.5996, lat: 39.9354, chinaNames: ["秦皇岛市"], aliases: ["秦皇岛", "秦皇岛市"] },
   { label: "衡阳", note: "衡阳市", lng: 112.5719, lat: 26.8932, chinaNames: ["衡阳市"], aliases: ["衡阳", "衡阳市"] },
   { label: "西安", note: "西安市", lng: 108.9398, lat: 34.3416, chinaNames: ["西安市"], aliases: ["西安", "西安市"] },
@@ -42,6 +40,12 @@ for (const city of cityCatalog) {
 
 function normalizeCity(value) {
   return String(value || "").trim().replace(/\s+/g, "").replace(/[，、]/g, "/");
+}
+
+function isDualCity(value) {
+  const raw = String(value || "").trim();
+  const normalized = normalizeCity(raw);
+  return normalized.includes("/") || raw.includes("与");
 }
 
 function textCell(value) {
@@ -151,12 +155,17 @@ function buildMapData(records) {
   const unrecordedStudents = [];
   const provinceOnlyStudents = [];
   const unmappedStudents = [];
+  const excludedDualCityStudents = [];
 
   for (const record of records) {
     const student = memberRecord(record.registeredName || record.name, record.wechatName);
     const city = normalizeCity(record.city);
     if (!city) {
       unrecordedStudents.push(student);
+      continue;
+    }
+    if (isDualCity(record.city)) {
+      excludedDualCityStudents.push({ ...student, city: record.city });
       continue;
     }
     const label = aliasToLabel.get(city);
@@ -179,13 +188,15 @@ function buildMapData(records) {
     updatedAt: new Date().toISOString(),
     totalMembers: records.length,
     locatedMembers: placeRows.reduce((sum, row) => sum + row.count, 0),
-    filledCityRecords: records.filter((record) => normalizeCity(record.city)).length,
+    filledCityRecords: records.filter((record) => normalizeCity(record.city) && !isDualCity(record.city)).length,
     provinceOnlyMembers: provinceOnlyStudents.length + unmappedStudents.length,
     unrecordedMembers: unrecordedStudents.length,
+    excludedDualCityMembers: excludedDualCityStudents.length,
     placeRows,
     unrecordedStudents,
     provinceOnlyStudents,
-    unmappedStudents
+    unmappedStudents,
+    excludedDualCityStudents
   };
 }
 

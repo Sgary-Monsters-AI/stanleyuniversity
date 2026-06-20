@@ -1,10 +1,11 @@
 {
-  "updatedAt": "2026-06-20T16:47:25.977Z",
-  "totalMembers": 67,
-  "locatedMembers": 29,
-  "filledCityRecords": 36,
-  "provinceOnlyMembers": 7,
-  "unrecordedMembers": 31,
+  "updatedAt": "2026-06-20T18:18:15.562Z",
+  "totalMembers": 72,
+  "locatedMembers": 32,
+  "filledCityRecords": 48,
+  "provinceOnlyMembers": 16,
+  "unrecordedMembers": 21,
+  "excludedDualCityMembers": 3,
   "placeRows": [
     {
       "label": "武汉",
@@ -14,7 +15,7 @@
       "chinaNames": [
         "武汉市"
       ],
-      "count": 4,
+      "count": 5,
       "students": [
         {
           "name": "王境",
@@ -35,6 +36,11 @@
           "name": "章魚飯.",
           "registeredName": "章魚飯.",
           "wechatName": "章魚飯."
+        },
+        {
+          "name": "冷酷小猫",
+          "registeredName": "冷酷小猫",
+          "wechatName": "猫博"
         }
       ]
     },
@@ -46,7 +52,7 @@
       "chinaNames": [
         "上海市"
       ],
-      "count": 3,
+      "count": 4,
       "students": [
         {
           "name": "王梓如",
@@ -62,6 +68,90 @@
           "name": "Allonsy",
           "registeredName": "Allonsy",
           "wechatName": "Allons--y"
+        },
+        {
+          "name": "Wheeler",
+          "registeredName": "Wheeler",
+          "wechatName": "Seacoconut"
+        }
+      ]
+    },
+    {
+      "label": "杭州",
+      "note": "杭州市",
+      "lng": 120.1551,
+      "lat": 30.2741,
+      "chinaNames": [
+        "杭州市"
+      ],
+      "count": 3,
+      "students": [
+        {
+          "name": "影洲",
+          "registeredName": "影洲",
+          "wechatName": "雅正"
+        },
+        {
+          "name": "五谷粥",
+          "registeredName": "五谷粥",
+          "wechatName": "五谷粥"
+        },
+        {
+          "name": "华宇昊",
+          "registeredName": "华宇昊",
+          "wechatName": "ɔɪ化十子."
+        }
+      ]
+    },
+    {
+      "label": "南京",
+      "note": "南京市",
+      "lng": 118.7969,
+      "lat": 32.0603,
+      "chinaNames": [
+        "南京市"
+      ],
+      "count": 3,
+      "students": [
+        {
+          "name": "李仲实",
+          "registeredName": "李仲实",
+          "wechatName": "塞雷SL"
+        },
+        {
+          "name": "Yesoo",
+          "registeredName": "Yesoo",
+          "wechatName": "Malpaca"
+        },
+        {
+          "name": "大符",
+          "registeredName": "大符",
+          "wechatName": "红茶椰"
+        }
+      ]
+    },
+    {
+      "label": "悉尼",
+      "note": "海外都会区边界",
+      "lng": 151.2093,
+      "lat": -33.8688,
+      "overseasId": "sydney",
+      "count": 3,
+      "students": [
+        {
+          "name": "sam",
+          "registeredName": "sam",
+          "wechatName": "lwt"
+        },
+        {
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂"
+        },
+        {
+          "name": "Sophie",
+          "registeredName": "Sophie",
+          "wechatName": "淼"
         }
       ]
     },
@@ -88,70 +178,6 @@
       ]
     },
     {
-      "label": "杭州",
-      "note": "杭州市",
-      "lng": 120.1551,
-      "lat": 30.2741,
-      "chinaNames": [
-        "杭州市"
-      ],
-      "count": 2,
-      "students": [
-        {
-          "name": "影洲",
-          "registeredName": "影洲",
-          "wechatName": "雅正"
-        },
-        {
-          "name": "华宇昊",
-          "registeredName": "华宇昊",
-          "wechatName": "ɔɪ化十子."
-        }
-      ]
-    },
-    {
-      "label": "南京",
-      "note": "南京市",
-      "lng": 118.7969,
-      "lat": 32.0603,
-      "chinaNames": [
-        "南京市"
-      ],
-      "count": 2,
-      "students": [
-        {
-          "name": "李仲实",
-          "registeredName": "李仲实",
-          "wechatName": "塞雷SL"
-        },
-        {
-          "name": "Yesoo",
-          "registeredName": "Yesoo",
-          "wechatName": "Malpaca"
-        }
-      ]
-    },
-    {
-      "label": "悉尼",
-      "note": "海外都会区边界",
-      "lng": 151.2093,
-      "lat": -33.8688,
-      "overseasId": "sydney",
-      "count": 2,
-      "students": [
-        {
-          "name": "sam",
-          "registeredName": "sam",
-          "wechatName": "lwt"
-        },
-        {
-          "name": "Sophie",
-          "registeredName": "Sophie",
-          "wechatName": "淼"
-        }
-      ]
-    },
-    {
       "label": "波士顿",
       "note": "海外市级行政边界",
       "lng": -71.0589,
@@ -163,24 +189,6 @@
           "name": "Tracy",
           "registeredName": "Tracy",
           "wechatName": "Traaa"
-        }
-      ]
-    },
-    {
-      "label": "常州/北京",
-      "note": "同一条双地点记录，填常州与北京",
-      "lng": 118.2,
-      "lat": 35.9,
-      "chinaNames": [
-        "常州市",
-        "北京市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "季佳杰",
-          "registeredName": "季佳杰",
-          "wechatName": "季"
         }
       ]
     },
@@ -368,24 +376,6 @@
           "wechatName": "火火"
         }
       ]
-    },
-    {
-      "label": "长春/济南",
-      "note": "同一条双地点记录，填长春与济南",
-      "lng": 123.08,
-      "lat": 40.76,
-      "chinaNames": [
-        "长春市",
-        "济南市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "janus",
-          "registeredName": "janus",
-          "wechatName": "陆小果"
-        }
-      ]
     }
   ],
   "unrecordedStudents": [
@@ -420,34 +410,9 @@
       "wechatName": "注意力"
     },
     {
-      "name": "五谷粥",
-      "registeredName": "五谷粥",
-      "wechatName": "五谷粥"
-    },
-    {
       "name": "JM",
       "registeredName": "JM",
       "wechatName": "JM"
-    },
-    {
-      "name": "Time flies.",
-      "registeredName": "Time flies.",
-      "wechatName": "Time flies."
-    },
-    {
-      "name": "张嘉文",
-      "registeredName": "张嘉文",
-      "wechatName": "我说，要有光"
-    },
-    {
-      "name": "Algea",
-      "registeredName": "Algea",
-      "wechatName": "Algea"
-    },
-    {
-      "name": "浩瀚夜空",
-      "registeredName": "浩瀚夜空",
-      "wechatName": "浩瀚夜空"
     },
     {
       "name": "Echo",
@@ -465,11 +430,6 @@
       "wechatName": "覔"
     },
     {
-      "name": "蟑螂",
-      "registeredName": "蟑螂",
-      "wechatName": "ㅤ蟑螂"
-    },
-    {
       "name": "Lihyu",
       "registeredName": "Lihyu",
       "wechatName": "Lihyu"
@@ -483,11 +443,6 @@
       "name": "月",
       "registeredName": "月",
       "wechatName": "月"
-    },
-    {
-      "name": "姜永健",
-      "registeredName": "姜永健",
-      "wechatName": "。"
     },
     {
       "name": "Yuvi",
@@ -515,34 +470,19 @@
       "wechatName": "桜のMusol"
     },
     {
-      "name": "酌锦",
-      "registeredName": "酌锦",
-      "wechatName": "酌锦"
-    },
-    {
       "name": "vleffrey",
       "registeredName": "vleffrey",
       "wechatName": "vleffrey"
     },
     {
-      "name": "Glory",
-      "registeredName": "Glory",
-      "wechatName": "Glory"
-    },
-    {
-      "name": "Seacoconut",
-      "registeredName": "Seacoconut",
-      "wechatName": "Seacoconut"
-    },
-    {
-      "name": "Ryan",
-      "registeredName": "Ryan",
-      "wechatName": "Ryan"
-    },
-    {
       "name": "郁郁葱葱",
       "registeredName": "郁郁葱葱",
       "wechatName": "郁郁葱葱"
+    },
+    {
+      "name": "乘璟",
+      "registeredName": "乘璟",
+      "wechatName": "乘璟"
     }
   ],
   "provinceOnlyStudents": [
@@ -555,6 +495,11 @@
       "name": "舒奕萌",
       "registeredName": "舒奕萌",
       "wechatName": "🐟"
+    },
+    {
+      "name": "Bryan",
+      "registeredName": "Bryan",
+      "wechatName": "Ryan"
     }
   ],
   "unmappedStudents": [
@@ -563,6 +508,36 @@
       "registeredName": "淼淼",
       "wechatName": "邱淼淼",
       "city": "福建"
+    },
+    {
+      "name": "Time flies.",
+      "registeredName": "Time flies.",
+      "wechatName": "Time flies.",
+      "city": "成都"
+    },
+    {
+      "name": "张嘉文",
+      "registeredName": "张嘉文",
+      "wechatName": "我说，要有光",
+      "city": "巴黎"
+    },
+    {
+      "name": "浩瀚夜空",
+      "registeredName": "浩瀚夜空",
+      "wechatName": "浩瀚夜空",
+      "city": "香港"
+    },
+    {
+      "name": "酌锦",
+      "registeredName": "酌锦",
+      "wechatName": "酌锦",
+      "city": "昆明"
+    },
+    {
+      "name": "Glory",
+      "registeredName": "Glory",
+      "wechatName": "Glory",
+      "city": "淄博"
     },
     {
       "name": "郑杨守都",
@@ -587,6 +562,44 @@
       "registeredName": "Levia",
       "wechatName": "Levia.Qi",
       "city": "福州"
+    },
+    {
+      "name": "张校菘",
+      "registeredName": "张校菘",
+      "wechatName": "向箔",
+      "city": "山东烟台"
+    },
+    {
+      "name": "杜博伦",
+      "registeredName": "杜博伦",
+      "wechatName": "有志青年",
+      "city": "江苏淮安"
+    },
+    {
+      "name": "张淇博",
+      "registeredName": "张淇博",
+      "wechatName": "keve",
+      "city": "深圳"
+    }
+  ],
+  "excludedDualCityStudents": [
+    {
+      "name": "janus",
+      "registeredName": "janus",
+      "wechatName": "陆小果",
+      "city": "长春 / 济南"
+    },
+    {
+      "name": "季佳杰",
+      "registeredName": "季佳杰",
+      "wechatName": "季",
+      "city": "常州/北京"
+    },
+    {
+      "name": "姜永健",
+      "registeredName": "姜永健",
+      "wechatName": "。",
+      "city": "泉州 / 厦门"
     }
   ]
 }
