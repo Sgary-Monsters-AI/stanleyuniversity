@@ -1085,15 +1085,15 @@
         item.overseasId === feature.properties.memberId ||
         item.overseasId === feature.properties.id
       ));
-      if (!row) return null;
+      const count = row?.count || 0;
       return {
         ...feature,
         properties: {
           ...feature.properties,
-          displayLabel: row.label,
-          studentCount: row.count,
-          note: row.note || "海外市级行政边界",
-          color: colorFor(row.count)
+          displayLabel: row?.label || feature.properties.name,
+          studentCount: count,
+          note: row?.note || feature.properties.note || "海外市级行政边界",
+          color: count ? colorFor(count) : "rgba(255, 250, 243, 0.36)"
         }
       };
     }
@@ -1101,7 +1101,7 @@
     function overseasGeoJson() {
       const source = overseasAdminGeo || OVERSEAS_BOUNDARIES;
       const realFeatures = source.features
-        .filter((feature) => feature.properties.boundaryRole === "member-city")
+        .filter((feature) => ["grid-city", "member-city"].includes(feature.properties.boundaryRole))
         .map(decorateOverseasFeature)
         .filter(Boolean);
       if (realFeatures.length) {
@@ -1211,7 +1211,11 @@
         id: "overseas-lines",
         type: "line",
         source: "overseas-city-blocks",
-        paint: { "line-color": "#ffffff", "line-width": 1.1 }
+        paint: {
+          "line-color": "rgba(214, 174, 168, 0.9)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.32, 4, 0.5, 7, 0.85, 10, 1.15],
+          "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 4, 0.68, 7, 0.88]
+        }
       });
       map.addLayer({
         id: "overseas-active",
