@@ -810,7 +810,7 @@
       { label: "西安", count: 1, note: "西安市", lng: 108.9398, lat: 34.3416, chinaNames: ["西安市"], students: ["杜祖鹏"] },
       { label: "新加坡", count: 1, note: "海外市级行政边界", lng: 103.8198, lat: 1.3521, overseasId: "singapore", students: ["愚任杰"] },
       { label: "波士顿", count: 1, note: "海外市级行政边界", lng: -71.0589, lat: 42.3601, overseasId: "boston", students: ["Tracy"] },
-      { label: "悉尼", count: 1, note: "海外市级行政边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
+      { label: "悉尼", count: 1, note: "海外都会区边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
     ];
 
     const chinaCountByName = new Map();
@@ -914,9 +914,6 @@
       }
       if (map?.getSource("overseas-city-blocks")) {
         map.getSource("overseas-city-blocks").setData(overseasGeoJson());
-      }
-      if (map?.getSource("overseas-admin-boundaries") && overseasAdminGeo) {
-        map.getSource("overseas-admin-boundaries").setData(overseasAdminGeo);
       }
       renderMapLabels();
     }
@@ -1085,8 +1082,8 @@
 
     function decorateOverseasFeature(feature) {
       const row = PLACE_ROWS.find((item) => (
-        item.overseasId === feature.properties.id ||
-        (item.overseasId === "singapore" && feature.properties.region === "singapore" && feature.properties.boundaryRole === "context")
+        item.overseasId === feature.properties.memberId ||
+        item.overseasId === feature.properties.id
       ));
       if (!row) return null;
       return {
@@ -1104,7 +1101,7 @@
     function overseasGeoJson() {
       const source = overseasAdminGeo || OVERSEAS_BOUNDARIES;
       const realFeatures = source.features
-        .filter((feature) => !(feature.properties.id === "singapore" && feature.properties.boundaryRole === "member-city"))
+        .filter((feature) => feature.properties.boundaryRole === "member-city")
         .map(decorateOverseasFeature)
         .filter(Boolean);
       if (realFeatures.length) {
@@ -1152,7 +1149,6 @@
       chinaCityGeo = chinaGeo;
       overseasAdminGeo = overseasGeo;
       map.addSource("world-land", { type: "geojson", data: worldGeo });
-      map.addSource("overseas-admin-boundaries", { type: "geojson", data: overseasAdminGeo });
       map.addSource("china-cities", { type: "geojson", data: chinaGeo });
       map.addSource("overseas-city-blocks", { type: "geojson", data: overseasGeoJson() });
 
@@ -1210,17 +1206,6 @@
         source: "overseas-city-blocks",
         filter: filteredFeatureExpression(),
         paint: { "fill-color": ["get", "color"], "fill-opacity": 0.86 }
-      });
-      map.addLayer({
-        id: "overseas-admin-lines",
-        type: "line",
-        source: "overseas-admin-boundaries",
-        filter: ["!", ["all", ["==", ["get", "id"], "singapore"], ["==", ["get", "boundaryRole"], "member-city"]]],
-        paint: {
-          "line-color": "rgba(214, 174, 168, 0.9)",
-          "line-width": ["interpolate", ["linear"], ["zoom"], 0.9, 0.28, 5, 0.45, 8, 0.85, 11, 1.2],
-          "line-opacity": ["interpolate", ["linear"], ["zoom"], 0.9, 0.34, 5, 0.52, 8, 0.86]
-        }
       });
       map.addLayer({
         id: "overseas-lines",

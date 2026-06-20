@@ -4,6 +4,7 @@ import { dirname, join, resolve } from "node:path";
 const ROOT = resolve(import.meta.dirname, "..");
 const OUT_FILE = process.env.OVERSEAS_BOUNDARIES_OUT_FILE || join(ROOT, "data/overseas-admin-boundaries.json");
 const USER_AGENT = process.env.OSM_USER_AGENT || "stanleyuniversity-map/1.0 (https://stanleyuniversity.garylau.ai/map/)";
+const INCLUDE_CONTEXT = process.env.INCLUDE_OVERSEAS_CONTEXT === "1";
 const OVERPASS_ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter"
@@ -172,12 +173,16 @@ function featureFromLookup(row, regionKey) {
 
 async function main() {
   const allIds = new Set(memberBoundaryIds.keys());
-  for (const region of regions) {
-    const payload = await overpass(region);
-    const ids = relationIdsForRegion(region, payload);
-    for (const id of ids) allIds.add(id);
-    console.log(`${region.name}: ${ids.length} context boundaries`);
-    await sleep(1200);
+  if (INCLUDE_CONTEXT) {
+    for (const region of regions) {
+      const payload = await overpass(region);
+      const ids = relationIdsForRegion(region, payload);
+      for (const id of ids) allIds.add(id);
+      console.log(`${region.name}: ${ids.length} context boundaries`);
+      await sleep(1200);
+    }
+  } else {
+    console.log("Skipping overseas context boundaries; exporting member city outlines only.");
   }
 
   const rows = await nominatimLookup([...allIds]);
