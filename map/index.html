@@ -1085,16 +1085,6 @@
         paint: { "line-color": "rgba(232, 208, 204, 0.62)", "line-width": 0.45 }
       });
       map.addLayer({
-        id: "overseas-admin-lines",
-        type: "line",
-        source: "overseas-admin-boundaries",
-        paint: {
-          "line-color": "rgba(232, 208, 204, 0.86)",
-          "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.35, 5, 0.55, 8, 0.95, 11, 1.35],
-          "line-opacity": ["interpolate", ["linear"], ["zoom"], 1, 0.32, 5, 0.62, 8, 0.9]
-        }
-      });
-      map.addLayer({
         id: "china-empty",
         type: "fill",
         source: "china-cities",
@@ -1135,7 +1125,18 @@
         type: "fill",
         source: "overseas-city-blocks",
         filter: filteredFeatureExpression(),
-        paint: { "fill-color": ["get", "color"], "fill-opacity": 0.9 }
+        paint: { "fill-color": ["get", "color"], "fill-opacity": 0.86 }
+      });
+      map.addLayer({
+        id: "overseas-admin-lines",
+        type: "line",
+        source: "overseas-admin-boundaries",
+        minzoom: 5,
+        paint: {
+          "line-color": "rgba(214, 174, 168, 0.9)",
+          "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.45, 8, 0.85, 11, 1.2],
+          "line-opacity": ["interpolate", ["linear"], ["zoom"], 5, 0.52, 8, 0.86]
+        }
       });
       map.addLayer({
         id: "overseas-lines",
