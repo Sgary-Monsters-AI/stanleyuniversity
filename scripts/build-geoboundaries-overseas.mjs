@@ -60,6 +60,14 @@ const countryGrids = [
   }
 ];
 
+const adminRegionGrids = [
+  {
+    country: "USA",
+    adm: "ADM1",
+    note: "美国州级边界"
+  }
+];
+
 async function fetchJson(url) {
   const response = await fetch(url, {
     headers: { "User-Agent": USER_AGENT }
@@ -113,6 +121,33 @@ async function geoboundariesGrid(config) {
   });
 }
 
+async function geoboundariesAdminRegions(config) {
+  const metadata = await fetchJson(`https://www.geoboundaries.org/api/current/gbOpen/${config.country}/${config.adm}/`);
+  const data = await fetchJson(metadata.simplifiedGeometryGeoJSON || metadata.gjDownloadURL);
+  return data.features.map((feature) => {
+    const sourceName = feature.properties.shapeName;
+    return {
+      type: "Feature",
+      geometry: roundGeometry(feature.geometry),
+      properties: {
+        id: `gb-${config.country.toLowerCase()}-${config.adm.toLowerCase()}-${slug(sourceName)}`,
+        memberId: "",
+        name: sourceName,
+        name_en: sourceName,
+        note: config.note,
+        sourceName,
+        display_name: `${sourceName}, ${metadata.boundaryName}`,
+        country: config.country,
+        boundarySource: metadata.boundarySource,
+        boundarySourceURL: metadata.boundarySourceURL,
+        boundaryLicense: metadata.boundaryLicense,
+        boundaryType: metadata.boundaryType,
+        boundaryRole: "admin-region"
+      }
+    };
+  });
+}
+
 async function usPlaceGrid() {
   const data = JSON.parse(await readFile(US_PLACE_GRID_FILE, "utf8"));
   return data.features.map((feature) => {
@@ -148,6 +183,11 @@ async function main() {
   for (const config of countryGrids) {
     const grid = await geoboundariesGrid(config);
     console.log(`${config.country} ${config.adm}: ${grid.length} grid features`);
+    features.push(...grid);
+  }
+  for (const config of adminRegionGrids) {
+    const grid = await geoboundariesAdminRegions(config);
+    console.log(`${config.country} ${config.adm}: ${grid.length} admin-region features`);
     features.push(...grid);
   }
   const usPlaces = await usPlaceGrid();
