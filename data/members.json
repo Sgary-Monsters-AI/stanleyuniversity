@@ -1,0 +1,305 @@
+{
+  "updatedAt": "2026-06-20T11:49:05.019Z",
+  "totalMembers": 54,
+  "locatedMembers": 27,
+  "filledCityRecords": 29,
+  "provinceOnlyMembers": 2,
+  "unrecordedMembers": 25,
+  "placeRows": [
+    {
+      "label": "武汉",
+      "note": "武汉市",
+      "lng": 114.3055,
+      "lat": 30.5928,
+      "chinaNames": [
+        "武汉市"
+      ],
+      "count": 4,
+      "students": [
+        "王境",
+        "李国正",
+        "李谨西",
+        "章魚飯."
+      ]
+    },
+    {
+      "label": "上海",
+      "note": "上海市",
+      "lng": 121.4737,
+      "lat": 31.2304,
+      "chinaNames": [
+        "上海市"
+      ],
+      "count": 3,
+      "students": [
+        "王梓如",
+        "leah",
+        "Allonsy"
+      ]
+    },
+    {
+      "label": "杭州",
+      "note": "杭州市",
+      "lng": 120.1551,
+      "lat": 30.2741,
+      "chinaNames": [
+        "杭州市"
+      ],
+      "count": 2,
+      "students": [
+        "影洲",
+        "华宇昊"
+      ]
+    },
+    {
+      "label": "南京",
+      "note": "南京市",
+      "lng": 118.7969,
+      "lat": 32.0603,
+      "chinaNames": [
+        "南京市"
+      ],
+      "count": 2,
+      "students": [
+        "李仲实",
+        "Yesoo"
+      ]
+    },
+    {
+      "label": "北京",
+      "note": "北京市",
+      "lng": 116.4074,
+      "lat": 39.9042,
+      "chinaNames": [
+        "北京市"
+      ],
+      "count": 1,
+      "students": [
+        "阿良"
+      ]
+    },
+    {
+      "label": "波士顿",
+      "note": "海外中心城区块",
+      "lng": -71.0589,
+      "lat": 42.3601,
+      "overseasId": "boston",
+      "count": 1,
+      "students": [
+        "Tracy"
+      ]
+    },
+    {
+      "label": "常州/北京",
+      "note": "同一条双地点记录，填常州与北京",
+      "lng": 118.2,
+      "lat": 35.9,
+      "chinaNames": [
+        "常州市",
+        "北京市"
+      ],
+      "count": 1,
+      "students": [
+        "季佳杰"
+      ]
+    },
+    {
+      "label": "大连",
+      "note": "大连市",
+      "lng": 121.6147,
+      "lat": 38.914,
+      "chinaNames": [
+        "大连市"
+      ],
+      "count": 1,
+      "students": [
+        "Wincent"
+      ]
+    },
+    {
+      "label": "广西柳州",
+      "note": "柳州市",
+      "lng": 109.4281,
+      "lat": 24.3264,
+      "chinaNames": [
+        "柳州市"
+      ],
+      "count": 1,
+      "students": [
+        "多林"
+      ]
+    },
+    {
+      "label": "衡阳",
+      "note": "衡阳市",
+      "lng": 112.5719,
+      "lat": 26.8932,
+      "chinaNames": [
+        "衡阳市"
+      ],
+      "count": 1,
+      "students": [
+        "Spaceman"
+      ]
+    },
+    {
+      "label": "秦皇岛",
+      "note": "秦皇岛市",
+      "lng": 119.5996,
+      "lat": 39.9354,
+      "chinaNames": [
+        "秦皇岛市"
+      ],
+      "count": 1,
+      "students": [
+        "小羊"
+      ]
+    },
+    {
+      "label": "厦门",
+      "note": "厦门市",
+      "lng": 118.0894,
+      "lat": 24.4798,
+      "chinaNames": [
+        "厦门市"
+      ],
+      "count": 1,
+      "students": [
+        "moby豪"
+      ]
+    },
+    {
+      "label": "石家庄市",
+      "note": "石家庄市",
+      "lng": 114.5149,
+      "lat": 38.0428,
+      "chinaNames": [
+        "石家庄市"
+      ],
+      "count": 1,
+      "students": [
+        "穆昱伟"
+      ]
+    },
+    {
+      "label": "苏州",
+      "note": "苏州市",
+      "lng": 120.5853,
+      "lat": 31.2989,
+      "chinaNames": [
+        "苏州市"
+      ],
+      "count": 1,
+      "students": [
+        "三十六"
+      ]
+    },
+    {
+      "label": "天津",
+      "note": "天津市",
+      "lng": 117.2009,
+      "lat": 39.0842,
+      "chinaNames": [
+        "天津市"
+      ],
+      "count": 1,
+      "students": [
+        "朱天宇"
+      ]
+    },
+    {
+      "label": "西安",
+      "note": "西安市",
+      "lng": 108.9398,
+      "lat": 34.3416,
+      "chinaNames": [
+        "西安市"
+      ],
+      "count": 1,
+      "students": [
+        "杜祖鹏"
+      ]
+    },
+    {
+      "label": "悉尼",
+      "note": "海外中心城区块",
+      "lng": 151.2093,
+      "lat": -33.8688,
+      "overseasId": "sydney",
+      "count": 1,
+      "students": [
+        "sam"
+      ]
+    },
+    {
+      "label": "新加坡",
+      "note": "海外中心城区块",
+      "lng": 103.8198,
+      "lat": 1.3521,
+      "overseasId": "singapore",
+      "count": 1,
+      "students": [
+        "愚任杰"
+      ]
+    },
+    {
+      "label": "信阳市",
+      "note": "信阳市",
+      "lng": 114.0913,
+      "lat": 32.147,
+      "chinaNames": [
+        "信阳市"
+      ],
+      "count": 1,
+      "students": [
+        "徐亚博"
+      ]
+    },
+    {
+      "label": "长春/济南",
+      "note": "同一条双地点记录，填长春与济南",
+      "lng": 123.08,
+      "lat": 40.76,
+      "chinaNames": [
+        "长春市",
+        "济南市"
+      ],
+      "count": 1,
+      "students": [
+        "janus"
+      ]
+    }
+  ],
+  "unrecordedStudents": [
+    "雷雨",
+    "彭根辉",
+    "小橘",
+    "周晶🎐",
+    "Dorian",
+    "邱淼淼",
+    "注意力",
+    "五谷粥",
+    "JM",
+    "Time flies.",
+    "张嘉文",
+    "Algea",
+    "浩瀚夜空",
+    "Echo",
+    "Jaden",
+    "覔",
+    "蟑螂",
+    "Lihyu",
+    "仅此而已",
+    "月",
+    "姜永健",
+    "Yuvi",
+    "Cameron",
+    "Gambetto",
+    "半夏"
+  ],
+  "provinceOnlyStudents": [
+    "张锦阳",
+    "舒奕萌"
+  ],
+  "unmappedStudents": []
+}
