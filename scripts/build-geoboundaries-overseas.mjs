@@ -5,14 +5,51 @@ const ROOT = resolve(import.meta.dirname, "..");
 const OUT_FILE = join(ROOT, "data/overseas-admin-boundaries.json");
 const USER_AGENT = process.env.GEOBOUNDARIES_USER_AGENT || "stanleyuniversity-map/1.0 (https://stanleyuniversity.garylau.ai/map/)";
 
+const greaterSydneyLgas = [
+  "Bayside (NSW)",
+  "Blacktown",
+  "Blue Mountains",
+  "Burwood",
+  "Camden",
+  "Campbelltown (NSW)",
+  "Canada Bay",
+  "Canterbury-Bankstown",
+  "Cumberland",
+  "Fairfield",
+  "Georges River",
+  "Hawkesbury",
+  "Hornsby",
+  "Hunters Hill",
+  "Inner West",
+  "Ku-ring-gai",
+  "Lane Cove",
+  "Liverpool",
+  "Mosman",
+  "North Sydney",
+  "Northern Beaches",
+  "Parramatta",
+  "Penrith",
+  "Randwick",
+  "Ryde",
+  "Strathfield",
+  "Sutherland",
+  "Sydney",
+  "The Hills",
+  "Waverley",
+  "Willoughby",
+  "Wollondilly",
+  "Woollahra"
+];
+
 const countryGrids = [
   {
     country: "AUS",
     adm: "ADM2",
     note: "澳洲市级/地方政府区块",
-    memberByName: new Map([
-      ["Sydney", { id: "sydney", name: "悉尼", note: "澳洲市级/地方政府区块" }]
-    ])
+    memberByName: new Map(greaterSydneyLgas.map((name) => [
+      name,
+      { id: "sydney", name: "悉尼", note: "澳洲悉尼都会区" }
+    ]))
   }
 ];
 

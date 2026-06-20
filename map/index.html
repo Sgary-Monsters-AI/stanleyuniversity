@@ -1021,7 +1021,9 @@
       if (!row || !map) return;
       activeLabel = row.label;
       const zoom = row.overseasId === "sydney" ? 7.75 : (row.overseasId ? 9.4 : 4.9);
-      map.flyTo({ center: [row.lng, row.lat], zoom, speed: 1.2, curve: 1.25 });
+      const center = row.overseasId === "sydney" ? [150.76, -33.86] : [row.lng, row.lat];
+      const targetZoom = row.overseasId === "sydney" ? 7.05 : zoom;
+      map.flyTo({ center, zoom: targetZoom, speed: 1.2, curve: 1.25 });
       renderList();
       applyLayerFilters();
     }
