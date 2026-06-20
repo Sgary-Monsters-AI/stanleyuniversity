@@ -371,6 +371,39 @@
     .maplibregl-canvas { cursor: grab; }
     .maplibregl-canvas:active { cursor: grabbing; }
 
+    .map-label {
+      pointer-events: none;
+      min-width: 46px;
+      padding: 3px 7px 4px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 7px;
+      color: #2e2e2e;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      text-align: center;
+      font-weight: 850;
+      line-height: 1.15;
+      transform: translateY(-2px);
+      backdrop-filter: blur(5px);
+    }
+
+    .map-label strong,
+    .map-label span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .map-label strong {
+      font-size: 12px;
+    }
+
+    .map-label span {
+      margin-top: 2px;
+      color: var(--text-dim);
+      font-size: 10px;
+      font-variant-numeric: tabular-nums;
+    }
+
     .loading {
       position: absolute;
       left: 18px;
@@ -803,6 +836,7 @@
     let filter = "all";
     let activeLabel = null;
     const expandedLabels = new Set();
+    let mapLabelMarkers = [];
 
     function colorFor(count) {
       if (count >= 3) return red;
@@ -884,6 +918,7 @@
       if (map?.getSource("overseas-admin-boundaries") && overseasAdminGeo) {
         map.getSource("overseas-admin-boundaries").setData(overseasAdminGeo);
       }
+      renderMapLabels();
     }
 
     async function fetchMemberData() {
@@ -971,6 +1006,10 @@
       return ["==", ["get", "displayLabel"], activeLabel];
     }
 
+    function passesCountFilter(count) {
+      return filter === "all" || count === Number(filter);
+    }
+
     function applyLayerFilters() {
       if (!map || !map.getLayer("china-filled")) return;
       const expression = filteredFeatureExpression();
@@ -978,6 +1017,7 @@
       map.setFilter("china-active", activeExpression());
       map.setFilter("overseas-filled", expression);
       map.setFilter("overseas-active", activeExpression());
+      renderMapLabels();
     }
 
     function focusRow(row) {
@@ -986,6 +1026,43 @@
       map.flyTo({ center: [row.lng, row.lat], zoom: row.overseasId ? 9.4 : 4.9, speed: 1.2, curve: 1.25 });
       renderList();
       applyLayerFilters();
+    }
+
+    function labelElement(label, count) {
+      const element = document.createElement("div");
+      element.className = "map-label";
+      element.innerHTML = `<strong>${label}</strong><span>${count}人</span>`;
+      return element;
+    }
+
+    function clearMapLabels() {
+      for (const marker of mapLabelMarkers) marker.remove();
+      mapLabelMarkers = [];
+    }
+
+    function addMapLabel(label, count, lngLat) {
+      if (!map || !lngLat || !passesCountFilter(count)) return;
+      const marker = new maplibregl.Marker({ element: labelElement(label, count), anchor: "center" })
+        .setLngLat(lngLat)
+        .addTo(map);
+      mapLabelMarkers.push(marker);
+    }
+
+    function renderMapLabels() {
+      clearMapLabels();
+      if (!map) return;
+      if (chinaCityGeo?.features) {
+        for (const feature of chinaCityGeo.features) {
+          const count = Number(feature.properties.studentCount || 0);
+          if (!count) continue;
+          const center = feature.properties.centroid || feature.properties.center;
+          addMapLabel(feature.properties.displayLabel || feature.properties.name, count, center);
+        }
+      }
+      for (const row of PLACE_ROWS) {
+        if (!row.overseasId || !row.count) continue;
+        addMapLabel(row.label, row.count, [row.lng, row.lat]);
+      }
     }
 
     function overseasPolygon(id, label, count, note, centerLng, centerLat, dx, dy) {
