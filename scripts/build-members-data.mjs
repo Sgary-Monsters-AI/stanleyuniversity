@@ -51,6 +51,17 @@ function textCell(value) {
   return String(value).trim();
 }
 
+function memberRecord(name, wechatName) {
+  const registeredName = textCell(name);
+  const wxName = textCell(wechatName);
+  const displayName = registeredName || wxName || "未命名成员";
+  return {
+    name: displayName,
+    registeredName: registeredName || displayName,
+    wechatName: wxName || displayName
+  };
+}
+
 async function requestJson(url, options = {}) {
   const response = await fetch(url, options);
   const payload = await response.json().catch(() => ({}));
@@ -85,8 +96,9 @@ async function listRecordsByOpenApi(token) {
     );
     for (const item of payload.data?.items || []) {
       const fields = item.fields || {};
+      const member = memberRecord(fields["名字"], fields["微信名字"]);
       records.push({
-        name: textCell(fields["名字"]) || textCell(fields["微信名字"]) || "未命名成员",
+        ...member,
         city: textCell(fields["城市"])
       });
     }
@@ -116,8 +128,9 @@ async function listRecordsByLarkCli() {
     if (!payload.ok) throw new Error(payload.msg || "lark-cli returned ok=false");
     const rows = payload.data?.data || [];
     for (const row of rows) {
+      const member = memberRecord(row[0], row[1]);
       records.push({
-        name: textCell(row[0]) || textCell(row[1]) || "未命名成员",
+        ...member,
         city: textCell(row[2])
       });
     }
@@ -140,20 +153,21 @@ function buildMapData(records) {
   const unmappedStudents = [];
 
   for (const record of records) {
+    const student = memberRecord(record.registeredName || record.name, record.wechatName);
     const city = normalizeCity(record.city);
     if (!city) {
-      unrecordedStudents.push(record.name);
+      unrecordedStudents.push(student);
       continue;
     }
     const label = aliasToLabel.get(city);
     if (label) {
       const bucket = buckets.get(label);
       bucket.count += 1;
-      bucket.students.push(record.name);
+      bucket.students.push(student);
       continue;
     }
-    if (provinceOnlyAliases.has(city)) provinceOnlyStudents.push(record.name);
-    else unmappedStudents.push({ name: record.name, city: record.city });
+    if (provinceOnlyAliases.has(city)) provinceOnlyStudents.push(student);
+    else unmappedStudents.push({ ...student, city: record.city });
   }
 
   const placeRows = [...buckets.values()]

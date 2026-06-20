@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-06-20T12:44:36.556Z",
-  "totalMembers": 54,
-  "locatedMembers": 27,
-  "filledCityRecords": 29,
-  "provinceOnlyMembers": 2,
-  "unrecordedMembers": 25,
+  "updatedAt": "2026-06-20T16:47:25.977Z",
+  "totalMembers": 67,
+  "locatedMembers": 29,
+  "filledCityRecords": 36,
+  "provinceOnlyMembers": 7,
+  "unrecordedMembers": 31,
   "placeRows": [
     {
       "label": "武汉",
@@ -16,10 +16,26 @@
       ],
       "count": 4,
       "students": [
-        "王境",
-        "李国正",
-        "李谨西",
-        "章魚飯."
+        {
+          "name": "王境",
+          "registeredName": "王境",
+          "wechatName": "狸猫🦝"
+        },
+        {
+          "name": "李国正",
+          "registeredName": "李国正",
+          "wechatName": "七度旅人"
+        },
+        {
+          "name": "李谨西",
+          "registeredName": "李谨西",
+          "wechatName": "koi"
+        },
+        {
+          "name": "章魚飯.",
+          "registeredName": "章魚飯.",
+          "wechatName": "章魚飯."
+        }
       ]
     },
     {
@@ -32,9 +48,43 @@
       ],
       "count": 3,
       "students": [
-        "王梓如",
-        "leah",
-        "Allonsy"
+        {
+          "name": "王梓如",
+          "registeredName": "王梓如",
+          "wechatName": "帧安"
+        },
+        {
+          "name": "leah",
+          "registeredName": "leah",
+          "wechatName": "状况外🌀"
+        },
+        {
+          "name": "Allonsy",
+          "registeredName": "Allonsy",
+          "wechatName": "Allons--y"
+        }
+      ]
+    },
+    {
+      "label": "北京",
+      "note": "北京市",
+      "lng": 116.4074,
+      "lat": 39.9042,
+      "chinaNames": [
+        "北京市"
+      ],
+      "count": 2,
+      "students": [
+        {
+          "name": "阿良",
+          "registeredName": "阿良",
+          "wechatName": "Anthony Li"
+        },
+        {
+          "name": "Robin",
+          "registeredName": "Robin",
+          "wechatName": "Robin"
+        }
       ]
     },
     {
@@ -47,8 +97,16 @@
       ],
       "count": 2,
       "students": [
-        "影洲",
-        "华宇昊"
+        {
+          "name": "影洲",
+          "registeredName": "影洲",
+          "wechatName": "雅正"
+        },
+        {
+          "name": "华宇昊",
+          "registeredName": "华宇昊",
+          "wechatName": "ɔɪ化十子."
+        }
       ]
     },
     {
@@ -61,21 +119,36 @@
       ],
       "count": 2,
       "students": [
-        "李仲实",
-        "Yesoo"
+        {
+          "name": "李仲实",
+          "registeredName": "李仲实",
+          "wechatName": "塞雷SL"
+        },
+        {
+          "name": "Yesoo",
+          "registeredName": "Yesoo",
+          "wechatName": "Malpaca"
+        }
       ]
     },
     {
-      "label": "北京",
-      "note": "北京市",
-      "lng": 116.4074,
-      "lat": 39.9042,
-      "chinaNames": [
-        "北京市"
-      ],
-      "count": 1,
+      "label": "悉尼",
+      "note": "海外都会区边界",
+      "lng": 151.2093,
+      "lat": -33.8688,
+      "overseasId": "sydney",
+      "count": 2,
       "students": [
-        "阿良"
+        {
+          "name": "sam",
+          "registeredName": "sam",
+          "wechatName": "lwt"
+        },
+        {
+          "name": "Sophie",
+          "registeredName": "Sophie",
+          "wechatName": "淼"
+        }
       ]
     },
     {
@@ -86,7 +159,11 @@
       "overseasId": "boston",
       "count": 1,
       "students": [
-        "Tracy"
+        {
+          "name": "Tracy",
+          "registeredName": "Tracy",
+          "wechatName": "Traaa"
+        }
       ]
     },
     {
@@ -100,7 +177,11 @@
       ],
       "count": 1,
       "students": [
-        "季佳杰"
+        {
+          "name": "季佳杰",
+          "registeredName": "季佳杰",
+          "wechatName": "季"
+        }
       ]
     },
     {
@@ -113,7 +194,11 @@
       ],
       "count": 1,
       "students": [
-        "Wincent"
+        {
+          "name": "Wincent",
+          "registeredName": "Wincent",
+          "wechatName": "Wincent"
+        }
       ]
     },
     {
@@ -126,7 +211,11 @@
       ],
       "count": 1,
       "students": [
-        "多林"
+        {
+          "name": "多林",
+          "registeredName": "多林",
+          "wechatName": "Artist多林"
+        }
       ]
     },
     {
@@ -139,7 +228,11 @@
       ],
       "count": 1,
       "students": [
-        "Spaceman"
+        {
+          "name": "Spaceman",
+          "registeredName": "Spaceman",
+          "wechatName": "十日十韦"
+        }
       ]
     },
     {
@@ -152,7 +245,11 @@
       ],
       "count": 1,
       "students": [
-        "小羊"
+        {
+          "name": "小羊",
+          "registeredName": "小羊",
+          "wechatName": "FY"
+        }
       ]
     },
     {
@@ -165,7 +262,11 @@
       ],
       "count": 1,
       "students": [
-        "moby豪"
+        {
+          "name": "moby豪",
+          "registeredName": "moby豪",
+          "wechatName": "MoBy豪"
+        }
       ]
     },
     {
@@ -178,7 +279,11 @@
       ],
       "count": 1,
       "students": [
-        "穆昱伟"
+        {
+          "name": "穆昱伟",
+          "registeredName": "穆昱伟",
+          "wechatName": "Algea"
+        }
       ]
     },
     {
@@ -191,7 +296,11 @@
       ],
       "count": 1,
       "students": [
-        "三十六"
+        {
+          "name": "三十六",
+          "registeredName": "三十六",
+          "wechatName": "三十六"
+        }
       ]
     },
     {
@@ -204,7 +313,11 @@
       ],
       "count": 1,
       "students": [
-        "朱天宇"
+        {
+          "name": "朱天宇",
+          "registeredName": "朱天宇",
+          "wechatName": "思想先落地"
+        }
       ]
     },
     {
@@ -217,18 +330,11 @@
       ],
       "count": 1,
       "students": [
-        "杜祖鹏"
-      ]
-    },
-    {
-      "label": "悉尼",
-      "note": "海外都会区边界",
-      "lng": 151.2093,
-      "lat": -33.8688,
-      "overseasId": "sydney",
-      "count": 1,
-      "students": [
-        "sam"
+        {
+          "name": "杜祖鹏",
+          "registeredName": "杜祖鹏",
+          "wechatName": "Sunflower"
+        }
       ]
     },
     {
@@ -239,7 +345,11 @@
       "overseasId": "singapore",
       "count": 1,
       "students": [
-        "愚任杰"
+        {
+          "name": "愚任杰",
+          "registeredName": "愚任杰",
+          "wechatName": "愚任杰"
+        }
       ]
     },
     {
@@ -252,7 +362,11 @@
       ],
       "count": 1,
       "students": [
-        "徐亚博"
+        {
+          "name": "徐亚博",
+          "registeredName": "徐亚博",
+          "wechatName": "火火"
+        }
       ]
     },
     {
@@ -266,40 +380,213 @@
       ],
       "count": 1,
       "students": [
-        "janus"
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果"
+        }
       ]
     }
   ],
   "unrecordedStudents": [
-    "雷雨",
-    "彭根辉",
-    "小橘",
-    "周晶🎐",
-    "Dorian",
-    "邱淼淼",
-    "注意力",
-    "五谷粥",
-    "JM",
-    "Time flies.",
-    "张嘉文",
-    "Algea",
-    "浩瀚夜空",
-    "Echo",
-    "Jaden",
-    "覔",
-    "蟑螂",
-    "Lihyu",
-    "仅此而已",
-    "月",
-    "姜永健",
-    "Yuvi",
-    "Cameron",
-    "Gambetto",
-    "半夏"
+    {
+      "name": "雷雨",
+      "registeredName": "雷雨",
+      "wechatName": "雷雨同学"
+    },
+    {
+      "name": "彭根辉",
+      "registeredName": "彭根辉",
+      "wechatName": "彭根辉"
+    },
+    {
+      "name": "小橘",
+      "registeredName": "小橘",
+      "wechatName": "小橘"
+    },
+    {
+      "name": "周晶🎐",
+      "registeredName": "周晶🎐",
+      "wechatName": "周晶🎐"
+    },
+    {
+      "name": "Dorian",
+      "registeredName": "Dorian",
+      "wechatName": "Dorian"
+    },
+    {
+      "name": "注意力",
+      "registeredName": "注意力",
+      "wechatName": "注意力"
+    },
+    {
+      "name": "五谷粥",
+      "registeredName": "五谷粥",
+      "wechatName": "五谷粥"
+    },
+    {
+      "name": "JM",
+      "registeredName": "JM",
+      "wechatName": "JM"
+    },
+    {
+      "name": "Time flies.",
+      "registeredName": "Time flies.",
+      "wechatName": "Time flies."
+    },
+    {
+      "name": "张嘉文",
+      "registeredName": "张嘉文",
+      "wechatName": "我说，要有光"
+    },
+    {
+      "name": "Algea",
+      "registeredName": "Algea",
+      "wechatName": "Algea"
+    },
+    {
+      "name": "浩瀚夜空",
+      "registeredName": "浩瀚夜空",
+      "wechatName": "浩瀚夜空"
+    },
+    {
+      "name": "Echo",
+      "registeredName": "Echo",
+      "wechatName": "Echo"
+    },
+    {
+      "name": "Jaden",
+      "registeredName": "Jaden",
+      "wechatName": "Jaden@Jaden_riku"
+    },
+    {
+      "name": "覔",
+      "registeredName": "覔",
+      "wechatName": "覔"
+    },
+    {
+      "name": "蟑螂",
+      "registeredName": "蟑螂",
+      "wechatName": "ㅤ蟑螂"
+    },
+    {
+      "name": "Lihyu",
+      "registeredName": "Lihyu",
+      "wechatName": "Lihyu"
+    },
+    {
+      "name": "仅此而已",
+      "registeredName": "仅此而已",
+      "wechatName": "仅此而已"
+    },
+    {
+      "name": "月",
+      "registeredName": "月",
+      "wechatName": "月"
+    },
+    {
+      "name": "姜永健",
+      "registeredName": "姜永健",
+      "wechatName": "。"
+    },
+    {
+      "name": "Yuvi",
+      "registeredName": "Yuvi",
+      "wechatName": "Yuvi"
+    },
+    {
+      "name": "Cameron",
+      "registeredName": "Cameron",
+      "wechatName": "Cameron"
+    },
+    {
+      "name": "Gambetto",
+      "registeredName": "Gambetto",
+      "wechatName": "Gambetto"
+    },
+    {
+      "name": "半夏",
+      "registeredName": "半夏",
+      "wechatName": "半夏"
+    },
+    {
+      "name": "Musol",
+      "registeredName": "Musol",
+      "wechatName": "桜のMusol"
+    },
+    {
+      "name": "酌锦",
+      "registeredName": "酌锦",
+      "wechatName": "酌锦"
+    },
+    {
+      "name": "vleffrey",
+      "registeredName": "vleffrey",
+      "wechatName": "vleffrey"
+    },
+    {
+      "name": "Glory",
+      "registeredName": "Glory",
+      "wechatName": "Glory"
+    },
+    {
+      "name": "Seacoconut",
+      "registeredName": "Seacoconut",
+      "wechatName": "Seacoconut"
+    },
+    {
+      "name": "Ryan",
+      "registeredName": "Ryan",
+      "wechatName": "Ryan"
+    },
+    {
+      "name": "郁郁葱葱",
+      "registeredName": "郁郁葱葱",
+      "wechatName": "郁郁葱葱"
+    }
   ],
   "provinceOnlyStudents": [
-    "张锦阳",
-    "舒奕萌"
+    {
+      "name": "张锦阳",
+      "registeredName": "张锦阳",
+      "wechatName": "Orion 常青de绵阳"
+    },
+    {
+      "name": "舒奕萌",
+      "registeredName": "舒奕萌",
+      "wechatName": "🐟"
+    }
   ],
-  "unmappedStudents": []
+  "unmappedStudents": [
+    {
+      "name": "淼淼",
+      "registeredName": "淼淼",
+      "wechatName": "邱淼淼",
+      "city": "福建"
+    },
+    {
+      "name": "郑杨守都",
+      "registeredName": "郑杨守都",
+      "wechatName": "Luxorion",
+      "city": "青岛"
+    },
+    {
+      "name": "梁波",
+      "registeredName": "梁波",
+      "wechatName": "粉色钉子头",
+      "city": "重庆"
+    },
+    {
+      "name": "康康",
+      "registeredName": "康康",
+      "wechatName": "sloth",
+      "city": "广州"
+    },
+    {
+      "name": "Levia",
+      "registeredName": "Levia",
+      "wechatName": "Levia.Qi",
+      "city": "福州"
+    }
+  ]
 }
