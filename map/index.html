@@ -1006,7 +1006,10 @@
     }
 
     function decorateOverseasFeature(feature) {
-      const row = PLACE_ROWS.find((item) => item.overseasId === feature.properties.id);
+      const row = PLACE_ROWS.find((item) => (
+        item.overseasId === feature.properties.id ||
+        (item.overseasId === "singapore" && feature.properties.region === "singapore" && feature.properties.boundaryRole === "context")
+      ));
       if (!row) return null;
       return {
         ...feature,
@@ -1022,7 +1025,10 @@
 
     function overseasGeoJson() {
       const source = overseasAdminGeo || OVERSEAS_BOUNDARIES;
-      const realFeatures = source.features.map(decorateOverseasFeature).filter(Boolean);
+      const realFeatures = source.features
+        .filter((feature) => !(feature.properties.id === "singapore" && feature.properties.boundaryRole === "member-city"))
+        .map(decorateOverseasFeature)
+        .filter(Boolean);
       if (realFeatures.length) {
         return { type: "FeatureCollection", features: realFeatures };
       }
@@ -1132,6 +1138,7 @@
         type: "line",
         source: "overseas-admin-boundaries",
         minzoom: 5,
+        filter: ["!", ["all", ["==", ["get", "id"], "singapore"], ["==", ["get", "boundaryRole"], "member-city"]]],
         paint: {
           "line-color": "rgba(214, 174, 168, 0.9)",
           "line-width": ["interpolate", ["linear"], ["zoom"], 5, 0.45, 8, 0.85, 11, 1.2],
