@@ -39,6 +39,8 @@ const cityCatalog = [
   { label: "西安", note: "西安市", lng: 108.9398, lat: 34.3416, chinaNames: ["西安市"], aliases: ["西安", "西安市"] },
   { label: "新加坡", note: "海外市级行政边界", lng: 103.8198, lat: 1.3521, overseasId: "singapore", aliases: ["新加坡", "Singapore"] },
   { label: "波士顿", note: "海外市级行政边界", lng: -71.0589, lat: 42.3601, overseasId: "boston", aliases: ["波士顿", "Boston"] },
+  { label: "巴黎", note: "海外市级行政边界", lng: 2.3522, lat: 48.8566, overseasId: "paris", aliases: ["巴黎", "Paris"] },
+  { label: "香港", note: "海外行政边界", lng: 114.1694, lat: 22.3193, overseasId: "hong-kong", aliases: ["香港", "香港特别行政区", "Hong Kong"] },
   { label: "悉尼", note: "海外都会区边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", aliases: ["悉尼", "Sydney"] }
 ];
 

@@ -68,6 +68,11 @@ const adminRegionGrids = [
   }
 ];
 
+const osmMemberBoundaries = [
+  { osmId: "R71525", id: "paris", name: "巴黎", name_en: "Paris", note: "法国巴黎市级行政边界", country: "FRA" },
+  { osmId: "R913110", id: "hong-kong", name: "香港", name_en: "Hong Kong", note: "香港特别行政区边界", country: "HKG" }
+];
+
 async function fetchJson(url) {
   const response = await fetch(url, {
     headers: { "User-Agent": USER_AGENT }
@@ -178,6 +183,44 @@ async function usPlaceGrid() {
   });
 }
 
+async function osmMemberFeatures() {
+  const features = [];
+  const byOsmId = new Map(osmMemberBoundaries.map((item) => [item.osmId, item]));
+  for (let index = 0; index < osmMemberBoundaries.length; index += 20) {
+    const batch = osmMemberBoundaries.slice(index, index + 20);
+    const url = `https://nominatim.openstreetmap.org/lookup?format=jsonv2&polygon_geojson=1&osm_ids=${batch.map((item) => item.osmId).join(",")}`;
+    const rows = await fetchJson(url);
+    for (const row of rows) {
+      if (!row.geojson || !["Polygon", "MultiPolygon"].includes(row.geojson.type)) continue;
+      const osmKey = `${row.osm_type?.[0]?.toUpperCase() || "R"}${row.osm_id}`;
+      const member = byOsmId.get(osmKey);
+      if (!member) continue;
+      features.push({
+        type: "Feature",
+        geometry: roundGeometry(row.geojson),
+        properties: {
+          id: member.id,
+          memberId: member.id,
+          name: member.name,
+          name_en: member.name_en,
+          note: member.note,
+          sourceName: row.name || member.name_en,
+          display_name: row.display_name || member.name_en,
+          country: member.country,
+          boundarySource: "OpenStreetMap via Nominatim lookup",
+          boundarySourceURL: "https://www.openstreetmap.org/",
+          boundaryLicense: "Open Database License (ODbL)",
+          boundaryType: row.type || "administrative",
+          boundaryRole: "member-city",
+          osm_type: row.osm_type,
+          osm_id: row.osm_id
+        }
+      });
+    }
+  }
+  return features;
+}
+
 async function main() {
   const features = [];
   for (const config of countryGrids) {
@@ -193,6 +236,9 @@ async function main() {
   const usPlaces = await usPlaceGrid();
   console.log(`USA places: ${usPlaces.length} grid features`);
   features.push(...usPlaces);
+  const osmMembers = await osmMemberFeatures();
+  console.log(`OSM member boundaries: ${osmMembers.length} features`);
+  features.push(...osmMembers);
 
   const collection = {
     type: "FeatureCollection",
