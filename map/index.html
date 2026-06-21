@@ -97,6 +97,14 @@
       min-width: 0;
     }
 
+    .header-center {
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
     .sync-status {
       display: inline-flex;
       align-items: center;
@@ -129,7 +137,6 @@
     }
 
     .view-mode-toggle {
-      justify-self: center;
       display: flex;
       align-items: center;
       gap: 4px;
@@ -137,6 +144,17 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       background: var(--bg-elev);
+      box-shadow: var(--shadow);
+    }
+
+    .map-mode-toggle {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.72);
       box-shadow: var(--shadow);
     }
 
@@ -169,7 +187,16 @@
       font-weight: 750;
     }
 
-    .view-btn.active {
+    .map-mode-btn {
+      min-width: 58px;
+      border: 0;
+      color: var(--text-dim);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .view-btn.active,
+    .map-mode-btn.active {
       color: var(--text);
       background: #f8f7ff;
       box-shadow: inset 0 0 0 1px rgba(124, 92, 255, 0.12);
@@ -255,6 +282,45 @@
       padding: 10px 8px 18px;
     }
 
+    .tree-section {
+      margin: 0 0 10px;
+    }
+
+    .tree-section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 26px;
+      padding: 4px 8px 6px;
+      color: var(--text-faint);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .province-group {
+      margin-bottom: 5px;
+      border-radius: 7px;
+      background: rgba(255,255,255,0.28);
+      box-shadow: inset 0 0 0 1px rgba(226, 224, 219, 0.5);
+    }
+
+    .province-group > .tree-row {
+      background: rgba(255,255,255,0.35);
+    }
+
+    .province-group .city-children {
+      display: grid;
+      gap: 3px;
+      padding: 0 6px 7px 28px;
+    }
+
+    .city-children .tree-row {
+      min-height: 38px;
+      padding: 5px 7px;
+    }
+
     .tree-row {
       width: 100%;
       display: flex;
@@ -310,11 +376,19 @@
       transform: rotate(90deg);
     }
 
+    .province-group.expanded > .tree-row .expand-icon {
+      transform: rotate(90deg);
+    }
+
     .student-list {
       display: grid;
       gap: 8px;
       min-width: 0;
       padding: 0 10px 12px 40px;
+    }
+
+    .student-list.city-indent {
+      padding-left: 32px;
     }
 
     .student-chip {
@@ -845,11 +919,17 @@
 
   <header class="app-header">
     <h1>🌍 Stanley商学院成员分布</h1>
-    <div class="view-mode-toggle" aria-label="人数筛选">
-      <button class="view-btn active" type="button" data-filter="all">全部 <span class="view-count">16</span></button>
-      <button class="view-btn" type="button" data-filter="3"><span class="mode-dot dot-red"></span>3人 <span class="view-count">2</span></button>
-      <button class="view-btn" type="button" data-filter="2"><span class="mode-dot dot-amber"></span>2人 <span class="view-count">2</span></button>
-      <button class="view-btn" type="button" data-filter="1"><span class="mode-dot dot-green"></span>1人 <span class="view-count">12</span></button>
+    <div class="header-center">
+      <div class="map-mode-toggle" aria-label="地图层级">
+        <button class="map-mode-btn active" type="button" data-map-mode="city">市视图</button>
+        <button class="map-mode-btn" type="button" data-map-mode="province">省视图</button>
+      </div>
+      <div class="view-mode-toggle" aria-label="人数筛选">
+        <button class="view-btn active" type="button" data-filter="all">全部 <span class="view-count">16</span></button>
+        <button class="view-btn" type="button" data-filter="3"><span class="mode-dot dot-red"></span>3人 <span class="view-count">2</span></button>
+        <button class="view-btn" type="button" data-filter="2"><span class="mode-dot dot-amber"></span>2人 <span class="view-count">2</span></button>
+        <button class="view-btn" type="button" data-filter="1"><span class="mode-dot dot-green"></span>1人 <span class="view-count">12</span></button>
+      </div>
     </div>
     <div class="header-actions">
       <div class="sync-status" id="syncStatus"><span class="sync-dot"></span><span>等待数据同步</span></div>
@@ -859,7 +939,7 @@
 
   <main class="app-main">
     <aside class="place-tree" aria-label="已填色地点">
-      <div class="tree-header"><span>已填色地点</span><span id="visibleCount">16</span></div>
+      <div class="tree-header"><span id="treeTitle">已填色地点</span><span id="visibleCount">16</span></div>
       <div class="tree-body" id="cityList"></div>
     </aside>
 
@@ -881,12 +961,13 @@
         <div class="summary-card">
           <div class="summary-grid">
             <div class="metric"><strong id="totalMembersMetric">42</strong><span>总成员</span></div>
-            <div class="metric"><strong id="filledCityMetric">24</strong><span>有城市</span></div>
+            <div class="metric"><strong id="filledCityMetric">24</strong><span>有地点</span></div>
             <div class="metric"><strong id="placeCountMetric">16</strong><span>填色地点</span></div>
           </div>
           <ul class="note-list">
             <li><span>落图人数</span><strong id="locatedMembersMetric">22</strong></li>
-            <li><span>未落图地点</span><strong id="provinceOnlyMetric">2</strong></li>
+            <li><span>只填省份</span><strong id="provinceOnlyMetric">0</strong></li>
+            <li><span>未落图地点</span><strong id="unmappedMetric">0</strong></li>
             <li><span>双地点未落图</span><strong id="excludedDualCityMetric">0</strong></li>
             <li><span>未记录成员</span><strong id="unrecordedMetric">18</strong></li>
           </ul>
@@ -921,10 +1002,14 @@
     const MUNICIPALITY_CODES = new Set(["110000", "120000", "310000", "500000"]);
     const EXCLUDE_CODES = new Set(["710000", "810000", "820000"]);
     let chinaCityGeo = null;
+    let chinaProvinceGeo = null;
     let TOTAL_MEMBERS = 42;
     let LOCATED_MEMBERS = 22;
+    let CITY_LOCATED_MEMBERS = 22;
+    let PROVINCE_LOCATED_MEMBERS = 22;
     let FILLED_CITY_RECORDS = 24;
     let PROVINCE_ONLY_MEMBERS = 2;
+    let UNMAPPED_MEMBERS = 0;
     let EXCLUDED_DUAL_CITY_MEMBERS = 0;
     let UNRECORDED_MEMBERS = 18;
     let DATA_UPDATED_AT = "";
@@ -947,19 +1032,24 @@
       { label: "波士顿", count: 1, note: "海外市级行政边界", lng: -71.0589, lat: 42.3601, overseasId: "boston", students: ["Tracy"] },
       { label: "悉尼", count: 1, note: "海外都会区边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", students: ["sam"] }
     ];
+    let PROVINCE_ROWS = [];
 
-    const chinaCountByName = new Map();
-    const chinaLabelByName = new Map();
+    const cityCountByName = new Map();
+    const cityLabelByName = new Map();
+    const provinceCountByName = new Map();
+    const provinceLabelByName = new Map();
     let overseasAdminGeo = null;
 
     const tooltip = document.getElementById("tooltip");
     const loading = document.getElementById("loading");
     const list = document.getElementById("cityList");
+    const treeTitle = document.getElementById("treeTitle");
     const visibleCount = document.getElementById("visibleCount");
     const cityPie = document.getElementById("cityPie");
     const cityPieLegend = document.getElementById("cityPieLegend");
     const syncStatus = document.getElementById("syncStatus");
     const filterButtons = document.querySelectorAll("[data-filter]");
+    const mapModeButtons = document.querySelectorAll("[data-map-mode]");
     const red = getComputedStyle(document.documentElement).getPropertyValue("--red").trim();
     const amber = getComputedStyle(document.documentElement).getPropertyValue("--amber").trim();
     const green = getComputedStyle(document.documentElement).getPropertyValue("--green").trim();
@@ -970,6 +1060,7 @@
     ];
     let map;
     let filter = "all";
+    let geoMode = "city";
     let activeLabel = null;
     const expandedLabels = new Set();
     let mapLabelMarkers = [];
@@ -980,8 +1071,22 @@
       return green;
     }
 
+    function overseasRows() {
+      return PLACE_ROWS.filter((row) => row.overseasId);
+    }
+
+    function domesticCityRows() {
+      return PLACE_ROWS.filter((row) => !row.overseasId);
+    }
+
+    function displayRows() {
+      return geoMode === "province"
+        ? [...PROVINCE_ROWS, ...overseasRows()]
+        : PLACE_ROWS;
+    }
+
     function rows() {
-      return PLACE_ROWS.filter((row) => filter === "all" || row.count === Number(filter));
+      return displayRows().filter((row) => filter === "all" || row.count === Number(filter));
     }
 
     function escapeHtml(value) {
@@ -1027,13 +1132,20 @@
     }
 
     function rebuildLookups() {
-      chinaCountByName.clear();
-      chinaLabelByName.clear();
+      cityCountByName.clear();
+      cityLabelByName.clear();
+      provinceCountByName.clear();
+      provinceLabelByName.clear();
       for (const row of PLACE_ROWS) {
+        if (row.overseasId) continue;
         for (const name of row.chinaNames || []) {
-          chinaCountByName.set(name, row.count);
-          chinaLabelByName.set(name, row.label);
+          cityCountByName.set(name, row.count);
+          cityLabelByName.set(name, row.label);
         }
+      }
+      for (const row of PROVINCE_ROWS) {
+        provinceCountByName.set(row.name, row.count);
+        provinceLabelByName.set(row.name, row.label);
       }
     }
 
@@ -1046,13 +1158,21 @@
       syncStatus.querySelector("span:last-child").textContent = updatedText;
       document.getElementById("totalMembersMetric").textContent = TOTAL_MEMBERS;
       document.getElementById("filledCityMetric").textContent = FILLED_CITY_RECORDS;
-      document.getElementById("placeCountMetric").textContent = PLACE_ROWS.length;
-      document.getElementById("locatedMembersMetric").textContent = LOCATED_MEMBERS;
+      document.getElementById("placeCountMetric").textContent = displayRows().length;
+      const overseasLocatedMembers = overseasRows().reduce((sum, row) => sum + row.count, 0);
+      const domesticProvinceLocatedMembers = PROVINCE_LOCATED_MEMBERS || PROVINCE_ROWS.reduce((sum, row) => sum + row.count, 0);
+      const locatedInMode = geoMode === "province"
+        ? domesticProvinceLocatedMembers + overseasLocatedMembers
+        : CITY_LOCATED_MEMBERS;
+      document.getElementById("locatedMembersMetric").textContent = locatedInMode;
       document.getElementById("provinceOnlyMetric").textContent = PROVINCE_ONLY_MEMBERS;
+      document.getElementById("unmappedMetric").textContent = UNMAPPED_MEMBERS;
       document.getElementById("excludedDualCityMetric").textContent = EXCLUDED_DUAL_CITY_MEMBERS;
       document.getElementById("unrecordedMetric").textContent = UNRECORDED_MEMBERS;
-      const counts = { all: PLACE_ROWS.length, 1: 0, 2: 0, 3: 0 };
-      for (const row of PLACE_ROWS) {
+      treeTitle.textContent = geoMode === "province" ? "省级 / 海外" : "国内省市 / 海外";
+      const countRows = displayRows();
+      const counts = { all: countRows.length, 1: 0, 2: 0, 3: 0 };
+      for (const row of countRows) {
         if (row.count >= 3) counts[3] += 1;
         else if (row.count === 2) counts[2] += 1;
         else counts[1] += 1;
@@ -1073,10 +1193,14 @@
     function applyMemberData(data) {
       if (!data || !Array.isArray(data.placeRows)) return;
       PLACE_ROWS = data.placeRows;
+      PROVINCE_ROWS = Array.isArray(data.provinceRows) ? data.provinceRows : [];
       TOTAL_MEMBERS = data.totalMembers;
       LOCATED_MEMBERS = data.locatedMembers;
+      CITY_LOCATED_MEMBERS = data.cityLocatedMembers || data.locatedMembers;
+      PROVINCE_LOCATED_MEMBERS = data.provinceLocatedMembers || PROVINCE_ROWS.reduce((sum, row) => sum + row.count, 0);
       FILLED_CITY_RECORDS = data.filledCityRecords;
       PROVINCE_ONLY_MEMBERS = data.provinceOnlyMembers;
+      UNMAPPED_MEMBERS = data.unmappedMembers || 0;
       EXCLUDED_DUAL_CITY_MEMBERS = data.excludedDualCityMembers || 0;
       UNRECORDED_MEMBERS = data.unrecordedMembers;
       DATA_UPDATED_AT = data.updatedAt || "";
@@ -1086,6 +1210,10 @@
       if (map?.getSource("china-cities") && chinaCityGeo) {
         for (const feature of chinaCityGeo.features) decorateFeature(feature);
         map.getSource("china-cities").setData(chinaCityGeo);
+      }
+      if (map?.getSource("china-provinces") && chinaCityGeo) {
+        chinaProvinceGeo = buildChinaProvinceGeo(chinaCityGeo);
+        map.getSource("china-provinces").setData(chinaProvinceGeo);
       }
       if (map?.getSource("overseas-city-blocks")) {
         map.getSource("overseas-city-blocks").setData(overseasGeoJson());
@@ -1111,12 +1239,22 @@
     }
 
     function pieSegments() {
+      const segments = displayRows().map((row, index) => ({
+        label: row.label,
+        count: row.count,
+        color: pieColors[index % pieColors.length]
+      }));
+      if (geoMode === "city" && PROVINCE_ONLY_MEMBERS) {
+        segments.push({ label: "只填省份", count: PROVINCE_ONLY_MEMBERS, color: "#bcb8b0" });
+      }
+      if (UNMAPPED_MEMBERS) {
+        segments.push({ label: "未落图地点", count: UNMAPPED_MEMBERS, color: "#c5bfb4" });
+      }
       return [
-        ...PLACE_ROWS.map((row, index) => ({ label: row.label, count: row.count, color: pieColors[index % pieColors.length] })),
-        { label: "未落图地点", count: PROVINCE_ONLY_MEMBERS, color: "#bcb8b0" },
+        ...segments,
         { label: "双地点未落图", count: EXCLUDED_DUAL_CITY_MEMBERS, color: "#cec8bd" },
         { label: "未记录成员", count: UNRECORDED_MEMBERS, color: "#d8d5cf" }
-      ];
+      ].filter((segment) => segment.count > 0);
     }
 
     function renderCityPie() {
@@ -1141,28 +1279,131 @@
       cityPieLegend.innerHTML = legend.join("");
     }
 
+    function rowButton(row, indent = "") {
+      const isExpanded = expandedLabels.has(row.label);
+      const hasStudents = (row.students || []).length > 0;
+      const active = activeLabel === row.label;
+      return `
+        <button class="tree-row ${active ? "active" : ""}" type="button" data-label="${escapeHtml(row.label)}" aria-expanded="${isExpanded}">
+          <span class="expand-icon">${hasStudents ? "▶" : ""}</span>
+          <span class="leaf-dot" style="background:${colorFor(row.count)}"></span>
+          <span class="tree-label"><strong>${escapeHtml(row.label)}</strong><span>${escapeHtml(row.note || "")}</span></span>
+          <span class="tree-badge">${row.count}</span>
+        </button>
+        ${isExpanded && hasStudents ? `<div class="student-list ${indent}">${(row.students || []).map(studentChip).join("")}</div>` : ""}
+      `;
+    }
+
+    function renderCityModeList() {
+      const visibleSet = new Set(rows().map((row) => row.label));
+      const cityByLabel = new Map(PLACE_ROWS.map((row) => [row.label, row]));
+      const domesticSections = PROVINCE_ROWS
+        .map((province) => {
+          const visibleCities = (province.cities || [])
+            .map((city) => cityByLabel.get(city.label))
+            .filter((city) => city && visibleSet.has(city.label));
+          const provinceOnlyStudents = (province.students || []).filter((student) => {
+            const cityName = String(student.city || "").replace(/[省市自治区特别行政区]/g, "");
+            return cityName && cityName === province.label;
+          });
+          const showProvince = visibleCities.length || (filter === "all" && provinceOnlyStudents.length);
+          if (!showProvince) return "";
+          const isExpanded = expandedLabels.has(province.label);
+          const provinceCount = visibleCities.reduce((sum, city) => sum + city.count, 0) + (filter === "all" ? provinceOnlyStudents.length : 0);
+          const children = [
+            ...visibleCities.map((city) => `
+              <div class="tree-item ${expandedLabels.has(city.label) ? "expanded" : ""}">
+                ${rowButton(city, "city-indent")}
+              </div>
+            `),
+            ...(filter === "all" && provinceOnlyStudents.length ? [`
+              <div class="tree-item ${expandedLabels.has(`${province.label}省级记录`) ? "expanded" : ""}">
+                ${rowButton({
+                  ...province,
+                  label: `${province.label}省级记录`,
+                  note: "只填省份",
+                  count: provinceOnlyStudents.length,
+                  students: provinceOnlyStudents
+                }, "city-indent")}
+              </div>
+            `] : [])
+          ].join("");
+          return `
+            <div class="province-group ${isExpanded ? "expanded" : ""}">
+              <button class="tree-row ${activeLabel === province.label ? "active" : ""}" type="button" data-label="${escapeHtml(province.label)}" aria-expanded="${isExpanded}">
+                <span class="expand-icon">▶</span>
+                <span class="leaf-dot" style="background:${colorFor(province.count)}"></span>
+                <span class="tree-label"><strong>${escapeHtml(province.label)}</strong><span>${escapeHtml(province.note || "")}</span></span>
+                <span class="tree-badge">${provinceCount}</span>
+              </button>
+              ${isExpanded ? `<div class="city-children">${children}</div>` : ""}
+            </div>
+          `;
+        })
+        .filter(Boolean)
+        .join("");
+      const overseasSections = overseasRows()
+        .filter((row) => visibleSet.has(row.label))
+        .map((row) => `<div class="tree-item ${expandedLabels.has(row.label) ? "expanded" : ""}">${rowButton(row)}</div>`)
+        .join("");
+      return `
+        <section class="tree-section">
+          <div class="tree-section-title"><span>国内</span><strong>${domesticSections ? "" : "无"}</strong></div>
+          ${domesticSections}
+        </section>
+        <section class="tree-section">
+          <div class="tree-section-title"><span>海外</span><strong>${overseasSections ? "" : "无"}</strong></div>
+          ${overseasSections}
+        </section>
+      `;
+    }
+
+    function renderProvinceModeList() {
+      const visible = rows();
+      const domesticSections = visible
+        .filter((row) => !row.overseasId)
+        .map((row) => `<div class="tree-item ${expandedLabels.has(row.label) ? "expanded" : ""}">${rowButton(row)}</div>`)
+        .join("");
+      const overseasSections = visible
+        .filter((row) => row.overseasId)
+        .map((row) => `<div class="tree-item ${expandedLabels.has(row.label) ? "expanded" : ""}">${rowButton(row)}</div>`)
+        .join("");
+      return `
+        <section class="tree-section">
+          <div class="tree-section-title"><span>国内省份</span><strong>${domesticSections ? "" : "无"}</strong></div>
+          ${domesticSections}
+        </section>
+        <section class="tree-section">
+          <div class="tree-section-title"><span>海外</span><strong>${overseasSections ? "" : "无"}</strong></div>
+          ${overseasSections}
+        </section>
+      `;
+    }
+
+    function findRowByLabel(label) {
+      if (!label) return null;
+      if (label.endsWith("省级记录")) {
+        return PROVINCE_ROWS.find((row) => `${row.label}省级记录` === label) || null;
+      }
+      return PLACE_ROWS.find((row) => row.label === label)
+        || PROVINCE_ROWS.find((row) => row.label === label)
+        || null;
+    }
+
     function renderList() {
       const visibleRows = rows();
       visibleCount.textContent = visibleRows.length;
-      list.innerHTML = visibleRows.map((row) => `
-        <div class="tree-item ${expandedLabels.has(row.label) ? "expanded" : ""}">
-          <button class="tree-row ${activeLabel === row.label ? "active" : ""}" type="button" data-label="${row.label}" aria-expanded="${expandedLabels.has(row.label)}">
-            <span class="expand-icon">▶</span>
-            <span class="leaf-dot" style="background:${colorFor(row.count)}"></span>
-            <span class="tree-label"><strong>${row.label}</strong><span>${row.note}</span></span>
-            <span class="tree-badge">${row.count}</span>
-          </button>
-          ${expandedLabels.has(row.label) ? `<div class="student-list">${(row.students || []).map(studentChip).join("")}</div>` : ""}
-        </div>
-      `).join("");
+      list.innerHTML = geoMode === "province" ? renderProvinceModeList() : renderCityModeList();
 
       document.querySelectorAll(".tree-row").forEach((button) => {
         button.addEventListener("click", () => {
-          const row = PLACE_ROWS.find((item) => item.label === button.dataset.label);
-          if (expandedLabels.has(row.label)) {
-            expandedLabels.delete(row.label);
+          const row = findRowByLabel(button.dataset.label);
+          if (!row) return;
+          const label = button.dataset.label;
+          if (expandedLabels.has(label)) {
+            expandedLabels.delete(label);
           } else {
-            expandedLabels.add(row.label);
+            expandedLabels.add(label);
           }
           focusRow(row);
         });
@@ -1186,8 +1427,18 @@
     function applyLayerFilters() {
       if (!map || !map.getLayer("china-filled")) return;
       const expression = filteredFeatureExpression();
+      const cityVisible = geoMode === "city" ? "visible" : "none";
+      const provinceVisible = geoMode === "province" ? "visible" : "none";
+      for (const layer of ["china-empty", "china-boundaries", "china-filled", "china-active"]) {
+        if (map.getLayer(layer)) map.setLayoutProperty(layer, "visibility", cityVisible);
+      }
+      for (const layer of ["china-province-empty", "china-province-boundaries", "china-province-filled", "china-province-active"]) {
+        if (map.getLayer(layer)) map.setLayoutProperty(layer, "visibility", provinceVisible);
+      }
       map.setFilter("china-filled", expression);
       map.setFilter("china-active", activeExpression());
+      if (map.getLayer("china-province-filled")) map.setFilter("china-province-filled", expression);
+      if (map.getLayer("china-province-active")) map.setFilter("china-province-active", activeExpression());
       map.setFilter("overseas-filled", expression);
       map.setFilter("overseas-active", activeExpression());
       renderMapLabels();
@@ -1196,7 +1447,8 @@
     function focusRow(row) {
       if (!row || !map) return;
       activeLabel = row.label;
-      const zoom = row.overseasId === "sydney" ? 7.75 : (row.overseasId ? 9.4 : 4.9);
+      const isProvince = !row.overseasId && !row.chinaNames;
+      const zoom = row.overseasId === "sydney" ? 7.75 : (row.overseasId ? 9.4 : (isProvince ? 4.15 : 4.9));
       const center = row.overseasId === "sydney" ? [150.76, -33.86] : [row.lng, row.lat];
       const targetZoom = row.overseasId === "sydney" ? 7.05 : zoom;
       map.flyTo({ center, zoom: targetZoom, speed: 1.2, curve: 1.25 });
@@ -1214,7 +1466,7 @@
     function updateMapLabelScale() {
       if (!map) return;
       const zoom = map.getZoom();
-      const scale = Math.min(1.7, Math.max(0.24, Math.pow(1.45, zoom - 5)));
+      const scale = Math.min(1.55, Math.max(0.16, Math.pow(1.32, zoom - 4.6)));
       map.getContainer().style.setProperty("--label-scale", scale.toFixed(3));
     }
 
@@ -1235,15 +1487,16 @@
       clearMapLabels();
       if (!map) return;
       updateMapLabelScale();
-      if (chinaCityGeo?.features) {
-        for (const feature of chinaCityGeo.features) {
+      const domesticGeo = geoMode === "province" ? chinaProvinceGeo : chinaCityGeo;
+      if (domesticGeo?.features) {
+        for (const feature of domesticGeo.features) {
           const count = Number(feature.properties.studentCount || 0);
           if (!count) continue;
           const center = feature.properties.centroid || feature.properties.center;
           addMapLabel(feature.properties.displayLabel || feature.properties.name, count, center);
         }
       }
-      for (const row of PLACE_ROWS) {
+      for (const row of overseasRows()) {
         if (!row.overseasId || !row.count) continue;
         addMapLabel(row.label, row.count, [row.lng, row.lat]);
       }
@@ -1333,17 +1586,62 @@
 
     function decorateFeature(feature) {
       const name = feature.properties.name;
-      const count = chinaCountByName.get(name) || 0;
+      const count = cityCountByName.get(name) || 0;
       feature.properties.studentCount = count;
-      feature.properties.displayLabel = chinaLabelByName.get(name) || name;
+      feature.properties.displayLabel = cityLabelByName.get(name) || name;
       feature.properties.color = count ? colorFor(count) : "rgba(255, 250, 243, 0.36)";
+    }
+
+    function polygonParts(geometry) {
+      if (!geometry) return [];
+      if (geometry.type === "Polygon") return geometry.coordinates;
+      if (geometry.type === "MultiPolygon") return geometry.coordinates.flat();
+      return [];
+    }
+
+    function buildChinaProvinceGeo(chinaGeo) {
+      const provinceByCode = new Map(PROVINCE_ROWS.map((row) => [String(row.adcode), row]));
+      const ringsByCode = new Map();
+      for (const feature of chinaGeo?.features || []) {
+        const props = feature.properties || {};
+        const code = String(props.level === "province" ? props.adcode : props.parent?.adcode || "");
+        if (!provinceByCode.has(code)) continue;
+        if (!ringsByCode.has(code)) ringsByCode.set(code, []);
+        ringsByCode.get(code).push(...polygonParts(feature.geometry));
+      }
+      return {
+        type: "FeatureCollection",
+        features: [...provinceByCode.entries()]
+          .map(([code, row]) => {
+            const rings = ringsByCode.get(code) || [];
+            if (!rings.length) return null;
+            return {
+              type: "Feature",
+              geometry: { type: "MultiPolygon", coordinates: rings.map((ring) => [ring]) },
+              properties: {
+                adcode: row.adcode,
+                name: row.name,
+                displayLabel: row.label,
+                note: `${row.name} · ${row.cityCount || 0}人落市${row.provinceOnlyCount ? `，${row.provinceOnlyCount}人只填省` : ""}`,
+                center: [row.lng, row.lat],
+                centroid: [row.lng, row.lat],
+                level: "province",
+                studentCount: row.count,
+                color: row.count ? colorFor(row.count) : "rgba(255, 250, 243, 0.36)"
+              }
+            };
+          })
+          .filter(Boolean)
+      };
     }
 
     function addChoroplethLayers(chinaGeo, worldGeo, overseasGeo) {
       chinaCityGeo = chinaGeo;
+      chinaProvinceGeo = buildChinaProvinceGeo(chinaGeo);
       overseasAdminGeo = overseasGeo;
       map.addSource("world-land", { type: "geojson", data: worldGeo });
       map.addSource("china-cities", { type: "geojson", data: chinaGeo });
+      map.addSource("china-provinces", { type: "geojson", data: chinaProvinceGeo });
       map.addSource("overseas-region-boundaries", { type: "geojson", data: overseasRegionGeoJson() });
       map.addSource("overseas-city-blocks", { type: "geojson", data: overseasGeoJson() });
 
@@ -1387,6 +1685,39 @@
         source: "china-cities",
         filter: activeExpression(),
         paint: { "line-color": "#7c5cff", "line-width": 2.4 }
+      });
+      map.addLayer({
+        id: "china-province-empty",
+        type: "fill",
+        source: "china-provinces",
+        layout: { visibility: "none" },
+        paint: { "fill-color": "rgba(255, 250, 243, 0.42)", "fill-opacity": 0.7 }
+      });
+      map.addLayer({
+        id: "china-province-boundaries",
+        type: "line",
+        source: "china-provinces",
+        layout: { visibility: "none" },
+        paint: { "line-color": "rgba(217, 184, 178, 0.92)", "line-width": ["interpolate", ["linear"], ["zoom"], 1, 0.45, 4, 0.85, 6, 1.2] }
+      });
+      map.addLayer({
+        id: "china-province-filled",
+        type: "fill",
+        source: "china-provinces",
+        layout: { visibility: "none" },
+        filter: filteredFeatureExpression(),
+        paint: {
+          "fill-color": ["get", "color"],
+          "fill-opacity": 0.84
+        }
+      });
+      map.addLayer({
+        id: "china-province-active",
+        type: "line",
+        source: "china-provinces",
+        layout: { visibility: "none" },
+        filter: activeExpression(),
+        paint: { "line-color": "#7c5cff", "line-width": 2.6 }
       });
 
       map.addLayer({
@@ -1432,7 +1763,7 @@
         paint: { "line-color": "#7c5cff", "line-width": 2.6 }
       });
 
-      for (const layer of ["china-filled", "overseas-filled"]) {
+      for (const layer of ["china-filled", "china-province-filled", "overseas-filled"]) {
         map.on("mousemove", layer, (event) => {
           const feature = event.features?.[0];
           if (!feature) return;
@@ -1447,7 +1778,7 @@
           const feature = event.features?.[0];
           if (!feature) return;
           const label = feature.properties.displayLabel || feature.properties.name;
-          const row = PLACE_ROWS.find((item) => item.label === label || (item.chinaNames || []).includes(feature.properties.name));
+          const row = findRowByLabel(label) || PLACE_ROWS.find((item) => (item.chinaNames || []).includes(feature.properties.name));
           if (row) {
             expandedLabels.add(row.label);
             focusRow(row);
@@ -1504,6 +1835,16 @@
         filterButtons.forEach((item) => item.classList.toggle("active", item === button));
         renderList();
         applyLayerFilters();
+      });
+    });
+
+    mapModeButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        geoMode = button.dataset.mapMode;
+        activeLabel = null;
+        expandedLabels.clear();
+        mapModeButtons.forEach((item) => item.classList.toggle("active", item === button));
+        refreshRenderedData();
       });
     });
 

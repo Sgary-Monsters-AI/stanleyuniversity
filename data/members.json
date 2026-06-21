@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-06-21T03:19:26.882Z",
+  "updatedAt": "2026-06-21T03:44:34.776Z",
   "totalMembers": 72,
-  "locatedMembers": 44,
+  "locatedMembers": 47,
+  "cityLocatedMembers": 47,
+  "provinceLocatedMembers": 41,
   "filledCityRecords": 48,
-  "provinceOnlyMembers": 4,
+  "provinceOnlyMembers": 1,
+  "unmappedMembers": 0,
   "unrecordedMembers": 21,
   "excludedDualCityMembers": 3,
   "placeRows": [
     {
       "label": "武汉",
+      "provinceLabel": "湖北",
       "note": "武汉市",
       "lng": 114.3055,
       "lat": 30.5928,
@@ -46,6 +50,7 @@
     },
     {
       "label": "上海",
+      "provinceLabel": "上海",
       "note": "上海市",
       "lng": 121.4737,
       "lat": 31.2304,
@@ -78,6 +83,7 @@
     },
     {
       "label": "杭州",
+      "provinceLabel": "浙江",
       "note": "杭州市",
       "lng": 120.1551,
       "lat": 30.2741,
@@ -105,6 +111,7 @@
     },
     {
       "label": "南京",
+      "provinceLabel": "江苏",
       "note": "南京市",
       "lng": 118.7969,
       "lat": 32.0603,
@@ -157,6 +164,7 @@
     },
     {
       "label": "北京",
+      "provinceLabel": "北京",
       "note": "北京市",
       "lng": 116.4074,
       "lat": 39.9042,
@@ -209,6 +217,7 @@
     },
     {
       "label": "成都",
+      "provinceLabel": "四川",
       "note": "成都市",
       "lng": 104.065735,
       "lat": 30.659462,
@@ -226,6 +235,7 @@
     },
     {
       "label": "重庆",
+      "provinceLabel": "重庆",
       "note": "重庆市",
       "lng": 106.504962,
       "lat": 29.533155,
@@ -243,6 +253,7 @@
     },
     {
       "label": "大连",
+      "provinceLabel": "辽宁",
       "note": "大连市",
       "lng": 121.6147,
       "lat": 38.914,
@@ -260,6 +271,7 @@
     },
     {
       "label": "福州",
+      "provinceLabel": "福建",
       "note": "福州市",
       "lng": 119.306239,
       "lat": 26.075302,
@@ -277,6 +289,7 @@
     },
     {
       "label": "广西柳州",
+      "provinceLabel": "广西",
       "note": "柳州市",
       "lng": 109.4281,
       "lat": 24.3264,
@@ -294,6 +307,7 @@
     },
     {
       "label": "广州",
+      "provinceLabel": "广东",
       "note": "广州市",
       "lng": 113.280637,
       "lat": 23.125178,
@@ -311,6 +325,7 @@
     },
     {
       "label": "衡阳",
+      "provinceLabel": "湖南",
       "note": "衡阳市",
       "lng": 112.5719,
       "lat": 26.8932,
@@ -328,6 +343,7 @@
     },
     {
       "label": "淮安",
+      "provinceLabel": "江苏",
       "note": "淮安市",
       "lng": 119.021265,
       "lat": 33.597506,
@@ -345,6 +361,7 @@
     },
     {
       "label": "昆明",
+      "provinceLabel": "云南",
       "note": "昆明市",
       "lng": 102.712251,
       "lat": 25.040609,
@@ -361,7 +378,26 @@
       ]
     },
     {
+      "label": "连云港",
+      "provinceLabel": "江苏",
+      "note": "连云港市",
+      "lng": 119.178821,
+      "lat": 34.600018,
+      "chinaNames": [
+        "连云港市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "Bryan",
+          "registeredName": "Bryan",
+          "wechatName": "Ryan"
+        }
+      ]
+    },
+    {
       "label": "秦皇岛",
+      "provinceLabel": "河北",
       "note": "秦皇岛市",
       "lng": 119.5996,
       "lat": 39.9354,
@@ -379,6 +415,7 @@
     },
     {
       "label": "青岛",
+      "provinceLabel": "山东",
       "note": "青岛市",
       "lng": 120.355173,
       "lat": 36.082982,
@@ -396,6 +433,7 @@
     },
     {
       "label": "厦门",
+      "provinceLabel": "福建",
       "note": "厦门市",
       "lng": 118.0894,
       "lat": 24.4798,
@@ -413,6 +451,7 @@
     },
     {
       "label": "深圳",
+      "provinceLabel": "广东",
       "note": "深圳市",
       "lng": 114.085947,
       "lat": 22.547,
@@ -430,6 +469,7 @@
     },
     {
       "label": "石家庄市",
+      "provinceLabel": "河北",
       "note": "石家庄市",
       "lng": 114.5149,
       "lat": 38.0428,
@@ -447,6 +487,7 @@
     },
     {
       "label": "苏州",
+      "provinceLabel": "江苏",
       "note": "苏州市",
       "lng": 120.5853,
       "lat": 31.2989,
@@ -464,6 +505,7 @@
     },
     {
       "label": "天津",
+      "provinceLabel": "天津",
       "note": "天津市",
       "lng": 117.2009,
       "lat": 39.0842,
@@ -481,6 +523,7 @@
     },
     {
       "label": "西安",
+      "provinceLabel": "陕西",
       "note": "西安市",
       "lng": 108.9398,
       "lat": 34.3416,
@@ -528,6 +571,7 @@
     },
     {
       "label": "信阳市",
+      "provinceLabel": "河南",
       "note": "信阳市",
       "lng": 114.0913,
       "lat": 32.147,
@@ -545,6 +589,7 @@
     },
     {
       "label": "烟台",
+      "provinceLabel": "山东",
       "note": "烟台市",
       "lng": 121.391382,
       "lat": 37.539297,
@@ -561,7 +606,44 @@
       ]
     },
     {
+      "label": "漳州",
+      "provinceLabel": "福建",
+      "note": "漳州市",
+      "lng": 117.661801,
+      "lat": 24.510897,
+      "chinaNames": [
+        "漳州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "淼淼",
+          "registeredName": "淼淼",
+          "wechatName": "邱淼淼"
+        }
+      ]
+    },
+    {
+      "label": "郑州",
+      "provinceLabel": "河南",
+      "note": "郑州市",
+      "lng": 113.665412,
+      "lat": 34.757975,
+      "chinaNames": [
+        "郑州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳"
+        }
+      ]
+    },
+    {
       "label": "淄博",
+      "provinceLabel": "山东",
       "note": "淄博市",
       "lng": 118.047648,
       "lat": 36.814939,
@@ -574,6 +656,920 @@
           "name": "Glory",
           "registeredName": "Glory",
           "wechatName": "Glory"
+        }
+      ]
+    }
+  ],
+  "provinceRows": [
+    {
+      "label": "江苏",
+      "name": "江苏省",
+      "adcode": 320000,
+      "lng": 118.7632,
+      "lat": 32.0617,
+      "note": "江苏省",
+      "count": 6,
+      "cityCount": 6,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "李仲实",
+          "registeredName": "李仲实",
+          "wechatName": "塞雷SL",
+          "city": "南京"
+        },
+        {
+          "name": "Yesoo",
+          "registeredName": "Yesoo",
+          "wechatName": "Malpaca",
+          "city": "南京"
+        },
+        {
+          "name": "三十六",
+          "registeredName": "三十六",
+          "wechatName": "三十六",
+          "city": "苏州"
+        },
+        {
+          "name": "Bryan",
+          "registeredName": "Bryan",
+          "wechatName": "Ryan",
+          "city": "连云港"
+        },
+        {
+          "name": "大符",
+          "registeredName": "大符",
+          "wechatName": "红茶椰",
+          "city": "南京"
+        },
+        {
+          "name": "杜博伦",
+          "registeredName": "杜博伦",
+          "wechatName": "有志青年",
+          "city": "淮安"
+        }
+      ],
+      "cities": [
+        {
+          "label": "南京",
+          "count": 3,
+          "note": "南京市",
+          "students": [
+            {
+              "name": "李仲实",
+              "registeredName": "李仲实",
+              "wechatName": "塞雷SL"
+            },
+            {
+              "name": "Yesoo",
+              "registeredName": "Yesoo",
+              "wechatName": "Malpaca"
+            },
+            {
+              "name": "大符",
+              "registeredName": "大符",
+              "wechatName": "红茶椰"
+            }
+          ]
+        },
+        {
+          "label": "淮安",
+          "count": 1,
+          "note": "淮安市",
+          "students": [
+            {
+              "name": "杜博伦",
+              "registeredName": "杜博伦",
+              "wechatName": "有志青年"
+            }
+          ]
+        },
+        {
+          "label": "连云港",
+          "count": 1,
+          "note": "连云港市",
+          "students": [
+            {
+              "name": "Bryan",
+              "registeredName": "Bryan",
+              "wechatName": "Ryan"
+            }
+          ]
+        },
+        {
+          "label": "苏州",
+          "count": 1,
+          "note": "苏州市",
+          "students": [
+            {
+              "name": "三十六",
+              "registeredName": "三十六",
+              "wechatName": "三十六"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "湖北",
+      "name": "湖北省",
+      "adcode": 420000,
+      "lng": 114.3419,
+      "lat": 30.5465,
+      "note": "湖北省",
+      "count": 5,
+      "cityCount": 5,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "王境",
+          "registeredName": "王境",
+          "wechatName": "狸猫🦝",
+          "city": "武汉"
+        },
+        {
+          "name": "李国正",
+          "registeredName": "李国正",
+          "wechatName": "七度旅人",
+          "city": "武汉"
+        },
+        {
+          "name": "李谨西",
+          "registeredName": "李谨西",
+          "wechatName": "koi",
+          "city": "武汉"
+        },
+        {
+          "name": "章魚飯.",
+          "registeredName": "章魚飯.",
+          "wechatName": "章魚飯.",
+          "city": "武汉"
+        },
+        {
+          "name": "冷酷小猫",
+          "registeredName": "冷酷小猫",
+          "wechatName": "猫博",
+          "city": "武汉"
+        }
+      ],
+      "cities": [
+        {
+          "label": "武汉",
+          "count": 5,
+          "note": "武汉市",
+          "students": [
+            {
+              "name": "王境",
+              "registeredName": "王境",
+              "wechatName": "狸猫🦝"
+            },
+            {
+              "name": "李国正",
+              "registeredName": "李国正",
+              "wechatName": "七度旅人"
+            },
+            {
+              "name": "李谨西",
+              "registeredName": "李谨西",
+              "wechatName": "koi"
+            },
+            {
+              "name": "章魚飯.",
+              "registeredName": "章魚飯.",
+              "wechatName": "章魚飯."
+            },
+            {
+              "name": "冷酷小猫",
+              "registeredName": "冷酷小猫",
+              "wechatName": "猫博"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "山东",
+      "name": "山东省",
+      "adcode": 370000,
+      "lng": 117.0207,
+      "lat": 36.6702,
+      "note": "山东省",
+      "count": 4,
+      "cityCount": 3,
+      "provinceOnlyCount": 1,
+      "students": [
+        {
+          "name": "舒奕萌",
+          "registeredName": "舒奕萌",
+          "wechatName": "🐟",
+          "city": "山东"
+        },
+        {
+          "name": "Glory",
+          "registeredName": "Glory",
+          "wechatName": "Glory",
+          "city": "淄博"
+        },
+        {
+          "name": "郑杨守都",
+          "registeredName": "郑杨守都",
+          "wechatName": "Luxorion",
+          "city": "青岛"
+        },
+        {
+          "name": "张校菘",
+          "registeredName": "张校菘",
+          "wechatName": "向箔",
+          "city": "烟台"
+        }
+      ],
+      "cities": [
+        {
+          "label": "青岛",
+          "count": 1,
+          "note": "青岛市",
+          "students": [
+            {
+              "name": "郑杨守都",
+              "registeredName": "郑杨守都",
+              "wechatName": "Luxorion"
+            }
+          ]
+        },
+        {
+          "label": "烟台",
+          "count": 1,
+          "note": "烟台市",
+          "students": [
+            {
+              "name": "张校菘",
+              "registeredName": "张校菘",
+              "wechatName": "向箔"
+            }
+          ]
+        },
+        {
+          "label": "淄博",
+          "count": 1,
+          "note": "淄博市",
+          "students": [
+            {
+              "name": "Glory",
+              "registeredName": "Glory",
+              "wechatName": "Glory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "上海",
+      "name": "上海市",
+      "adcode": 310000,
+      "lng": 121.4737,
+      "lat": 31.2304,
+      "note": "上海市",
+      "count": 4,
+      "cityCount": 4,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "王梓如",
+          "registeredName": "王梓如",
+          "wechatName": "帧安",
+          "city": "上海"
+        },
+        {
+          "name": "leah",
+          "registeredName": "leah",
+          "wechatName": "状况外🌀",
+          "city": "上海"
+        },
+        {
+          "name": "Allonsy",
+          "registeredName": "Allonsy",
+          "wechatName": "Allons--y",
+          "city": "上海"
+        },
+        {
+          "name": "Wheeler",
+          "registeredName": "Wheeler",
+          "wechatName": "Seacoconut",
+          "city": "上海"
+        }
+      ],
+      "cities": [
+        {
+          "label": "上海",
+          "count": 4,
+          "note": "上海市",
+          "students": [
+            {
+              "name": "王梓如",
+              "registeredName": "王梓如",
+              "wechatName": "帧安"
+            },
+            {
+              "name": "leah",
+              "registeredName": "leah",
+              "wechatName": "状况外🌀"
+            },
+            {
+              "name": "Allonsy",
+              "registeredName": "Allonsy",
+              "wechatName": "Allons--y"
+            },
+            {
+              "name": "Wheeler",
+              "registeredName": "Wheeler",
+              "wechatName": "Seacoconut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "福建",
+      "name": "福建省",
+      "adcode": 350000,
+      "lng": 119.2951,
+      "lat": 26.1008,
+      "note": "福建省",
+      "count": 3,
+      "cityCount": 3,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "moby豪",
+          "registeredName": "moby豪",
+          "wechatName": "MoBy豪",
+          "city": "厦门"
+        },
+        {
+          "name": "淼淼",
+          "registeredName": "淼淼",
+          "wechatName": "邱淼淼",
+          "city": "漳州"
+        },
+        {
+          "name": "Levia",
+          "registeredName": "Levia",
+          "wechatName": "Levia.Qi",
+          "city": "福州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "福州",
+          "count": 1,
+          "note": "福州市",
+          "students": [
+            {
+              "name": "Levia",
+              "registeredName": "Levia",
+              "wechatName": "Levia.Qi"
+            }
+          ]
+        },
+        {
+          "label": "厦门",
+          "count": 1,
+          "note": "厦门市",
+          "students": [
+            {
+              "name": "moby豪",
+              "registeredName": "moby豪",
+              "wechatName": "MoBy豪"
+            }
+          ]
+        },
+        {
+          "label": "漳州",
+          "count": 1,
+          "note": "漳州市",
+          "students": [
+            {
+              "name": "淼淼",
+              "registeredName": "淼淼",
+              "wechatName": "邱淼淼"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "浙江",
+      "name": "浙江省",
+      "adcode": 330000,
+      "lng": 120.1528,
+      "lat": 30.2674,
+      "note": "浙江省",
+      "count": 3,
+      "cityCount": 3,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "影洲",
+          "registeredName": "影洲",
+          "wechatName": "雅正",
+          "city": "杭州"
+        },
+        {
+          "name": "五谷粥",
+          "registeredName": "五谷粥",
+          "wechatName": "五谷粥",
+          "city": "杭州"
+        },
+        {
+          "name": "华宇昊",
+          "registeredName": "华宇昊",
+          "wechatName": "ɔɪ化十子.",
+          "city": "杭州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "杭州",
+          "count": 3,
+          "note": "杭州市",
+          "students": [
+            {
+              "name": "影洲",
+              "registeredName": "影洲",
+              "wechatName": "雅正"
+            },
+            {
+              "name": "五谷粥",
+              "registeredName": "五谷粥",
+              "wechatName": "五谷粥"
+            },
+            {
+              "name": "华宇昊",
+              "registeredName": "华宇昊",
+              "wechatName": "ɔɪ化十子."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "北京",
+      "name": "北京市",
+      "adcode": 110000,
+      "lng": 116.4074,
+      "lat": 39.9042,
+      "note": "北京市",
+      "count": 2,
+      "cityCount": 2,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "阿良",
+          "registeredName": "阿良",
+          "wechatName": "Anthony Li",
+          "city": "北京"
+        },
+        {
+          "name": "Robin",
+          "registeredName": "Robin",
+          "wechatName": "Robin",
+          "city": "北京"
+        }
+      ],
+      "cities": [
+        {
+          "label": "北京",
+          "count": 2,
+          "note": "北京市",
+          "students": [
+            {
+              "name": "阿良",
+              "registeredName": "阿良",
+              "wechatName": "Anthony Li"
+            },
+            {
+              "name": "Robin",
+              "registeredName": "Robin",
+              "wechatName": "Robin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "广东",
+      "name": "广东省",
+      "adcode": 440000,
+      "lng": 113.2668,
+      "lat": 23.1322,
+      "note": "广东省",
+      "count": 2,
+      "cityCount": 2,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "康康",
+          "registeredName": "康康",
+          "wechatName": "sloth",
+          "city": "广州"
+        },
+        {
+          "name": "张淇博",
+          "registeredName": "张淇博",
+          "wechatName": "keve",
+          "city": "深圳"
+        }
+      ],
+      "cities": [
+        {
+          "label": "广州",
+          "count": 1,
+          "note": "广州市",
+          "students": [
+            {
+              "name": "康康",
+              "registeredName": "康康",
+              "wechatName": "sloth"
+            }
+          ]
+        },
+        {
+          "label": "深圳",
+          "count": 1,
+          "note": "深圳市",
+          "students": [
+            {
+              "name": "张淇博",
+              "registeredName": "张淇博",
+              "wechatName": "keve"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "河北",
+      "name": "河北省",
+      "adcode": 130000,
+      "lng": 114.5149,
+      "lat": 38.0428,
+      "note": "河北省",
+      "count": 2,
+      "cityCount": 2,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "穆昱伟",
+          "registeredName": "穆昱伟",
+          "wechatName": "Algea",
+          "city": "石家庄市"
+        },
+        {
+          "name": "小羊",
+          "registeredName": "小羊",
+          "wechatName": "FY",
+          "city": "秦皇岛"
+        }
+      ],
+      "cities": [
+        {
+          "label": "秦皇岛",
+          "count": 1,
+          "note": "秦皇岛市",
+          "students": [
+            {
+              "name": "小羊",
+              "registeredName": "小羊",
+              "wechatName": "FY"
+            }
+          ]
+        },
+        {
+          "label": "石家庄市",
+          "count": 1,
+          "note": "石家庄市",
+          "students": [
+            {
+              "name": "穆昱伟",
+              "registeredName": "穆昱伟",
+              "wechatName": "Algea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "河南",
+      "name": "河南省",
+      "adcode": 410000,
+      "lng": 113.7536,
+      "lat": 34.7657,
+      "note": "河南省",
+      "count": 2,
+      "cityCount": 2,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳",
+          "city": "郑州"
+        },
+        {
+          "name": "徐亚博",
+          "registeredName": "徐亚博",
+          "wechatName": "火火",
+          "city": "信阳市"
+        }
+      ],
+      "cities": [
+        {
+          "label": "信阳市",
+          "count": 1,
+          "note": "信阳市",
+          "students": [
+            {
+              "name": "徐亚博",
+              "registeredName": "徐亚博",
+              "wechatName": "火火"
+            }
+          ]
+        },
+        {
+          "label": "郑州",
+          "count": 1,
+          "note": "郑州市",
+          "students": [
+            {
+              "name": "张锦阳",
+              "registeredName": "张锦阳",
+              "wechatName": "Orion 常青de绵阳"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "重庆",
+      "name": "重庆市",
+      "adcode": 500000,
+      "lng": 106.504962,
+      "lat": 29.533155,
+      "note": "重庆市",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "梁波",
+          "registeredName": "梁波",
+          "wechatName": "粉色钉子头",
+          "city": "重庆"
+        }
+      ],
+      "cities": [
+        {
+          "label": "重庆",
+          "count": 1,
+          "note": "重庆市",
+          "students": [
+            {
+              "name": "梁波",
+              "registeredName": "梁波",
+              "wechatName": "粉色钉子头"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "广西",
+      "name": "广西壮族自治区",
+      "adcode": 450000,
+      "lng": 108.3275,
+      "lat": 22.8167,
+      "note": "广西壮族自治区",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "多林",
+          "registeredName": "多林",
+          "wechatName": "Artist多林",
+          "city": "广西柳州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "广西柳州",
+          "count": 1,
+          "note": "柳州市",
+          "students": [
+            {
+              "name": "多林",
+              "registeredName": "多林",
+              "wechatName": "Artist多林"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "湖南",
+      "name": "湖南省",
+      "adcode": 430000,
+      "lng": 112.9838,
+      "lat": 28.1124,
+      "note": "湖南省",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "Spaceman",
+          "registeredName": "Spaceman",
+          "wechatName": "十日十韦",
+          "city": "衡阳"
+        }
+      ],
+      "cities": [
+        {
+          "label": "衡阳",
+          "count": 1,
+          "note": "衡阳市",
+          "students": [
+            {
+              "name": "Spaceman",
+              "registeredName": "Spaceman",
+              "wechatName": "十日十韦"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "辽宁",
+      "name": "辽宁省",
+      "adcode": 210000,
+      "lng": 123.4291,
+      "lat": 41.8357,
+      "note": "辽宁省",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "Wincent",
+          "registeredName": "Wincent",
+          "wechatName": "Wincent",
+          "city": "大连"
+        }
+      ],
+      "cities": [
+        {
+          "label": "大连",
+          "count": 1,
+          "note": "大连市",
+          "students": [
+            {
+              "name": "Wincent",
+              "registeredName": "Wincent",
+              "wechatName": "Wincent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "陕西",
+      "name": "陕西省",
+      "adcode": 610000,
+      "lng": 108.9542,
+      "lat": 34.2655,
+      "note": "陕西省",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "杜祖鹏",
+          "registeredName": "杜祖鹏",
+          "wechatName": "Sunflower",
+          "city": "西安"
+        }
+      ],
+      "cities": [
+        {
+          "label": "西安",
+          "count": 1,
+          "note": "西安市",
+          "students": [
+            {
+              "name": "杜祖鹏",
+              "registeredName": "杜祖鹏",
+              "wechatName": "Sunflower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "四川",
+      "name": "四川省",
+      "adcode": 510000,
+      "lng": 104.0757,
+      "lat": 30.6509,
+      "note": "四川省",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "Time flies.",
+          "registeredName": "Time flies.",
+          "wechatName": "Time flies.",
+          "city": "成都"
+        }
+      ],
+      "cities": [
+        {
+          "label": "成都",
+          "count": 1,
+          "note": "成都市",
+          "students": [
+            {
+              "name": "Time flies.",
+              "registeredName": "Time flies.",
+              "wechatName": "Time flies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "天津",
+      "name": "天津市",
+      "adcode": 120000,
+      "lng": 117.2009,
+      "lat": 39.0842,
+      "note": "天津市",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "朱天宇",
+          "registeredName": "朱天宇",
+          "wechatName": "思想先落地",
+          "city": "天津"
+        }
+      ],
+      "cities": [
+        {
+          "label": "天津",
+          "count": 1,
+          "note": "天津市",
+          "students": [
+            {
+              "name": "朱天宇",
+              "registeredName": "朱天宇",
+              "wechatName": "思想先落地"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "云南",
+      "name": "云南省",
+      "adcode": 530000,
+      "lng": 102.7097,
+      "lat": 25.0453,
+      "note": "云南省",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "酌锦",
+          "registeredName": "酌锦",
+          "wechatName": "酌锦",
+          "city": "昆明"
+        }
+      ],
+      "cities": [
+        {
+          "label": "昆明",
+          "count": 1,
+          "note": "昆明市",
+          "students": [
+            {
+              "name": "酌锦",
+              "registeredName": "酌锦",
+              "wechatName": "酌锦"
+            }
+          ]
         }
       ]
     }
@@ -687,28 +1683,10 @@
   ],
   "provinceOnlyStudents": [
     {
-      "name": "淼淼",
-      "registeredName": "淼淼",
-      "wechatName": "邱淼淼",
-      "city": "福建"
-    },
-    {
-      "name": "张锦阳",
-      "registeredName": "张锦阳",
-      "wechatName": "Orion 常青de绵阳",
-      "city": "江苏"
-    },
-    {
       "name": "舒奕萌",
       "registeredName": "舒奕萌",
       "wechatName": "🐟",
       "city": "山东"
-    },
-    {
-      "name": "Bryan",
-      "registeredName": "Bryan",
-      "wechatName": "Ryan",
-      "city": "江苏"
     }
   ],
   "unmappedStudents": [],
