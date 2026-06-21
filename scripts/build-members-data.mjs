@@ -8,8 +8,8 @@ const execFileAsync = promisify(execFile);
 const ROOT = resolve(import.meta.dirname, "..");
 const OUT_FILE = process.env.MEMBERS_OUT_FILE || join(ROOT, "data/members.json");
 const BASE_TOKEN = process.env.FEISHU_BASE_TOKEN || "X1dVbdCW3aS8Vss4o8kcxahWnGe";
-const TABLE_ID = process.env.FEISHU_TABLE_ID || "tblO6TsMNrA0tHnW";
-const VIEW_ID = process.env.FEISHU_VIEW_ID || "vewJAtb20B";
+const TABLE_ID = process.env.FEISHU_TABLE_ID || "tblqNbOpO4Pqdfag";
+const VIEW_ID = process.env.FEISHU_VIEW_ID || "vewEwDrIqE";
 
 const provinceCatalog = [
   { label: "北京", name: "北京市", adcode: 110000, lng: 116.4074, lat: 39.9042, aliases: ["北京", "北京市"] },
