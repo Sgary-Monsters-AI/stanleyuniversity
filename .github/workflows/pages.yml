@@ -37,11 +37,16 @@ jobs:
           FEISHU_TABLE_ID: tblqNbOpO4Pqdfag
           FEISHU_VIEW_ID: vewEwDrIqE
         run: |
-          if [ -n "$FEISHU_APP_ID" ] && [ -n "$FEISHU_APP_SECRET" ]; then
-            node scripts/build-members-data.mjs
-          else
-            echo "FEISHU_APP_ID / FEISHU_APP_SECRET are not configured; using committed data/members.json"
+          if [ -z "$FEISHU_APP_ID" ] || [ -z "$FEISHU_APP_SECRET" ]; then
+            if [ "${{ github.event_name }}" = "push" ]; then
+              echo "::warning::FEISHU_APP_ID / FEISHU_APP_SECRET are not configured; publishing committed data/members.json for this push."
+              exit 0
+            fi
+            echo "::error::FEISHU_APP_ID / FEISHU_APP_SECRET are not configured, so scheduled Feishu sync cannot run."
+            echo "::error::Configure both repository secrets or the site will keep serving the last committed data/members.json."
+            exit 1
           fi
+          node scripts/build-members-data.mjs
 
       - uses: actions/configure-pages@v5
 
