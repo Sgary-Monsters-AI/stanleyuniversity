@@ -59,6 +59,7 @@ const cityCatalog = [
   { label: "天津", provinceLabel: "天津", note: "天津市", lng: 117.2009, lat: 39.0842, chinaNames: ["天津市"], aliases: ["天津", "天津市"] },
   { label: "重庆", provinceLabel: "重庆", note: "重庆市", lng: 106.504962, lat: 29.533155, chinaNames: ["重庆市"], aliases: ["重庆", "重庆市"] },
   { label: "长春", provinceLabel: "吉林", note: "长春市", lng: 125.3245, lat: 43.886841, chinaNames: ["长春市"], aliases: ["长春", "长春市", "吉林长春"] },
+  { label: "济南", provinceLabel: "山东", note: "济南市", lng: 117.1201, lat: 36.6512, chinaNames: ["济南市"], aliases: ["济南", "济南市", "山东济南"] },
   { label: "大连", provinceLabel: "辽宁", note: "大连市", lng: 121.6147, lat: 38.914, chinaNames: ["大连市"], aliases: ["大连", "大连市"] },
   { label: "成都", provinceLabel: "四川", note: "成都市", lng: 104.065735, lat: 30.659462, chinaNames: ["成都市"], aliases: ["成都", "成都市"] },
   { label: "广州", provinceLabel: "广东", note: "广州市", lng: 113.280637, lat: 23.125178, chinaNames: ["广州市"], aliases: ["广州", "广州市"] },
@@ -70,7 +71,9 @@ const cityCatalog = [
   { label: "烟台", provinceLabel: "山东", note: "烟台市", lng: 121.391382, lat: 37.539297, chinaNames: ["烟台市"], aliases: ["烟台", "烟台市", "山东烟台"] },
   { label: "淮安", provinceLabel: "江苏", note: "淮安市", lng: 119.021265, lat: 33.597506, chinaNames: ["淮安市"], aliases: ["淮安", "淮安市", "江苏淮安"] },
   { label: "连云港", provinceLabel: "江苏", note: "连云港市", lng: 119.178821, lat: 34.600018, chinaNames: ["连云港市"], aliases: ["连云港", "连云港市", "江苏连云港"] },
+  { label: "常州", provinceLabel: "江苏", note: "常州市", lng: 119.9741, lat: 31.8112, chinaNames: ["常州市"], aliases: ["常州", "常州市", "江苏常州"] },
   { label: "郑州", provinceLabel: "河南", note: "郑州市", lng: 113.665412, lat: 34.757975, chinaNames: ["郑州市"], aliases: ["郑州", "郑州市", "河南郑州"] },
+  { label: "泉州", provinceLabel: "福建", note: "泉州市", lng: 118.6757, lat: 24.8741, chinaNames: ["泉州市"], aliases: ["泉州", "泉州市", "福建泉州"] },
   { label: "漳州", provinceLabel: "福建", note: "漳州市", lng: 117.661801, lat: 24.510897, chinaNames: ["漳州市"], aliases: ["漳州", "漳州市", "福建漳州"] },
   { label: "广西柳州", provinceLabel: "广西", note: "柳州市", lng: 109.4281, lat: 24.3264, chinaNames: ["柳州市"], aliases: ["广西柳州", "柳州", "柳州市"] },
   { label: "秦皇岛", provinceLabel: "河北", note: "秦皇岛市", lng: 119.5996, lat: 39.9354, chinaNames: ["秦皇岛市"], aliases: ["秦皇岛", "秦皇岛市"] },
@@ -96,18 +99,22 @@ function normalizeCity(value) {
   return String(value || "").trim().replace(/\s+/g, "").replace(/[，、]/g, "/");
 }
 
-function isDualCity(value) {
+function splitCityValues(value) {
   const raw = String(value || "").trim();
-  const normalized = normalizeCity(raw);
-  return normalized.includes("/") || raw.includes("与");
-}
-
-function primaryCityOverride(value) {
-  const normalized = normalizeCity(value);
-  if (normalized === "长春/济南") return "长春";
-  if (normalized === "常州/北京") return "北京";
-  if (normalized === "泉州/厦门") return "厦门";
-  return "";
+  if (!raw) return [];
+  const normalized = raw
+    .replace(/[／|｜]/g, "/")
+    .replace(/[，,、；;]/g, "/")
+    .replace(/\s*与\s*/g, "/");
+  const seen = new Set();
+  return normalized
+    .split("/")
+    .map((item) => normalizeCity(item))
+    .filter((item) => {
+      if (!item || seen.has(item)) return false;
+      seen.add(item);
+      return true;
+    });
 }
 
 function textCell(value) {
@@ -229,44 +236,57 @@ function buildMapData(records) {
   const unrecordedStudents = [];
   const provinceOnlyStudents = [];
   const unmappedStudents = [];
-  const excludedDualCityStudents = [];
+  const multiAddressStudents = [];
+  let mappedMemberCount = 0;
+  let mappedAddressCount = 0;
 
   for (const record of records) {
     const student = memberRecord(record.registeredName || record.name, record.wechatName);
-    const primaryCity = primaryCityOverride(record.city);
-    const city = normalizeCity(primaryCity || record.city);
-    if (!city) {
+    const cities = splitCityValues(record.city);
+    if (!cities.length) {
       unrecordedStudents.push(student);
       continue;
     }
-    if (!primaryCity && isDualCity(record.city)) {
-      excludedDualCityStudents.push({ ...student, city: record.city });
-      continue;
-    }
-    const label = aliasToLabel.get(city);
-    if (label) {
-      const bucket = buckets.get(label);
-      bucket.count += 1;
-      bucket.students.push(student);
-      if (bucket.provinceLabel && provinceBuckets.has(bucket.provinceLabel)) {
-        const provinceBucket = provinceBuckets.get(bucket.provinceLabel);
-        provinceBucket.count += 1;
-        provinceBucket.cityCount += 1;
-        provinceBucket.students.push({ ...student, city: bucket.label });
+    if (cities.length > 1) multiAddressStudents.push({ ...student, city: record.city });
+    const mappedKeys = new Set();
+    const unmappedValues = [];
+    for (const city of cities) {
+      const label = aliasToLabel.get(city);
+      if (label) {
+        const key = `city:${label}`;
+        if (mappedKeys.has(key)) continue;
+        mappedKeys.add(key);
+        const bucket = buckets.get(label);
+        const locationStudent = { ...student, city: bucket.label, sourceCity: record.city };
+        bucket.count += 1;
+        bucket.students.push(locationStudent);
+        mappedAddressCount += 1;
+        if (bucket.provinceLabel && provinceBuckets.has(bucket.provinceLabel)) {
+          const provinceBucket = provinceBuckets.get(bucket.provinceLabel);
+          provinceBucket.count += 1;
+          provinceBucket.cityCount += 1;
+          provinceBucket.students.push(locationStudent);
+        }
+        continue;
       }
-      continue;
+      const provinceLabel = provinceAliasToLabel.get(city);
+      if (provinceLabel) {
+        const key = `province:${provinceLabel}`;
+        if (mappedKeys.has(key)) continue;
+        mappedKeys.add(key);
+        const provinceBucket = provinceBuckets.get(provinceLabel);
+        const provinceStudent = { ...student, city: record.city, sourceCity: record.city };
+        provinceBucket.count += 1;
+        provinceBucket.provinceOnlyCount += 1;
+        provinceBucket.students.push(provinceStudent);
+        provinceOnlyStudents.push(provinceStudent);
+        mappedAddressCount += 1;
+      } else {
+        unmappedValues.push(city);
+      }
     }
-    const provinceLabel = provinceAliasToLabel.get(city);
-    if (provinceLabel) {
-      const provinceBucket = provinceBuckets.get(provinceLabel);
-      provinceBucket.count += 1;
-      provinceBucket.provinceOnlyCount += 1;
-      const provinceStudent = { ...student, city: record.city };
-      provinceBucket.students.push(provinceStudent);
-      provinceOnlyStudents.push(provinceStudent);
-    } else {
-      unmappedStudents.push({ ...student, city: record.city });
-    }
+    if (mappedKeys.size) mappedMemberCount += 1;
+    if (unmappedValues.length) unmappedStudents.push({ ...student, city: unmappedValues.join("/") });
   }
 
   const placeRows = [...buckets.values()]
@@ -299,17 +319,20 @@ function buildMapData(records) {
     locatedMembers: cityLocatedMembers,
     cityLocatedMembers,
     provinceLocatedMembers,
-    filledCityRecords: records.filter((record) => normalizeCity(record.city) && !isDualCity(record.city)).length,
+    filledCityRecords: mappedMemberCount,
+    mappedAddressCount,
+    multiAddressMembers: multiAddressStudents.length,
     provinceOnlyMembers: provinceOnlyStudents.length,
     unmappedMembers: unmappedStudents.length,
     unrecordedMembers: unrecordedStudents.length,
-    excludedDualCityMembers: excludedDualCityStudents.length,
+    excludedDualCityMembers: 0,
     placeRows,
     provinceRows,
     unrecordedStudents,
     provinceOnlyStudents,
     unmappedStudents,
-    excludedDualCityStudents
+    excludedDualCityStudents: [],
+    multiAddressStudents
   };
 }
 

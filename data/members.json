@@ -1,10 +1,12 @@
 {
-  "updatedAt": "2026-06-21T04:33:11.950Z",
+  "updatedAt": "2026-06-21T05:29:15.289Z",
   "totalMembers": 72,
-  "locatedMembers": 50,
-  "cityLocatedMembers": 50,
-  "provinceLocatedMembers": 45,
-  "filledCityRecords": 48,
+  "locatedMembers": 53,
+  "cityLocatedMembers": 53,
+  "provinceLocatedMembers": 48,
+  "filledCityRecords": 51,
+  "mappedAddressCount": 54,
+  "multiAddressMembers": 3,
   "provinceOnlyMembers": 1,
   "unmappedMembers": 0,
   "unrecordedMembers": 21,
@@ -24,27 +26,37 @@
         {
           "name": "王境",
           "registeredName": "王境",
-          "wechatName": "狸猫🦝"
+          "wechatName": "狸猫🦝",
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "李国正",
           "registeredName": "李国正",
-          "wechatName": "七度旅人"
+          "wechatName": "七度旅人",
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "李谨西",
           "registeredName": "李谨西",
-          "wechatName": "koi"
+          "wechatName": "koi",
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "章魚飯.",
           "registeredName": "章魚飯.",
-          "wechatName": "章魚飯."
+          "wechatName": "章魚飯.",
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "冷酷小猫",
           "registeredName": "冷酷小猫",
-          "wechatName": "猫博"
+          "wechatName": "猫博",
+          "city": "武汉",
+          "sourceCity": "武汉"
         }
       ]
     },
@@ -62,22 +74,30 @@
         {
           "name": "王梓如",
           "registeredName": "王梓如",
-          "wechatName": "帧安"
+          "wechatName": "帧安",
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "leah",
           "registeredName": "leah",
-          "wechatName": "状况外🌀"
+          "wechatName": "状况外🌀",
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "Allonsy",
           "registeredName": "Allonsy",
-          "wechatName": "Allons--y"
+          "wechatName": "Allons--y",
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "Wheeler",
           "registeredName": "Wheeler",
-          "wechatName": "Seacoconut"
+          "wechatName": "Seacoconut",
+          "city": "上海",
+          "sourceCity": "上海"
         }
       ]
     },
@@ -95,17 +115,23 @@
         {
           "name": "季佳杰",
           "registeredName": "季佳杰",
-          "wechatName": "季"
+          "wechatName": "季",
+          "city": "北京",
+          "sourceCity": "常州/北京"
         },
         {
           "name": "阿良",
           "registeredName": "阿良",
-          "wechatName": "Anthony Li"
+          "wechatName": "Anthony Li",
+          "city": "北京",
+          "sourceCity": "北京"
         },
         {
           "name": "Robin",
           "registeredName": "Robin",
-          "wechatName": "Robin"
+          "wechatName": "Robin",
+          "city": "北京",
+          "sourceCity": "北京"
         }
       ]
     },
@@ -123,17 +149,23 @@
         {
           "name": "影洲",
           "registeredName": "影洲",
-          "wechatName": "雅正"
+          "wechatName": "雅正",
+          "city": "杭州",
+          "sourceCity": "杭州"
         },
         {
           "name": "五谷粥",
           "registeredName": "五谷粥",
-          "wechatName": "五谷粥"
+          "wechatName": "五谷粥",
+          "city": "杭州",
+          "sourceCity": "杭州"
         },
         {
           "name": "华宇昊",
           "registeredName": "华宇昊",
-          "wechatName": "ɔɪ化十子."
+          "wechatName": "ɔɪ化十子.",
+          "city": "杭州",
+          "sourceCity": "杭州"
         }
       ]
     },
@@ -151,17 +183,23 @@
         {
           "name": "李仲实",
           "registeredName": "李仲实",
-          "wechatName": "塞雷SL"
+          "wechatName": "塞雷SL",
+          "city": "南京",
+          "sourceCity": "南京"
         },
         {
           "name": "Yesoo",
           "registeredName": "Yesoo",
-          "wechatName": "Malpaca"
+          "wechatName": "Malpaca",
+          "city": "南京",
+          "sourceCity": "南京"
         },
         {
           "name": "大符",
           "registeredName": "大符",
-          "wechatName": "红茶椰"
+          "wechatName": "红茶椰",
+          "city": "南京",
+          "sourceCity": "南京"
         }
       ]
     },
@@ -176,17 +214,23 @@
         {
           "name": "sam",
           "registeredName": "sam",
-          "wechatName": "lwt"
+          "wechatName": "lwt",
+          "city": "悉尼",
+          "sourceCity": "悉尼"
         },
         {
           "name": "蟑螂",
           "registeredName": "蟑螂",
-          "wechatName": "ㅤ蟑螂"
+          "wechatName": "ㅤ蟑螂",
+          "city": "悉尼",
+          "sourceCity": "悉尼"
         },
         {
           "name": "Sophie",
           "registeredName": "Sophie",
-          "wechatName": "淼"
+          "wechatName": "淼",
+          "city": "悉尼",
+          "sourceCity": "悉尼"
         }
       ]
     },
@@ -204,12 +248,16 @@
         {
           "name": "moby豪",
           "registeredName": "moby豪",
-          "wechatName": "MoBy豪"
+          "wechatName": "MoBy豪",
+          "city": "厦门",
+          "sourceCity": "厦门"
         },
         {
           "name": "姜永健",
           "registeredName": "姜永健",
-          "wechatName": "。"
+          "wechatName": "。",
+          "city": "厦门",
+          "sourceCity": "泉州 / 厦门"
         }
       ]
     },
@@ -224,7 +272,9 @@
         {
           "name": "张嘉文",
           "registeredName": "张嘉文",
-          "wechatName": "我说，要有光"
+          "wechatName": "我说，要有光",
+          "city": "巴黎",
+          "sourceCity": "巴黎"
         }
       ]
     },
@@ -239,7 +289,29 @@
         {
           "name": "Tracy",
           "registeredName": "Tracy",
-          "wechatName": "Traaa"
+          "wechatName": "Traaa",
+          "city": "波士顿",
+          "sourceCity": "波士顿"
+        }
+      ]
+    },
+    {
+      "label": "常州",
+      "provinceLabel": "江苏",
+      "note": "常州市",
+      "lng": 119.9741,
+      "lat": 31.8112,
+      "chinaNames": [
+        "常州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "季佳杰",
+          "registeredName": "季佳杰",
+          "wechatName": "季",
+          "city": "常州",
+          "sourceCity": "常州/北京"
         }
       ]
     },
@@ -257,7 +329,9 @@
         {
           "name": "Time flies.",
           "registeredName": "Time flies.",
-          "wechatName": "Time flies."
+          "wechatName": "Time flies.",
+          "city": "成都",
+          "sourceCity": "成都"
         }
       ]
     },
@@ -275,7 +349,9 @@
         {
           "name": "梁波",
           "registeredName": "梁波",
-          "wechatName": "粉色钉子头"
+          "wechatName": "粉色钉子头",
+          "city": "重庆",
+          "sourceCity": "重庆"
         }
       ]
     },
@@ -293,7 +369,9 @@
         {
           "name": "Wincent",
           "registeredName": "Wincent",
-          "wechatName": "Wincent"
+          "wechatName": "Wincent",
+          "city": "大连",
+          "sourceCity": "大连"
         }
       ]
     },
@@ -311,7 +389,9 @@
         {
           "name": "Levia",
           "registeredName": "Levia",
-          "wechatName": "Levia.Qi"
+          "wechatName": "Levia.Qi",
+          "city": "福州",
+          "sourceCity": "福州"
         }
       ]
     },
@@ -329,7 +409,9 @@
         {
           "name": "多林",
           "registeredName": "多林",
-          "wechatName": "Artist多林"
+          "wechatName": "Artist多林",
+          "city": "广西柳州",
+          "sourceCity": "广西柳州"
         }
       ]
     },
@@ -347,7 +429,9 @@
         {
           "name": "康康",
           "registeredName": "康康",
-          "wechatName": "sloth"
+          "wechatName": "sloth",
+          "city": "广州",
+          "sourceCity": "广州"
         }
       ]
     },
@@ -365,7 +449,9 @@
         {
           "name": "Spaceman",
           "registeredName": "Spaceman",
-          "wechatName": "十日十韦"
+          "wechatName": "十日十韦",
+          "city": "衡阳",
+          "sourceCity": "衡阳"
         }
       ]
     },
@@ -383,7 +469,29 @@
         {
           "name": "杜博伦",
           "registeredName": "杜博伦",
-          "wechatName": "有志青年"
+          "wechatName": "有志青年",
+          "city": "淮安",
+          "sourceCity": "江苏淮安"
+        }
+      ]
+    },
+    {
+      "label": "济南",
+      "provinceLabel": "山东",
+      "note": "济南市",
+      "lng": 117.1201,
+      "lat": 36.6512,
+      "chinaNames": [
+        "济南市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果",
+          "city": "济南",
+          "sourceCity": "长春 / 济南"
         }
       ]
     },
@@ -401,7 +509,9 @@
         {
           "name": "酌锦",
           "registeredName": "酌锦",
-          "wechatName": "酌锦"
+          "wechatName": "酌锦",
+          "city": "昆明",
+          "sourceCity": "昆明"
         }
       ]
     },
@@ -419,7 +529,9 @@
         {
           "name": "Bryan",
           "registeredName": "Bryan",
-          "wechatName": "Ryan"
+          "wechatName": "Ryan",
+          "city": "连云港",
+          "sourceCity": "连云港"
         }
       ]
     },
@@ -437,7 +549,9 @@
         {
           "name": "小羊",
           "registeredName": "小羊",
-          "wechatName": "FY"
+          "wechatName": "FY",
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
         }
       ]
     },
@@ -455,7 +569,29 @@
         {
           "name": "郑杨守都",
           "registeredName": "郑杨守都",
-          "wechatName": "Luxorion"
+          "wechatName": "Luxorion",
+          "city": "青岛",
+          "sourceCity": "青岛"
+        }
+      ]
+    },
+    {
+      "label": "泉州",
+      "provinceLabel": "福建",
+      "note": "泉州市",
+      "lng": 118.6757,
+      "lat": 24.8741,
+      "chinaNames": [
+        "泉州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "姜永健",
+          "registeredName": "姜永健",
+          "wechatName": "。",
+          "city": "泉州",
+          "sourceCity": "泉州 / 厦门"
         }
       ]
     },
@@ -473,7 +609,9 @@
         {
           "name": "张淇博",
           "registeredName": "张淇博",
-          "wechatName": "keve"
+          "wechatName": "keve",
+          "city": "深圳",
+          "sourceCity": "深圳"
         }
       ]
     },
@@ -491,7 +629,9 @@
         {
           "name": "穆昱伟",
           "registeredName": "穆昱伟",
-          "wechatName": "Algea"
+          "wechatName": "Algea",
+          "city": "石家庄市",
+          "sourceCity": "石家庄市"
         }
       ]
     },
@@ -509,7 +649,9 @@
         {
           "name": "三十六",
           "registeredName": "三十六",
-          "wechatName": "三十六"
+          "wechatName": "三十六",
+          "city": "苏州",
+          "sourceCity": "苏州"
         }
       ]
     },
@@ -527,7 +669,9 @@
         {
           "name": "朱天宇",
           "registeredName": "朱天宇",
-          "wechatName": "思想先落地"
+          "wechatName": "思想先落地",
+          "city": "天津",
+          "sourceCity": "天津"
         }
       ]
     },
@@ -545,7 +689,9 @@
         {
           "name": "杜祖鹏",
           "registeredName": "杜祖鹏",
-          "wechatName": "Sunflower"
+          "wechatName": "Sunflower",
+          "city": "西安",
+          "sourceCity": "西安"
         }
       ]
     },
@@ -562,7 +708,9 @@
         {
           "name": "浩瀚夜空",
           "registeredName": "浩瀚夜空",
-          "wechatName": "浩瀚夜空"
+          "wechatName": "浩瀚夜空",
+          "city": "香港",
+          "sourceCity": "香港"
         }
       ]
     },
@@ -577,7 +725,9 @@
         {
           "name": "愚任杰",
           "registeredName": "愚任杰",
-          "wechatName": "愚任杰"
+          "wechatName": "愚任杰",
+          "city": "新加坡",
+          "sourceCity": "新加坡"
         }
       ]
     },
@@ -595,7 +745,9 @@
         {
           "name": "徐亚博",
           "registeredName": "徐亚博",
-          "wechatName": "火火"
+          "wechatName": "火火",
+          "city": "信阳市",
+          "sourceCity": "信阳市"
         }
       ]
     },
@@ -613,7 +765,9 @@
         {
           "name": "张校菘",
           "registeredName": "张校菘",
-          "wechatName": "向箔"
+          "wechatName": "向箔",
+          "city": "烟台",
+          "sourceCity": "山东烟台"
         }
       ]
     },
@@ -631,7 +785,9 @@
         {
           "name": "淼淼",
           "registeredName": "淼淼",
-          "wechatName": "邱淼淼"
+          "wechatName": "邱淼淼",
+          "city": "漳州",
+          "sourceCity": "漳州"
         }
       ]
     },
@@ -649,7 +805,9 @@
         {
           "name": "janus",
           "registeredName": "janus",
-          "wechatName": "陆小果"
+          "wechatName": "陆小果",
+          "city": "长春",
+          "sourceCity": "长春 / 济南"
         }
       ]
     },
@@ -667,7 +825,9 @@
         {
           "name": "张锦阳",
           "registeredName": "张锦阳",
-          "wechatName": "Orion 常青de绵阳"
+          "wechatName": "Orion 常青de绵阳",
+          "city": "郑州",
+          "sourceCity": "郑州"
         }
       ]
     },
@@ -685,7 +845,9 @@
         {
           "name": "Glory",
           "registeredName": "Glory",
-          "wechatName": "Glory"
+          "wechatName": "Glory",
+          "city": "淄博",
+          "sourceCity": "淄博"
         }
       ]
     }
@@ -698,45 +860,58 @@
       "lng": 118.7632,
       "lat": 32.0617,
       "note": "江苏省",
-      "count": 6,
-      "cityCount": 6,
+      "count": 7,
+      "cityCount": 7,
       "provinceOnlyCount": 0,
       "students": [
         {
           "name": "李仲实",
           "registeredName": "李仲实",
           "wechatName": "塞雷SL",
-          "city": "南京"
+          "city": "南京",
+          "sourceCity": "南京"
         },
         {
           "name": "Yesoo",
           "registeredName": "Yesoo",
           "wechatName": "Malpaca",
-          "city": "南京"
+          "city": "南京",
+          "sourceCity": "南京"
         },
         {
           "name": "三十六",
           "registeredName": "三十六",
           "wechatName": "三十六",
-          "city": "苏州"
+          "city": "苏州",
+          "sourceCity": "苏州"
+        },
+        {
+          "name": "季佳杰",
+          "registeredName": "季佳杰",
+          "wechatName": "季",
+          "city": "常州",
+          "sourceCity": "常州/北京"
         },
         {
           "name": "Bryan",
           "registeredName": "Bryan",
           "wechatName": "Ryan",
-          "city": "连云港"
+          "city": "连云港",
+          "sourceCity": "连云港"
         },
         {
           "name": "大符",
           "registeredName": "大符",
           "wechatName": "红茶椰",
-          "city": "南京"
+          "city": "南京",
+          "sourceCity": "南京"
         },
         {
           "name": "杜博伦",
           "registeredName": "杜博伦",
           "wechatName": "有志青年",
-          "city": "淮安"
+          "city": "淮安",
+          "sourceCity": "江苏淮安"
         }
       ],
       "cities": [
@@ -748,17 +923,37 @@
             {
               "name": "李仲实",
               "registeredName": "李仲实",
-              "wechatName": "塞雷SL"
+              "wechatName": "塞雷SL",
+              "city": "南京",
+              "sourceCity": "南京"
             },
             {
               "name": "Yesoo",
               "registeredName": "Yesoo",
-              "wechatName": "Malpaca"
+              "wechatName": "Malpaca",
+              "city": "南京",
+              "sourceCity": "南京"
             },
             {
               "name": "大符",
               "registeredName": "大符",
-              "wechatName": "红茶椰"
+              "wechatName": "红茶椰",
+              "city": "南京",
+              "sourceCity": "南京"
+            }
+          ]
+        },
+        {
+          "label": "常州",
+          "count": 1,
+          "note": "常州市",
+          "students": [
+            {
+              "name": "季佳杰",
+              "registeredName": "季佳杰",
+              "wechatName": "季",
+              "city": "常州",
+              "sourceCity": "常州/北京"
             }
           ]
         },
@@ -770,7 +965,9 @@
             {
               "name": "杜博伦",
               "registeredName": "杜博伦",
-              "wechatName": "有志青年"
+              "wechatName": "有志青年",
+              "city": "淮安",
+              "sourceCity": "江苏淮安"
             }
           ]
         },
@@ -782,7 +979,9 @@
             {
               "name": "Bryan",
               "registeredName": "Bryan",
-              "wechatName": "Ryan"
+              "wechatName": "Ryan",
+              "city": "连云港",
+              "sourceCity": "连云港"
             }
           ]
         },
@@ -794,7 +993,122 @@
             {
               "name": "三十六",
               "registeredName": "三十六",
-              "wechatName": "三十六"
+              "wechatName": "三十六",
+              "city": "苏州",
+              "sourceCity": "苏州"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "福建",
+      "name": "福建省",
+      "adcode": 350000,
+      "lng": 119.2951,
+      "lat": 26.1008,
+      "note": "福建省",
+      "count": 5,
+      "cityCount": 5,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "moby豪",
+          "registeredName": "moby豪",
+          "wechatName": "MoBy豪",
+          "city": "厦门",
+          "sourceCity": "厦门"
+        },
+        {
+          "name": "淼淼",
+          "registeredName": "淼淼",
+          "wechatName": "邱淼淼",
+          "city": "漳州",
+          "sourceCity": "漳州"
+        },
+        {
+          "name": "姜永健",
+          "registeredName": "姜永健",
+          "wechatName": "。",
+          "city": "泉州",
+          "sourceCity": "泉州 / 厦门"
+        },
+        {
+          "name": "姜永健",
+          "registeredName": "姜永健",
+          "wechatName": "。",
+          "city": "厦门",
+          "sourceCity": "泉州 / 厦门"
+        },
+        {
+          "name": "Levia",
+          "registeredName": "Levia",
+          "wechatName": "Levia.Qi",
+          "city": "福州",
+          "sourceCity": "福州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "厦门",
+          "count": 2,
+          "note": "厦门市",
+          "students": [
+            {
+              "name": "moby豪",
+              "registeredName": "moby豪",
+              "wechatName": "MoBy豪",
+              "city": "厦门",
+              "sourceCity": "厦门"
+            },
+            {
+              "name": "姜永健",
+              "registeredName": "姜永健",
+              "wechatName": "。",
+              "city": "厦门",
+              "sourceCity": "泉州 / 厦门"
+            }
+          ]
+        },
+        {
+          "label": "福州",
+          "count": 1,
+          "note": "福州市",
+          "students": [
+            {
+              "name": "Levia",
+              "registeredName": "Levia",
+              "wechatName": "Levia.Qi",
+              "city": "福州",
+              "sourceCity": "福州"
+            }
+          ]
+        },
+        {
+          "label": "泉州",
+          "count": 1,
+          "note": "泉州市",
+          "students": [
+            {
+              "name": "姜永健",
+              "registeredName": "姜永健",
+              "wechatName": "。",
+              "city": "泉州",
+              "sourceCity": "泉州 / 厦门"
+            }
+          ]
+        },
+        {
+          "label": "漳州",
+          "count": 1,
+          "note": "漳州市",
+          "students": [
+            {
+              "name": "淼淼",
+              "registeredName": "淼淼",
+              "wechatName": "邱淼淼",
+              "city": "漳州",
+              "sourceCity": "漳州"
             }
           ]
         }
@@ -815,31 +1129,36 @@
           "name": "王境",
           "registeredName": "王境",
           "wechatName": "狸猫🦝",
-          "city": "武汉"
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "李国正",
           "registeredName": "李国正",
           "wechatName": "七度旅人",
-          "city": "武汉"
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "李谨西",
           "registeredName": "李谨西",
           "wechatName": "koi",
-          "city": "武汉"
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "章魚飯.",
           "registeredName": "章魚飯.",
           "wechatName": "章魚飯.",
-          "city": "武汉"
+          "city": "武汉",
+          "sourceCity": "武汉"
         },
         {
           "name": "冷酷小猫",
           "registeredName": "冷酷小猫",
           "wechatName": "猫博",
-          "city": "武汉"
+          "city": "武汉",
+          "sourceCity": "武汉"
         }
       ],
       "cities": [
@@ -851,107 +1170,37 @@
             {
               "name": "王境",
               "registeredName": "王境",
-              "wechatName": "狸猫🦝"
+              "wechatName": "狸猫🦝",
+              "city": "武汉",
+              "sourceCity": "武汉"
             },
             {
               "name": "李国正",
               "registeredName": "李国正",
-              "wechatName": "七度旅人"
+              "wechatName": "七度旅人",
+              "city": "武汉",
+              "sourceCity": "武汉"
             },
             {
               "name": "李谨西",
               "registeredName": "李谨西",
-              "wechatName": "koi"
+              "wechatName": "koi",
+              "city": "武汉",
+              "sourceCity": "武汉"
             },
             {
               "name": "章魚飯.",
               "registeredName": "章魚飯.",
-              "wechatName": "章魚飯."
+              "wechatName": "章魚飯.",
+              "city": "武汉",
+              "sourceCity": "武汉"
             },
             {
               "name": "冷酷小猫",
               "registeredName": "冷酷小猫",
-              "wechatName": "猫博"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "福建",
-      "name": "福建省",
-      "adcode": 350000,
-      "lng": 119.2951,
-      "lat": 26.1008,
-      "note": "福建省",
-      "count": 4,
-      "cityCount": 4,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "moby豪",
-          "registeredName": "moby豪",
-          "wechatName": "MoBy豪",
-          "city": "厦门"
-        },
-        {
-          "name": "淼淼",
-          "registeredName": "淼淼",
-          "wechatName": "邱淼淼",
-          "city": "漳州"
-        },
-        {
-          "name": "姜永健",
-          "registeredName": "姜永健",
-          "wechatName": "。",
-          "city": "厦门"
-        },
-        {
-          "name": "Levia",
-          "registeredName": "Levia",
-          "wechatName": "Levia.Qi",
-          "city": "福州"
-        }
-      ],
-      "cities": [
-        {
-          "label": "厦门",
-          "count": 2,
-          "note": "厦门市",
-          "students": [
-            {
-              "name": "moby豪",
-              "registeredName": "moby豪",
-              "wechatName": "MoBy豪"
-            },
-            {
-              "name": "姜永健",
-              "registeredName": "姜永健",
-              "wechatName": "。"
-            }
-          ]
-        },
-        {
-          "label": "福州",
-          "count": 1,
-          "note": "福州市",
-          "students": [
-            {
-              "name": "Levia",
-              "registeredName": "Levia",
-              "wechatName": "Levia.Qi"
-            }
-          ]
-        },
-        {
-          "label": "漳州",
-          "count": 1,
-          "note": "漳州市",
-          "students": [
-            {
-              "name": "淼淼",
-              "registeredName": "淼淼",
-              "wechatName": "邱淼淼"
+              "wechatName": "猫博",
+              "city": "武汉",
+              "sourceCity": "武汉"
             }
           ]
         }
@@ -964,36 +1213,61 @@
       "lng": 117.0207,
       "lat": 36.6702,
       "note": "山东省",
-      "count": 4,
-      "cityCount": 3,
+      "count": 5,
+      "cityCount": 4,
       "provinceOnlyCount": 1,
       "students": [
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果",
+          "city": "济南",
+          "sourceCity": "长春 / 济南"
+        },
         {
           "name": "舒奕萌",
           "registeredName": "舒奕萌",
           "wechatName": "🐟",
-          "city": "山东"
+          "city": "山东",
+          "sourceCity": "山东"
         },
         {
           "name": "Glory",
           "registeredName": "Glory",
           "wechatName": "Glory",
-          "city": "淄博"
+          "city": "淄博",
+          "sourceCity": "淄博"
         },
         {
           "name": "郑杨守都",
           "registeredName": "郑杨守都",
           "wechatName": "Luxorion",
-          "city": "青岛"
+          "city": "青岛",
+          "sourceCity": "青岛"
         },
         {
           "name": "张校菘",
           "registeredName": "张校菘",
           "wechatName": "向箔",
-          "city": "烟台"
+          "city": "烟台",
+          "sourceCity": "山东烟台"
         }
       ],
       "cities": [
+        {
+          "label": "济南",
+          "count": 1,
+          "note": "济南市",
+          "students": [
+            {
+              "name": "janus",
+              "registeredName": "janus",
+              "wechatName": "陆小果",
+              "city": "济南",
+              "sourceCity": "长春 / 济南"
+            }
+          ]
+        },
         {
           "label": "青岛",
           "count": 1,
@@ -1002,7 +1276,9 @@
             {
               "name": "郑杨守都",
               "registeredName": "郑杨守都",
-              "wechatName": "Luxorion"
+              "wechatName": "Luxorion",
+              "city": "青岛",
+              "sourceCity": "青岛"
             }
           ]
         },
@@ -1014,7 +1290,9 @@
             {
               "name": "张校菘",
               "registeredName": "张校菘",
-              "wechatName": "向箔"
+              "wechatName": "向箔",
+              "city": "烟台",
+              "sourceCity": "山东烟台"
             }
           ]
         },
@@ -1026,7 +1304,9 @@
             {
               "name": "Glory",
               "registeredName": "Glory",
-              "wechatName": "Glory"
+              "wechatName": "Glory",
+              "city": "淄博",
+              "sourceCity": "淄博"
             }
           ]
         }
@@ -1047,25 +1327,29 @@
           "name": "王梓如",
           "registeredName": "王梓如",
           "wechatName": "帧安",
-          "city": "上海"
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "leah",
           "registeredName": "leah",
           "wechatName": "状况外🌀",
-          "city": "上海"
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "Allonsy",
           "registeredName": "Allonsy",
           "wechatName": "Allons--y",
-          "city": "上海"
+          "city": "上海",
+          "sourceCity": "上海"
         },
         {
           "name": "Wheeler",
           "registeredName": "Wheeler",
           "wechatName": "Seacoconut",
-          "city": "上海"
+          "city": "上海",
+          "sourceCity": "上海"
         }
       ],
       "cities": [
@@ -1077,22 +1361,30 @@
             {
               "name": "王梓如",
               "registeredName": "王梓如",
-              "wechatName": "帧安"
+              "wechatName": "帧安",
+              "city": "上海",
+              "sourceCity": "上海"
             },
             {
               "name": "leah",
               "registeredName": "leah",
-              "wechatName": "状况外🌀"
+              "wechatName": "状况外🌀",
+              "city": "上海",
+              "sourceCity": "上海"
             },
             {
               "name": "Allonsy",
               "registeredName": "Allonsy",
-              "wechatName": "Allons--y"
+              "wechatName": "Allons--y",
+              "city": "上海",
+              "sourceCity": "上海"
             },
             {
               "name": "Wheeler",
               "registeredName": "Wheeler",
-              "wechatName": "Seacoconut"
+              "wechatName": "Seacoconut",
+              "city": "上海",
+              "sourceCity": "上海"
             }
           ]
         }
@@ -1113,19 +1405,22 @@
           "name": "季佳杰",
           "registeredName": "季佳杰",
           "wechatName": "季",
-          "city": "北京"
+          "city": "北京",
+          "sourceCity": "常州/北京"
         },
         {
           "name": "阿良",
           "registeredName": "阿良",
           "wechatName": "Anthony Li",
-          "city": "北京"
+          "city": "北京",
+          "sourceCity": "北京"
         },
         {
           "name": "Robin",
           "registeredName": "Robin",
           "wechatName": "Robin",
-          "city": "北京"
+          "city": "北京",
+          "sourceCity": "北京"
         }
       ],
       "cities": [
@@ -1137,17 +1432,23 @@
             {
               "name": "季佳杰",
               "registeredName": "季佳杰",
-              "wechatName": "季"
+              "wechatName": "季",
+              "city": "北京",
+              "sourceCity": "常州/北京"
             },
             {
               "name": "阿良",
               "registeredName": "阿良",
-              "wechatName": "Anthony Li"
+              "wechatName": "Anthony Li",
+              "city": "北京",
+              "sourceCity": "北京"
             },
             {
               "name": "Robin",
               "registeredName": "Robin",
-              "wechatName": "Robin"
+              "wechatName": "Robin",
+              "city": "北京",
+              "sourceCity": "北京"
             }
           ]
         }
@@ -1168,19 +1469,22 @@
           "name": "影洲",
           "registeredName": "影洲",
           "wechatName": "雅正",
-          "city": "杭州"
+          "city": "杭州",
+          "sourceCity": "杭州"
         },
         {
           "name": "五谷粥",
           "registeredName": "五谷粥",
           "wechatName": "五谷粥",
-          "city": "杭州"
+          "city": "杭州",
+          "sourceCity": "杭州"
         },
         {
           "name": "华宇昊",
           "registeredName": "华宇昊",
           "wechatName": "ɔɪ化十子.",
-          "city": "杭州"
+          "city": "杭州",
+          "sourceCity": "杭州"
         }
       ],
       "cities": [
@@ -1192,17 +1496,23 @@
             {
               "name": "影洲",
               "registeredName": "影洲",
-              "wechatName": "雅正"
+              "wechatName": "雅正",
+              "city": "杭州",
+              "sourceCity": "杭州"
             },
             {
               "name": "五谷粥",
               "registeredName": "五谷粥",
-              "wechatName": "五谷粥"
+              "wechatName": "五谷粥",
+              "city": "杭州",
+              "sourceCity": "杭州"
             },
             {
               "name": "华宇昊",
               "registeredName": "华宇昊",
-              "wechatName": "ɔɪ化十子."
+              "wechatName": "ɔɪ化十子.",
+              "city": "杭州",
+              "sourceCity": "杭州"
             }
           ]
         }
@@ -1223,13 +1533,15 @@
           "name": "康康",
           "registeredName": "康康",
           "wechatName": "sloth",
-          "city": "广州"
+          "city": "广州",
+          "sourceCity": "广州"
         },
         {
           "name": "张淇博",
           "registeredName": "张淇博",
           "wechatName": "keve",
-          "city": "深圳"
+          "city": "深圳",
+          "sourceCity": "深圳"
         }
       ],
       "cities": [
@@ -1241,7 +1553,9 @@
             {
               "name": "康康",
               "registeredName": "康康",
-              "wechatName": "sloth"
+              "wechatName": "sloth",
+              "city": "广州",
+              "sourceCity": "广州"
             }
           ]
         },
@@ -1253,7 +1567,9 @@
             {
               "name": "张淇博",
               "registeredName": "张淇博",
-              "wechatName": "keve"
+              "wechatName": "keve",
+              "city": "深圳",
+              "sourceCity": "深圳"
             }
           ]
         }
@@ -1274,13 +1590,15 @@
           "name": "穆昱伟",
           "registeredName": "穆昱伟",
           "wechatName": "Algea",
-          "city": "石家庄市"
+          "city": "石家庄市",
+          "sourceCity": "石家庄市"
         },
         {
           "name": "小羊",
           "registeredName": "小羊",
           "wechatName": "FY",
-          "city": "秦皇岛"
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
         }
       ],
       "cities": [
@@ -1292,7 +1610,9 @@
             {
               "name": "小羊",
               "registeredName": "小羊",
-              "wechatName": "FY"
+              "wechatName": "FY",
+              "city": "秦皇岛",
+              "sourceCity": "秦皇岛"
             }
           ]
         },
@@ -1304,7 +1624,9 @@
             {
               "name": "穆昱伟",
               "registeredName": "穆昱伟",
-              "wechatName": "Algea"
+              "wechatName": "Algea",
+              "city": "石家庄市",
+              "sourceCity": "石家庄市"
             }
           ]
         }
@@ -1325,13 +1647,15 @@
           "name": "张锦阳",
           "registeredName": "张锦阳",
           "wechatName": "Orion 常青de绵阳",
-          "city": "郑州"
+          "city": "郑州",
+          "sourceCity": "郑州"
         },
         {
           "name": "徐亚博",
           "registeredName": "徐亚博",
           "wechatName": "火火",
-          "city": "信阳市"
+          "city": "信阳市",
+          "sourceCity": "信阳市"
         }
       ],
       "cities": [
@@ -1343,7 +1667,9 @@
             {
               "name": "徐亚博",
               "registeredName": "徐亚博",
-              "wechatName": "火火"
+              "wechatName": "火火",
+              "city": "信阳市",
+              "sourceCity": "信阳市"
             }
           ]
         },
@@ -1355,7 +1681,9 @@
             {
               "name": "张锦阳",
               "registeredName": "张锦阳",
-              "wechatName": "Orion 常青de绵阳"
+              "wechatName": "Orion 常青de绵阳",
+              "city": "郑州",
+              "sourceCity": "郑州"
             }
           ]
         }
@@ -1376,7 +1704,8 @@
           "name": "梁波",
           "registeredName": "梁波",
           "wechatName": "粉色钉子头",
-          "city": "重庆"
+          "city": "重庆",
+          "sourceCity": "重庆"
         }
       ],
       "cities": [
@@ -1388,7 +1717,9 @@
             {
               "name": "梁波",
               "registeredName": "梁波",
-              "wechatName": "粉色钉子头"
+              "wechatName": "粉色钉子头",
+              "city": "重庆",
+              "sourceCity": "重庆"
             }
           ]
         }
@@ -1409,7 +1740,8 @@
           "name": "多林",
           "registeredName": "多林",
           "wechatName": "Artist多林",
-          "city": "广西柳州"
+          "city": "广西柳州",
+          "sourceCity": "广西柳州"
         }
       ],
       "cities": [
@@ -1421,7 +1753,9 @@
             {
               "name": "多林",
               "registeredName": "多林",
-              "wechatName": "Artist多林"
+              "wechatName": "Artist多林",
+              "city": "广西柳州",
+              "sourceCity": "广西柳州"
             }
           ]
         }
@@ -1442,7 +1776,8 @@
           "name": "Spaceman",
           "registeredName": "Spaceman",
           "wechatName": "十日十韦",
-          "city": "衡阳"
+          "city": "衡阳",
+          "sourceCity": "衡阳"
         }
       ],
       "cities": [
@@ -1454,7 +1789,9 @@
             {
               "name": "Spaceman",
               "registeredName": "Spaceman",
-              "wechatName": "十日十韦"
+              "wechatName": "十日十韦",
+              "city": "衡阳",
+              "sourceCity": "衡阳"
             }
           ]
         }
@@ -1475,7 +1812,8 @@
           "name": "janus",
           "registeredName": "janus",
           "wechatName": "陆小果",
-          "city": "长春"
+          "city": "长春",
+          "sourceCity": "长春 / 济南"
         }
       ],
       "cities": [
@@ -1487,7 +1825,9 @@
             {
               "name": "janus",
               "registeredName": "janus",
-              "wechatName": "陆小果"
+              "wechatName": "陆小果",
+              "city": "长春",
+              "sourceCity": "长春 / 济南"
             }
           ]
         }
@@ -1508,7 +1848,8 @@
           "name": "Wincent",
           "registeredName": "Wincent",
           "wechatName": "Wincent",
-          "city": "大连"
+          "city": "大连",
+          "sourceCity": "大连"
         }
       ],
       "cities": [
@@ -1520,7 +1861,9 @@
             {
               "name": "Wincent",
               "registeredName": "Wincent",
-              "wechatName": "Wincent"
+              "wechatName": "Wincent",
+              "city": "大连",
+              "sourceCity": "大连"
             }
           ]
         }
@@ -1541,7 +1884,8 @@
           "name": "杜祖鹏",
           "registeredName": "杜祖鹏",
           "wechatName": "Sunflower",
-          "city": "西安"
+          "city": "西安",
+          "sourceCity": "西安"
         }
       ],
       "cities": [
@@ -1553,7 +1897,9 @@
             {
               "name": "杜祖鹏",
               "registeredName": "杜祖鹏",
-              "wechatName": "Sunflower"
+              "wechatName": "Sunflower",
+              "city": "西安",
+              "sourceCity": "西安"
             }
           ]
         }
@@ -1574,7 +1920,8 @@
           "name": "Time flies.",
           "registeredName": "Time flies.",
           "wechatName": "Time flies.",
-          "city": "成都"
+          "city": "成都",
+          "sourceCity": "成都"
         }
       ],
       "cities": [
@@ -1586,7 +1933,9 @@
             {
               "name": "Time flies.",
               "registeredName": "Time flies.",
-              "wechatName": "Time flies."
+              "wechatName": "Time flies.",
+              "city": "成都",
+              "sourceCity": "成都"
             }
           ]
         }
@@ -1607,7 +1956,8 @@
           "name": "朱天宇",
           "registeredName": "朱天宇",
           "wechatName": "思想先落地",
-          "city": "天津"
+          "city": "天津",
+          "sourceCity": "天津"
         }
       ],
       "cities": [
@@ -1619,7 +1969,9 @@
             {
               "name": "朱天宇",
               "registeredName": "朱天宇",
-              "wechatName": "思想先落地"
+              "wechatName": "思想先落地",
+              "city": "天津",
+              "sourceCity": "天津"
             }
           ]
         }
@@ -1640,7 +1992,8 @@
           "name": "浩瀚夜空",
           "registeredName": "浩瀚夜空",
           "wechatName": "浩瀚夜空",
-          "city": "香港"
+          "city": "香港",
+          "sourceCity": "香港"
         }
       ],
       "cities": [
@@ -1652,7 +2005,9 @@
             {
               "name": "浩瀚夜空",
               "registeredName": "浩瀚夜空",
-              "wechatName": "浩瀚夜空"
+              "wechatName": "浩瀚夜空",
+              "city": "香港",
+              "sourceCity": "香港"
             }
           ]
         }
@@ -1673,7 +2028,8 @@
           "name": "酌锦",
           "registeredName": "酌锦",
           "wechatName": "酌锦",
-          "city": "昆明"
+          "city": "昆明",
+          "sourceCity": "昆明"
         }
       ],
       "cities": [
@@ -1685,7 +2041,9 @@
             {
               "name": "酌锦",
               "registeredName": "酌锦",
-              "wechatName": "酌锦"
+              "wechatName": "酌锦",
+              "city": "昆明",
+              "sourceCity": "昆明"
             }
           ]
         }
@@ -1804,9 +2162,30 @@
       "name": "舒奕萌",
       "registeredName": "舒奕萌",
       "wechatName": "🐟",
-      "city": "山东"
+      "city": "山东",
+      "sourceCity": "山东"
     }
   ],
   "unmappedStudents": [],
-  "excludedDualCityStudents": []
+  "excludedDualCityStudents": [],
+  "multiAddressStudents": [
+    {
+      "name": "janus",
+      "registeredName": "janus",
+      "wechatName": "陆小果",
+      "city": "长春 / 济南"
+    },
+    {
+      "name": "季佳杰",
+      "registeredName": "季佳杰",
+      "wechatName": "季",
+      "city": "常州/北京"
+    },
+    {
+      "name": "姜永健",
+      "registeredName": "姜永健",
+      "wechatName": "。",
+      "city": "泉州 / 厦门"
+    }
+  ]
 }

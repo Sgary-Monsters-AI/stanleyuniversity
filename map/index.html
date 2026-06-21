@@ -253,6 +253,7 @@
       display: flex;
       flex-direction: column;
       border-right: 1px solid var(--border);
+      scroll-margin-top: 12px;
     }
 
     .data-panel {
@@ -335,6 +336,7 @@
       background: transparent;
       text-align: left;
       cursor: pointer;
+      scroll-margin-block: 14px;
     }
 
     .tree-row:hover,
@@ -787,8 +789,19 @@
         grid-template-columns: 1fr;
         gap: 10px;
       }
+      .header-center {
+        justify-self: stretch;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        scrollbar-width: thin;
+      }
+      .map-mode-toggle {
+        flex: 0 0 auto;
+      }
       .view-mode-toggle {
         justify-self: stretch;
+        flex: 1 0 auto;
         overflow-x: auto;
       }
       .view-btn {
@@ -810,51 +823,80 @@
         min-height: 280px;
         border: 0;
       }
+      .place-tree {
+        border-top: 1px solid var(--border);
+      }
     }
 
     @media (max-width: 680px) {
       body { background: var(--bg-sidebar); }
       .titlebar {
-        height: 34px;
-        padding: 0 12px;
-      }
-      .traffic span {
-        width: 11px;
-        height: 11px;
-      }
-      .window-title {
-        font-size: 13px;
+        display: none;
       }
       .app-header {
-        padding: 10px 12px;
+        position: sticky;
+        top: 0;
+        z-index: 6;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+          "title actions"
+          "modes modes";
+        padding: 8px 10px 9px;
+        gap: 8px;
+        box-shadow: 0 8px 24px rgba(45, 54, 49, 0.08);
       }
       h1 {
-        font-size: 16px;
+        grid-area: title;
+        overflow: hidden;
+        font-size: 15px;
         line-height: 1.25;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .header-center {
+        grid-area: modes;
+        gap: 8px;
+        margin: 0 -10px;
+        padding: 0 10px 2px;
+      }
+      .map-mode-toggle,
+      .view-mode-toggle {
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(29, 38, 34, 0.05), 0 6px 16px rgba(29, 38, 34, 0.08);
+      }
+      .map-mode-btn {
+        min-width: 60px;
+        padding: 7px 9px;
+        font-size: 12px;
       }
       .view-mode-toggle {
-        width: 100%;
+        min-width: max-content;
         padding: 3px;
       }
       .view-btn {
-        min-width: 72px;
+        min-width: 68px;
         padding: 6px 8px;
         font-size: 12px;
       }
-      .header-actions {
-        width: 100%;
-        justify-content: space-between;
+      .view-count {
+        min-width: 20px;
+        height: 19px;
+        margin-left: 4px;
+        padding: 0 5px;
       }
+      .header-actions {
+        grid-area: actions;
+        width: auto;
+        justify-content: flex-end;
+      }
+      .sync-status { display: none; }
       .header-actions button {
-        min-width: 96px;
+        min-width: 74px;
         min-height: 34px;
       }
-      .sync-status {
-        max-width: calc(100% - 106px);
-      }
       .map-wrap {
-        height: 56svh;
-        min-height: 340px;
+        height: 52svh;
+        min-height: 330px;
       }
       .maplibregl-ctrl-top-right {
         top: 10px;
@@ -872,12 +914,29 @@
         font-size: 11px;
       }
       .tree-body {
-        max-height: 420px;
-        padding: 8px 8px 14px;
+        max-height: none;
+        padding: 8px 10px 16px;
       }
       .tree-row {
-        min-height: 50px;
-        padding: 7px 8px;
+        min-height: 54px;
+        margin-bottom: 6px;
+        padding: 8px 10px;
+        background: rgba(255,255,255,0.42);
+      }
+      .province-group,
+      .tree-item.expanded {
+        border-radius: 10px;
+      }
+      .tree-label strong {
+        font-size: 14px;
+      }
+      .tree-label span {
+        font-size: 12px;
+      }
+      .tree-badge {
+        min-width: 28px;
+        height: 28px;
+        font-size: 12px;
       }
       .student-list {
         grid-template-columns: 1fr;
@@ -961,11 +1020,12 @@
         <div class="summary-card">
           <div class="summary-grid">
             <div class="metric"><strong id="totalMembersMetric">42</strong><span>总成员</span></div>
-            <div class="metric"><strong id="filledCityMetric">24</strong><span>有地点</span></div>
+            <div class="metric"><strong id="filledCityMetric">24</strong><span>有地点成员</span></div>
             <div class="metric"><strong id="placeCountMetric">16</strong><span>填色地点</span></div>
           </div>
           <ul class="note-list">
-            <li><span>落图人数</span><strong id="locatedMembersMetric">22</strong></li>
+            <li><span>落图点位</span><strong id="locatedMembersMetric">22</strong></li>
+            <li id="multiAddressRow"><span>多地址成员</span><strong id="multiAddressMetric">0</strong></li>
             <li><span>只填省份</span><strong id="provinceOnlyMetric">0</strong></li>
             <li><span>未记录成员</span><strong id="unrecordedMetric">18</strong></li>
           </ul>
@@ -1006,6 +1066,7 @@
     let PROVINCE_LOCATED_MEMBERS = 22;
     let FILLED_CITY_RECORDS = 24;
     let PROVINCE_ONLY_MEMBERS = 2;
+    let MULTI_ADDRESS_MEMBERS = 0;
     let UNMAPPED_MEMBERS = 0;
     let EXCLUDED_DUAL_CITY_MEMBERS = 0;
     let UNRECORDED_MEMBERS = 18;
@@ -1168,7 +1229,6 @@
     }
 
     function updateSummary() {
-      document.querySelector(".pie-caption").textContent = `${TOTAL_MEMBERS} 位成员`;
       const updatedAt = DATA_UPDATED_AT ? new Date(DATA_UPDATED_AT) : null;
       const updatedText = updatedAt && !Number.isNaN(updatedAt.valueOf())
         ? `飞书同步 ${updatedAt.toLocaleString("zh-CN", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" })}`
@@ -1183,6 +1243,8 @@
         ? domesticProvinceLocatedMembers + overseasLocatedMembers
         : CITY_LOCATED_MEMBERS;
       document.getElementById("locatedMembersMetric").textContent = locatedInMode;
+      document.getElementById("multiAddressMetric").textContent = MULTI_ADDRESS_MEMBERS;
+      document.getElementById("multiAddressRow").style.display = MULTI_ADDRESS_MEMBERS ? "" : "none";
       document.getElementById("provinceOnlyMetric").textContent = PROVINCE_ONLY_MEMBERS;
       document.getElementById("unrecordedMetric").textContent = UNRECORDED_MEMBERS;
       treeTitle.textContent = geoMode === "province" ? "省级 / 海外" : "国内省市 / 海外";
@@ -1217,6 +1279,7 @@
       PROVINCE_LOCATED_MEMBERS = data.provinceLocatedMembers || PROVINCE_ROWS.reduce((sum, row) => sum + row.count, 0);
       FILLED_CITY_RECORDS = data.filledCityRecords;
       PROVINCE_ONLY_MEMBERS = data.provinceOnlyMembers;
+      MULTI_ADDRESS_MEMBERS = data.multiAddressMembers || 0;
       UNMAPPED_MEMBERS = data.unmappedMembers || 0;
       EXCLUDED_DUAL_CITY_MEMBERS = data.excludedDualCityMembers || 0;
       UNRECORDED_MEMBERS = data.unrecordedMembers;
@@ -1267,16 +1330,22 @@
       let cursor = 0;
       const gradient = [];
       const legend = [];
-      for (const segment of pieSegments()) {
+      const segments = pieSegments();
+      const pieTotal = segments.reduce((sum, segment) => sum + segment.count, 0) || 1;
+      const caption = pieTotal === TOTAL_MEMBERS
+        ? `${TOTAL_MEMBERS} 位成员`
+        : `${TOTAL_MEMBERS} 位成员 · ${pieTotal} 个统计项`;
+      document.querySelector(".pie-caption").textContent = caption;
+      for (const segment of segments) {
         const start = cursor;
-        const end = cursor + (segment.count / TOTAL_MEMBERS) * 100;
+        const end = cursor + (segment.count / pieTotal) * 100;
         gradient.push(`${segment.color} ${start.toFixed(3)}% ${end.toFixed(3)}%`);
         legend.push(`
           <div class="legend-row">
             <i style="background:${segment.color}"></i>
             <span>${segment.label}</span>
             <strong>${segment.count}</strong>
-            <em>${((segment.count / TOTAL_MEMBERS) * 100).toFixed(1)}%</em>
+            <em>${((segment.count / pieTotal) * 100).toFixed(1)}%</em>
           </div>
         `);
         cursor = end;
@@ -1411,9 +1480,32 @@
           } else {
             expandedLabels.add(label);
           }
-          focusRow(row);
+          focusRow(row, { keepExpansionState: true });
         });
       });
+    }
+
+    function expandRowPath(row) {
+      if (!row) return;
+      expandedLabels.add(row.label);
+      if (geoMode === "city" && row.provinceLabel) {
+        expandedLabels.add(row.provinceLabel);
+      }
+    }
+
+    function scrollActiveRowIntoView() {
+      const activeRow = list.querySelector(".tree-row.active");
+      if (!activeRow) return;
+      const target = activeRow.closest(".tree-item, .province-group") || activeRow;
+      const isNarrow = window.matchMedia("(max-width: 980px)").matches;
+      if (isNarrow) {
+        document.querySelector(".place-tree")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 180);
+      } else {
+        target.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     }
 
     function filteredFeatureExpression() {
@@ -1453,9 +1545,11 @@
       renderMapLabels();
     }
 
-    function focusRow(row) {
+    function focusRow(row, options = {}) {
       if (!row || !map) return;
+      const { keepExpansionState = false, revealList = false } = options;
       activeLabel = row.label;
+      if (!keepExpansionState) expandRowPath(row);
       const isProvince = !row.overseasId && !row.chinaNames;
       const zoom = row.overseasId === "sydney" ? 7.75 : (row.overseasId ? 9.4 : (isProvince ? 4.15 : 4.9));
       const center = row.overseasId === "sydney" ? [150.76, -33.86] : [row.lng, row.lat];
@@ -1463,6 +1557,7 @@
       map.flyTo({ center, zoom: targetZoom, speed: 1.2, curve: 1.25 });
       renderList();
       applyLayerFilters();
+      if (revealList) requestAnimationFrame(scrollActiveRowIntoView);
     }
 
     function labelElement(label, count) {
@@ -1808,8 +1903,8 @@
           const label = feature.properties.displayLabel || feature.properties.name;
           const row = findRowByLabel(label) || PLACE_ROWS.find((item) => (item.chinaNames || []).includes(feature.properties.name));
           if (row) {
-            expandedLabels.add(row.label);
-            focusRow(row);
+            hideTip();
+            focusRow(row, { revealList: true });
           }
         });
       }
