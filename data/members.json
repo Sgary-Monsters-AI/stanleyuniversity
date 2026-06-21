@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-21T15:18:44.065Z",
-  "totalMembers": 72,
-  "locatedMembers": 50,
-  "cityLocatedMembers": 50,
-  "provinceLocatedMembers": 45,
-  "filledCityRecords": 51,
-  "mappedAddressCount": 51,
-  "multiAddressMembers": 0,
+  "updatedAt": "2026-06-21T17:18:44.627Z",
+  "totalMembers": 78,
+  "locatedMembers": 55,
+  "cityLocatedMembers": 55,
+  "provinceLocatedMembers": 50,
+  "filledCityRecords": 53,
+  "mappedAddressCount": 56,
+  "multiAddressMembers": 3,
   "provinceOnlyMembers": 1,
-  "unmappedMembers": 0,
-  "unrecordedMembers": 21,
+  "unmappedMembers": 1,
+  "unrecordedMembers": 24,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -21,7 +21,7 @@
       "chinaNames": [
         "武汉市"
       ],
-      "count": 5,
+      "count": 7,
       "students": [
         {
           "name": "冷酷小猫",
@@ -65,6 +65,24 @@
           "wechatName": "章魚飯.",
           "university": "",
           "major": "",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "李响",
+          "registeredName": "李响",
+          "wechatName": "Ali",
+          "university": "华中师范大学",
+          "major": "设计",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "刘吉洋",
+          "registeredName": "刘吉洋",
+          "wechatName": "集阳",
+          "university": "华中师范大学",
+          "major": "日语",
           "city": "武汉",
           "sourceCity": "武汉"
         }
@@ -137,7 +155,7 @@
           "university": "北京中医药大学",
           "major": "",
           "city": "北京",
-          "sourceCity": "北京"
+          "sourceCity": "常州/北京"
         },
         {
           "name": "阿良",
@@ -303,7 +321,7 @@
           "university": "华侨大学",
           "major": "市场营销专业（2024级）",
           "city": "厦门",
-          "sourceCity": "厦门"
+          "sourceCity": "泉州 / 厦门"
         }
       ]
     },
@@ -342,6 +360,28 @@
           "major": "Media Arts and Sciences",
           "city": "波士顿",
           "sourceCity": "波士顿"
+        }
+      ]
+    },
+    {
+      "label": "常州",
+      "provinceLabel": "江苏",
+      "note": "常州市",
+      "lng": 119.9741,
+      "lat": 31.8112,
+      "chinaNames": [
+        "常州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "季佳杰",
+          "registeredName": "季佳杰",
+          "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
+          "city": "常州",
+          "sourceCity": "常州/北京"
         }
       ]
     },
@@ -522,6 +562,28 @@
       ]
     },
     {
+      "label": "济南",
+      "provinceLabel": "山东",
+      "note": "济南市",
+      "lng": 117.1201,
+      "lat": 36.6512,
+      "chinaNames": [
+        "济南市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
+          "city": "济南",
+          "sourceCity": "长春 / 济南"
+        }
+      ]
+    },
+    {
       "label": "昆明",
       "provinceLabel": "云南",
       "note": "昆明市",
@@ -606,6 +668,28 @@
           "major": "人工智能专业在读",
           "city": "青岛",
           "sourceCity": "青岛"
+        }
+      ]
+    },
+    {
+      "label": "泉州",
+      "provinceLabel": "福建",
+      "note": "泉州市",
+      "lng": 118.6757,
+      "lat": 24.8741,
+      "chinaNames": [
+        "泉州市"
+      ],
+      "count": 1,
+      "students": [
+        {
+          "name": "姜永健",
+          "registeredName": "姜永健",
+          "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
+          "city": "泉州",
+          "sourceCity": "泉州 / 厦门"
         }
       ]
     },
@@ -843,7 +927,7 @@
           "university": "",
           "major": "导演 / 艺术生",
           "city": "长春",
-          "sourceCity": "长春"
+          "sourceCity": "长春 / 济南"
         }
       ]
     },
@@ -894,14 +978,162 @@
   ],
   "provinceRows": [
     {
+      "label": "湖北",
+      "name": "湖北省",
+      "adcode": 420000,
+      "lng": 114.3419,
+      "lat": 30.5465,
+      "note": "湖北省",
+      "count": 7,
+      "cityCount": 7,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "冷酷小猫",
+          "registeredName": "冷酷小猫",
+          "wechatName": "猫博",
+          "university": "华中科技大学",
+          "major": "机械电子工程",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "王境",
+          "registeredName": "王境",
+          "wechatName": "狸猫🦝",
+          "university": "武汉晴川学院",
+          "major": "机械电子工程",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "李国正",
+          "registeredName": "李国正",
+          "wechatName": "七度旅人",
+          "university": "湖北工业大学工程技术学院",
+          "major": "计算机科学与技术（大二，已休学创业中）",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "李谨西",
+          "registeredName": "李谨西",
+          "wechatName": "koi",
+          "university": "武汉科技大学",
+          "major": "金融科技专业",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "章魚飯.",
+          "registeredName": "章魚飯.",
+          "wechatName": "章魚飯.",
+          "university": "",
+          "major": "",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "李响",
+          "registeredName": "李响",
+          "wechatName": "Ali",
+          "university": "华中师范大学",
+          "major": "设计",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        },
+        {
+          "name": "刘吉洋",
+          "registeredName": "刘吉洋",
+          "wechatName": "集阳",
+          "university": "华中师范大学",
+          "major": "日语",
+          "city": "武汉",
+          "sourceCity": "武汉"
+        }
+      ],
+      "cities": [
+        {
+          "label": "武汉",
+          "count": 7,
+          "note": "武汉市",
+          "students": [
+            {
+              "name": "冷酷小猫",
+              "registeredName": "冷酷小猫",
+              "wechatName": "猫博",
+              "university": "华中科技大学",
+              "major": "机械电子工程",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "王境",
+              "registeredName": "王境",
+              "wechatName": "狸猫🦝",
+              "university": "武汉晴川学院",
+              "major": "机械电子工程",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "李国正",
+              "registeredName": "李国正",
+              "wechatName": "七度旅人",
+              "university": "湖北工业大学工程技术学院",
+              "major": "计算机科学与技术（大二，已休学创业中）",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "李谨西",
+              "registeredName": "李谨西",
+              "wechatName": "koi",
+              "university": "武汉科技大学",
+              "major": "金融科技专业",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "章魚飯.",
+              "registeredName": "章魚飯.",
+              "wechatName": "章魚飯.",
+              "university": "",
+              "major": "",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "李响",
+              "registeredName": "李响",
+              "wechatName": "Ali",
+              "university": "华中师范大学",
+              "major": "设计",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            },
+            {
+              "name": "刘吉洋",
+              "registeredName": "刘吉洋",
+              "wechatName": "集阳",
+              "university": "华中师范大学",
+              "major": "日语",
+              "city": "武汉",
+              "sourceCity": "武汉"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "江苏",
       "name": "江苏省",
       "adcode": 320000,
       "lng": 118.7632,
       "lat": 32.0617,
       "note": "江苏省",
-      "count": 6,
-      "cityCount": 6,
+      "count": 7,
+      "cityCount": 7,
       "provinceOnlyCount": 0,
       "students": [
         {
@@ -950,6 +1182,15 @@
           "sourceCity": "苏州"
         },
         {
+          "name": "季佳杰",
+          "registeredName": "季佳杰",
+          "wechatName": "季",
+          "university": "北京中医药大学",
+          "major": "",
+          "city": "常州",
+          "sourceCity": "常州/北京"
+        },
+        {
           "name": "Bryan",
           "registeredName": "Bryan",
           "wechatName": "Ryan",
@@ -991,6 +1232,22 @@
               "major": "软件工程 大二",
               "city": "南京",
               "sourceCity": "南京"
+            }
+          ]
+        },
+        {
+          "label": "常州",
+          "count": 1,
+          "note": "常州市",
+          "students": [
+            {
+              "name": "季佳杰",
+              "registeredName": "季佳杰",
+              "wechatName": "季",
+              "university": "北京中医药大学",
+              "major": "",
+              "city": "常州",
+              "sourceCity": "常州/北京"
             }
           ]
         },
@@ -1045,126 +1302,14 @@
       ]
     },
     {
-      "label": "湖北",
-      "name": "湖北省",
-      "adcode": 420000,
-      "lng": 114.3419,
-      "lat": 30.5465,
-      "note": "湖北省",
-      "count": 5,
-      "cityCount": 5,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "冷酷小猫",
-          "registeredName": "冷酷小猫",
-          "wechatName": "猫博",
-          "university": "华中科技大学",
-          "major": "机械电子工程",
-          "city": "武汉",
-          "sourceCity": "武汉"
-        },
-        {
-          "name": "王境",
-          "registeredName": "王境",
-          "wechatName": "狸猫🦝",
-          "university": "武汉晴川学院",
-          "major": "机械电子工程",
-          "city": "武汉",
-          "sourceCity": "武汉"
-        },
-        {
-          "name": "李国正",
-          "registeredName": "李国正",
-          "wechatName": "七度旅人",
-          "university": "湖北工业大学工程技术学院",
-          "major": "计算机科学与技术（大二，已休学创业中）",
-          "city": "武汉",
-          "sourceCity": "武汉"
-        },
-        {
-          "name": "李谨西",
-          "registeredName": "李谨西",
-          "wechatName": "koi",
-          "university": "武汉科技大学",
-          "major": "金融科技专业",
-          "city": "武汉",
-          "sourceCity": "武汉"
-        },
-        {
-          "name": "章魚飯.",
-          "registeredName": "章魚飯.",
-          "wechatName": "章魚飯.",
-          "university": "",
-          "major": "",
-          "city": "武汉",
-          "sourceCity": "武汉"
-        }
-      ],
-      "cities": [
-        {
-          "label": "武汉",
-          "count": 5,
-          "note": "武汉市",
-          "students": [
-            {
-              "name": "冷酷小猫",
-              "registeredName": "冷酷小猫",
-              "wechatName": "猫博",
-              "university": "华中科技大学",
-              "major": "机械电子工程",
-              "city": "武汉",
-              "sourceCity": "武汉"
-            },
-            {
-              "name": "王境",
-              "registeredName": "王境",
-              "wechatName": "狸猫🦝",
-              "university": "武汉晴川学院",
-              "major": "机械电子工程",
-              "city": "武汉",
-              "sourceCity": "武汉"
-            },
-            {
-              "name": "李国正",
-              "registeredName": "李国正",
-              "wechatName": "七度旅人",
-              "university": "湖北工业大学工程技术学院",
-              "major": "计算机科学与技术（大二，已休学创业中）",
-              "city": "武汉",
-              "sourceCity": "武汉"
-            },
-            {
-              "name": "李谨西",
-              "registeredName": "李谨西",
-              "wechatName": "koi",
-              "university": "武汉科技大学",
-              "major": "金融科技专业",
-              "city": "武汉",
-              "sourceCity": "武汉"
-            },
-            {
-              "name": "章魚飯.",
-              "registeredName": "章魚飯.",
-              "wechatName": "章魚飯.",
-              "university": "",
-              "major": "",
-              "city": "武汉",
-              "sourceCity": "武汉"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "福建",
       "name": "福建省",
       "adcode": 350000,
       "lng": 119.2951,
       "lat": 26.1008,
       "note": "福建省",
-      "count": 4,
-      "cityCount": 4,
+      "count": 5,
+      "cityCount": 5,
       "provinceOnlyCount": 0,
       "students": [
         {
@@ -1191,8 +1336,17 @@
           "wechatName": "。",
           "university": "华侨大学",
           "major": "市场营销专业（2024级）",
+          "city": "泉州",
+          "sourceCity": "泉州 / 厦门"
+        },
+        {
+          "name": "姜永健",
+          "registeredName": "姜永健",
+          "wechatName": "。",
+          "university": "华侨大学",
+          "major": "市场营销专业（2024级）",
           "city": "厦门",
-          "sourceCity": "厦门"
+          "sourceCity": "泉州 / 厦门"
         },
         {
           "name": "Levia",
@@ -1226,7 +1380,7 @@
               "university": "华侨大学",
               "major": "市场营销专业（2024级）",
               "city": "厦门",
-              "sourceCity": "厦门"
+              "sourceCity": "泉州 / 厦门"
             }
           ]
         },
@@ -1243,6 +1397,22 @@
               "major": "",
               "city": "福州",
               "sourceCity": "福州"
+            }
+          ]
+        },
+        {
+          "label": "泉州",
+          "count": 1,
+          "note": "泉州市",
+          "students": [
+            {
+              "name": "姜永健",
+              "registeredName": "姜永健",
+              "wechatName": "。",
+              "university": "华侨大学",
+              "major": "市场营销专业（2024级）",
+              "city": "泉州",
+              "sourceCity": "泉州 / 厦门"
             }
           ]
         },
@@ -1271,8 +1441,8 @@
       "lng": 117.0207,
       "lat": 36.6702,
       "note": "山东省",
-      "count": 4,
-      "cityCount": 3,
+      "count": 5,
+      "cityCount": 4,
       "provinceOnlyCount": 1,
       "students": [
         {
@@ -1283,6 +1453,15 @@
           "major": "AI应用方向",
           "city": "烟台",
           "sourceCity": "山东烟台"
+        },
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
+          "city": "济南",
+          "sourceCity": "长春 / 济南"
         },
         {
           "name": "舒奕萌",
@@ -1313,6 +1492,22 @@
         }
       ],
       "cities": [
+        {
+          "label": "济南",
+          "count": 1,
+          "note": "济南市",
+          "students": [
+            {
+              "name": "janus",
+              "registeredName": "janus",
+              "wechatName": "陆小果",
+              "university": "",
+              "major": "导演 / 艺术生",
+              "city": "济南",
+              "sourceCity": "长春 / 济南"
+            }
+          ]
+        },
         {
           "label": "青岛",
           "count": 1,
@@ -1475,7 +1670,7 @@
           "university": "北京中医药大学",
           "major": "",
           "city": "北京",
-          "sourceCity": "北京"
+          "sourceCity": "常州/北京"
         },
         {
           "name": "阿良",
@@ -1509,7 +1704,7 @@
               "university": "北京中医药大学",
               "major": "",
               "city": "北京",
-              "sourceCity": "北京"
+              "sourceCity": "常州/北京"
             },
             {
               "name": "阿良",
@@ -1942,7 +2137,7 @@
           "university": "",
           "major": "导演 / 艺术生",
           "city": "长春",
-          "sourceCity": "长春"
+          "sourceCity": "长春 / 济南"
         }
       ],
       "cities": [
@@ -1958,7 +2153,7 @@
               "university": "",
               "major": "导演 / 艺术生",
               "city": "长春",
-              "sourceCity": "长春"
+              "sourceCity": "长春 / 济南"
             }
           ]
         }
@@ -2352,6 +2547,27 @@
       "wechatName": "郁郁葱葱",
       "university": "",
       "major": ""
+    },
+    {
+      "name": "好名字可以让你的朋友更容易记住你",
+      "registeredName": "好名字可以让你的朋友更容易记住你",
+      "wechatName": "好名字可以让你的朋友更容易记住你",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "目送",
+      "registeredName": "目送",
+      "wechatName": "目送",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "雀韵青醅",
+      "registeredName": "雀韵青醅",
+      "wechatName": "雀韵青醅",
+      "university": "",
+      "major": ""
     }
   ],
   "provinceOnlyStudents": [
@@ -2365,9 +2581,43 @@
       "sourceCity": "山东"
     }
   ],
-  "unmappedStudents": [],
+  "unmappedStudents": [
+    {
+      "name": "杜雅丽",
+      "registeredName": "杜雅丽",
+      "wechatName": "磐夏",
+      "university": "合肥工业大学宣城校区",
+      "major": "环境工程",
+      "city": "宣城"
+    }
+  ],
   "excludedDualCityStudents": [],
-  "multiAddressStudents": [],
+  "multiAddressStudents": [
+    {
+      "name": "janus",
+      "registeredName": "janus",
+      "wechatName": "陆小果",
+      "university": "",
+      "major": "导演 / 艺术生",
+      "city": "长春 / 济南"
+    },
+    {
+      "name": "季佳杰",
+      "registeredName": "季佳杰",
+      "wechatName": "季",
+      "university": "北京中医药大学",
+      "major": "",
+      "city": "常州/北京"
+    },
+    {
+      "name": "姜永健",
+      "registeredName": "姜永健",
+      "wechatName": "。",
+      "university": "华侨大学",
+      "major": "市场营销专业（2024级）",
+      "city": "泉州 / 厦门"
+    }
+  ],
   "studentRows": [
     {
       "name": "冷酷小猫",
@@ -2617,11 +2867,16 @@
       "wechatName": "陆小果",
       "university": "",
       "major": "导演 / 艺术生",
-      "city": "长春",
+      "city": "长春 / 济南",
       "locations": [
         {
           "label": "长春",
           "note": "长春市",
+          "type": "city"
+        },
+        {
+          "label": "济南",
+          "note": "济南市",
           "type": "city"
         }
       ],
@@ -2935,8 +3190,13 @@
       "wechatName": "季",
       "university": "北京中医药大学",
       "major": "",
-      "city": "北京",
+      "city": "常州/北京",
       "locations": [
+        {
+          "label": "常州",
+          "note": "常州市",
+          "type": "city"
+        },
         {
           "label": "北京",
           "note": "北京市",
@@ -3139,8 +3399,13 @@
       "wechatName": "。",
       "university": "华侨大学",
       "major": "市场营销专业（2024级）",
-      "city": "厦门",
+      "city": "泉州 / 厦门",
       "locations": [
+        {
+          "label": "泉州",
+          "note": "泉州市",
+          "type": "city"
+        },
         {
           "label": "厦门",
           "note": "厦门市",
@@ -3394,6 +3659,80 @@
       "city": "",
       "locations": [],
       "unmappedLocations": []
+    },
+    {
+      "name": "李响",
+      "registeredName": "李响",
+      "wechatName": "Ali",
+      "university": "华中师范大学",
+      "major": "设计",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "好名字可以让你的朋友更容易记住你",
+      "registeredName": "好名字可以让你的朋友更容易记住你",
+      "wechatName": "好名字可以让你的朋友更容易记住你",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "目送",
+      "registeredName": "目送",
+      "wechatName": "目送",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "雀韵青醅",
+      "registeredName": "雀韵青醅",
+      "wechatName": "雀韵青醅",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "刘吉洋",
+      "registeredName": "刘吉洋",
+      "wechatName": "集阳",
+      "university": "华中师范大学",
+      "major": "日语",
+      "city": "武汉",
+      "locations": [
+        {
+          "label": "武汉",
+          "note": "武汉市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "杜雅丽",
+      "registeredName": "杜雅丽",
+      "wechatName": "磐夏",
+      "university": "合肥工业大学宣城校区",
+      "major": "环境工程",
+      "city": "宣城",
+      "locations": [],
+      "unmappedLocations": [
+        "宣城"
+      ]
     }
   ]
 }

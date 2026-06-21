@@ -158,15 +158,26 @@ async function tenantAccessToken() {
 
 async function listRecordsByOpenApi(token) {
   const records = [];
-  let pageToken = "";
-  do {
-    const params = new URLSearchParams({ page_size: "500" });
+  let offset = 0;
+  while (true) {
+    const fieldIds = ["名字", "微信名字", "城市", "学校", "在读专业"];
+    const params = new URLSearchParams({ limit: "200", offset: String(offset) });
     if (VIEW_ID) params.set("view_id", VIEW_ID);
-    if (pageToken) params.set("page_token", pageToken);
+    for (const fieldId of fieldIds) params.append("field_id", fieldId);
     const payload = await requestJson(
-      `https://open.feishu.cn/open-apis/bitable/v1/apps/${BASE_TOKEN}/tables/${TABLE_ID}/records?${params}`,
+      `https://open.feishu.cn/open-apis/base/v3/bases/${BASE_TOKEN}/tables/${TABLE_ID}/records?${params}`,
       { headers: { authorization: `Bearer ${token}` } }
     );
+    const rows = payload.data?.data || [];
+    for (const row of rows) {
+      const member = memberRecord(row[0], row[1]);
+      records.push({
+        ...member,
+        city: textCell(row[2]),
+        university: textCell(row[3]),
+        major: textCell(row[4])
+      });
+    }
     for (const item of payload.data?.items || []) {
       const fields = item.fields || {};
       const member = memberRecord(fields["名字"], fields["微信名字"]);
@@ -177,8 +188,9 @@ async function listRecordsByOpenApi(token) {
         major: textCell(fields["在读专业"])
       });
     }
-    pageToken = payload.data?.page_token || "";
-  } while (pageToken);
+    if (!payload.data?.has_more || rows.length === 0) break;
+    offset += rows.length;
+  }
   return records;
 }
 
