@@ -42,7 +42,8 @@ const provinceCatalog = [
   { label: "甘肃", name: "甘肃省", adcode: 620000, lng: 103.8263, lat: 36.0594, aliases: ["甘肃", "甘肃省"] },
   { label: "青海", name: "青海省", adcode: 630000, lng: 101.7802, lat: 36.6209, aliases: ["青海", "青海省"] },
   { label: "宁夏", name: "宁夏回族自治区", adcode: 640000, lng: 106.2588, lat: 38.4712, aliases: ["宁夏", "宁夏回族自治区"] },
-  { label: "新疆", name: "新疆维吾尔自治区", adcode: 650000, lng: 87.6277, lat: 43.793, aliases: ["新疆", "新疆维吾尔自治区"] }
+  { label: "新疆", name: "新疆维吾尔自治区", adcode: 650000, lng: 87.6277, lat: 43.793, aliases: ["新疆", "新疆维吾尔自治区"] },
+  { label: "香港", name: "香港特别行政区", adcode: 810000, lng: 114.1694, lat: 22.3193, aliases: ["香港", "香港特别行政区", "Hong Kong"] }
 ];
 
 const cityCatalog = [
@@ -78,7 +79,7 @@ const cityCatalog = [
   { label: "新加坡", note: "海外市级行政边界", lng: 103.8198, lat: 1.3521, overseasId: "singapore", aliases: ["新加坡", "Singapore"] },
   { label: "波士顿", note: "海外市级行政边界", lng: -71.0589, lat: 42.3601, overseasId: "boston", aliases: ["波士顿", "Boston"] },
   { label: "巴黎", note: "海外市级行政边界", lng: 2.3522, lat: 48.8566, overseasId: "paris", aliases: ["巴黎", "Paris"] },
-  { label: "香港", note: "海外行政边界", lng: 114.1694, lat: 22.3193, overseasId: "hong-kong", aliases: ["香港", "香港特别行政区", "Hong Kong"] },
+  { label: "香港", provinceLabel: "香港", note: "香港特别行政区", lng: 114.1694, lat: 22.3193, overseasId: "hong-kong", domesticRegion: true, aliases: ["香港", "香港特别行政区", "Hong Kong"] },
   { label: "悉尼", note: "海外都会区边界", lng: 151.2093, lat: -33.8688, overseasId: "sydney", aliases: ["悉尼", "Sydney"] }
 ];
 

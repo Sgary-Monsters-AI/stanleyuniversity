@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-06-21T04:17:48.760Z",
+  "updatedAt": "2026-06-21T04:33:11.950Z",
   "totalMembers": 72,
   "locatedMembers": 50,
   "cityLocatedMembers": 50,
-  "provinceLocatedMembers": 44,
+  "provinceLocatedMembers": 45,
   "filledCityRecords": 48,
   "provinceOnlyMembers": 1,
   "unmappedMembers": 0,
@@ -551,10 +551,12 @@
     },
     {
       "label": "香港",
-      "note": "海外行政边界",
+      "provinceLabel": "香港",
+      "note": "香港特别行政区",
       "lng": 114.1694,
       "lat": 22.3193,
       "overseasId": "hong-kong",
+      "domesticRegion": true,
       "count": 1,
       "students": [
         {
@@ -1618,6 +1620,39 @@
               "name": "朱天宇",
               "registeredName": "朱天宇",
               "wechatName": "思想先落地"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "香港",
+      "name": "香港特别行政区",
+      "adcode": 810000,
+      "lng": 114.1694,
+      "lat": 22.3193,
+      "note": "香港特别行政区",
+      "count": 1,
+      "cityCount": 1,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "浩瀚夜空",
+          "registeredName": "浩瀚夜空",
+          "wechatName": "浩瀚夜空",
+          "city": "香港"
+        }
+      ],
+      "cities": [
+        {
+          "label": "香港",
+          "count": 1,
+          "note": "香港特别行政区",
+          "students": [
+            {
+              "name": "浩瀚夜空",
+              "registeredName": "浩瀚夜空",
+              "wechatName": "浩瀚夜空"
             }
           ]
         }

@@ -1070,11 +1070,15 @@
     }
 
     function overseasRows() {
-      return PLACE_ROWS.filter((row) => row.overseasId);
+      return PLACE_ROWS.filter((row) => row.overseasId && !row.domesticRegion);
     }
 
     function domesticCityRows() {
-      return PLACE_ROWS.filter((row) => !row.overseasId);
+      return PLACE_ROWS.filter((row) => !row.overseasId || row.domesticRegion);
+    }
+
+    function boundaryRows() {
+      return PLACE_ROWS.filter((row) => row.overseasId);
     }
 
     function displayRows() {
@@ -1492,7 +1496,7 @@
           addMapLabel(feature.properties.displayLabel || feature.properties.name, count, center);
         }
       }
-      for (const row of overseasRows()) {
+      for (const row of boundaryRows()) {
         if (!row.overseasId || !row.count) continue;
         addMapLabel(row.label, row.count, [row.lng, row.lat]);
       }
