@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-23T04:59:14.817Z",
-  "totalMembers": 80,
-  "locatedMembers": 57,
-  "cityLocatedMembers": 57,
-  "provinceLocatedMembers": 52,
-  "filledCityRecords": 55,
-  "mappedAddressCount": 58,
+  "updatedAt": "2026-06-23T05:26:47.379Z",
+  "totalMembers": 82,
+  "locatedMembers": 58,
+  "cityLocatedMembers": 58,
+  "provinceLocatedMembers": 53,
+  "filledCityRecords": 56,
+  "mappedAddressCount": 59,
   "multiAddressMembers": 3,
   "provinceOnlyMembers": 1,
   "unmappedMembers": 1,
-  "unrecordedMembers": 24,
+  "unrecordedMembers": 25,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -322,6 +322,37 @@
           "major": "金融工程",
           "city": "广州",
           "sourceCity": "广州"
+        }
+      ]
+    },
+    {
+      "label": "秦皇岛",
+      "provinceLabel": "河北",
+      "note": "秦皇岛市",
+      "lng": 119.5996,
+      "lat": 39.9354,
+      "chinaNames": [
+        "秦皇岛市"
+      ],
+      "count": 2,
+      "students": [
+        {
+          "name": "小羊",
+          "registeredName": "小羊",
+          "wechatName": "FY",
+          "university": "燕山大学",
+          "major": "机械工程",
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
+        },
+        {
+          "name": "高康超",
+          "registeredName": "高康超",
+          "wechatName": "星司",
+          "university": "东北大学秦皇岛分校",
+          "major": "计算机科学与技术（大一）",
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
         }
       ]
     },
@@ -664,28 +695,6 @@
           "major": "",
           "city": "连云港",
           "sourceCity": "连云港"
-        }
-      ]
-    },
-    {
-      "label": "秦皇岛",
-      "provinceLabel": "河北",
-      "note": "秦皇岛市",
-      "lng": 119.5996,
-      "lat": 39.9354,
-      "chinaNames": [
-        "秦皇岛市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "小羊",
-          "registeredName": "小羊",
-          "wechatName": "FY",
-          "university": "燕山大学",
-          "major": "机械工程",
-          "city": "秦皇岛",
-          "sourceCity": "秦皇岛"
         }
       ]
     },
@@ -1830,6 +1839,89 @@
       ]
     },
     {
+      "label": "河北",
+      "name": "河北省",
+      "adcode": 130000,
+      "lng": 114.5149,
+      "lat": 38.0428,
+      "note": "河北省",
+      "count": 3,
+      "cityCount": 3,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "穆昱伟",
+          "registeredName": "穆昱伟",
+          "wechatName": "Algea",
+          "university": "河北科技大学",
+          "major": "建环专业",
+          "city": "石家庄市",
+          "sourceCity": "石家庄市"
+        },
+        {
+          "name": "小羊",
+          "registeredName": "小羊",
+          "wechatName": "FY",
+          "university": "燕山大学",
+          "major": "机械工程",
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
+        },
+        {
+          "name": "高康超",
+          "registeredName": "高康超",
+          "wechatName": "星司",
+          "university": "东北大学秦皇岛分校",
+          "major": "计算机科学与技术（大一）",
+          "city": "秦皇岛",
+          "sourceCity": "秦皇岛"
+        }
+      ],
+      "cities": [
+        {
+          "label": "秦皇岛",
+          "count": 2,
+          "note": "秦皇岛市",
+          "students": [
+            {
+              "name": "小羊",
+              "registeredName": "小羊",
+              "wechatName": "FY",
+              "university": "燕山大学",
+              "major": "机械工程",
+              "city": "秦皇岛",
+              "sourceCity": "秦皇岛"
+            },
+            {
+              "name": "高康超",
+              "registeredName": "高康超",
+              "wechatName": "星司",
+              "university": "东北大学秦皇岛分校",
+              "major": "计算机科学与技术（大一）",
+              "city": "秦皇岛",
+              "sourceCity": "秦皇岛"
+            }
+          ]
+        },
+        {
+          "label": "石家庄市",
+          "count": 1,
+          "note": "石家庄市",
+          "students": [
+            {
+              "name": "穆昱伟",
+              "registeredName": "穆昱伟",
+              "wechatName": "Algea",
+              "university": "河北科技大学",
+              "major": "建环专业",
+              "city": "石家庄市",
+              "sourceCity": "石家庄市"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "河南",
       "name": "河南省",
       "adcode": 410000,
@@ -1983,71 +2075,6 @@
               "major": "生物技术专业（刚毕业）",
               "city": "杭州",
               "sourceCity": "杭州"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "河北",
-      "name": "河北省",
-      "adcode": 130000,
-      "lng": 114.5149,
-      "lat": 38.0428,
-      "note": "河北省",
-      "count": 2,
-      "cityCount": 2,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "穆昱伟",
-          "registeredName": "穆昱伟",
-          "wechatName": "Algea",
-          "university": "河北科技大学",
-          "major": "建环专业",
-          "city": "石家庄市",
-          "sourceCity": "石家庄市"
-        },
-        {
-          "name": "小羊",
-          "registeredName": "小羊",
-          "wechatName": "FY",
-          "university": "燕山大学",
-          "major": "机械工程",
-          "city": "秦皇岛",
-          "sourceCity": "秦皇岛"
-        }
-      ],
-      "cities": [
-        {
-          "label": "秦皇岛",
-          "count": 1,
-          "note": "秦皇岛市",
-          "students": [
-            {
-              "name": "小羊",
-              "registeredName": "小羊",
-              "wechatName": "FY",
-              "university": "燕山大学",
-              "major": "机械工程",
-              "city": "秦皇岛",
-              "sourceCity": "秦皇岛"
-            }
-          ]
-        },
-        {
-          "label": "石家庄市",
-          "count": 1,
-          "note": "石家庄市",
-          "students": [
-            {
-              "name": "穆昱伟",
-              "registeredName": "穆昱伟",
-              "wechatName": "Algea",
-              "university": "河北科技大学",
-              "major": "建环专业",
-              "city": "石家庄市",
-              "sourceCity": "石家庄市"
             }
           ]
         }
@@ -2620,6 +2647,13 @@
       "name": "雀韵青醅",
       "registeredName": "雀韵青醅",
       "wechatName": "雀韵青醅",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "与神同行",
+      "registeredName": "与神同行",
+      "wechatName": "与神同行",
       "university": "",
       "major": ""
     }
@@ -3818,6 +3852,32 @@
           "type": "city"
         }
       ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "高康超",
+      "registeredName": "高康超",
+      "wechatName": "星司",
+      "university": "东北大学秦皇岛分校",
+      "major": "计算机科学与技术（大一）",
+      "city": "秦皇岛",
+      "locations": [
+        {
+          "label": "秦皇岛",
+          "note": "秦皇岛市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "与神同行",
+      "registeredName": "与神同行",
+      "wechatName": "与神同行",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
       "unmappedLocations": []
     }
   ]
