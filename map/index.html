@@ -42,33 +42,7 @@
 
     body {
       display: grid;
-      grid-template-rows: 40px 58px 1fr;
-    }
-
-    .titlebar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 0 16px;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg);
-    }
-
-    .traffic { display: flex; gap: 8px; }
-    .traffic span {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
-    }
-    .traffic .r { background: #ff5f57; }
-    .traffic .y { background: #ffbd2e; }
-    .traffic .g { background: #28c840; }
-
-    .window-title {
-      color: #5f6964;
-      font-size: 15px;
-      font-weight: 800;
+      grid-template-rows: 58px 1fr;
     }
 
     .app-header {
@@ -949,23 +923,29 @@
         min-height: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(380px, 1fr) minmax(230px, 34vh);
-        overflow: hidden;
+        grid-template-rows: minmax(360px, 52vh) auto auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       .map-wrap {
         order: 0;
         grid-row: 1;
-        height: auto;
-        min-height: 0;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        height: 52vh;
+        min-height: 360px;
         border-bottom: 1px solid var(--border);
       }
       .place-tree {
-        order: 1;
-        grid-row: 2;
-        min-height: 0;
+        order: 2;
+        grid-row: 3;
+        min-height: 320px;
         height: auto;
-        overflow: hidden;
+        overflow: visible;
         border: 0;
+        border-top: 1px solid var(--border);
       }
       .tree-header {
         flex-shrink: 0;
@@ -974,12 +954,20 @@
       .tree-body {
         flex: 1;
         min-height: 0;
-        overflow-y: auto;
+        overflow-y: visible;
         max-height: none;
         -webkit-overflow-scrolling: touch;
       }
       .data-panel {
-        display: none;
+        order: 1;
+        grid-row: 2;
+        display: grid;
+        border-left: 0;
+        border-top: 1px solid var(--border);
+        overflow: visible;
+      }
+      .data-body {
+        overflow: visible;
       }
     }
 
@@ -993,9 +981,6 @@
         display: grid;
         grid-template-rows: auto minmax(0, 1fr);
         background: var(--bg-sidebar);
-      }
-      .titlebar {
-        display: none;
       }
       .app-header {
         position: relative;
@@ -1058,7 +1043,11 @@
         min-height: 34px;
       }
       .app-main {
-        grid-template-rows: minmax(300px, 52svh) minmax(0, 1fr);
+        grid-template-rows: minmax(300px, 48svh) auto auto;
+      }
+      .map-wrap {
+        height: 48svh;
+        min-height: 300px;
       }
       .maplibregl-ctrl-top-right {
         top: 10px;
@@ -1113,11 +1102,8 @@
         grid-template-columns: 1fr;
         padding: 0 10px 12px 34px;
       }
-      .data-panel {
-        display: none;
-      }
       .data-body {
-        padding: 12px;
+        padding: 12px 10px 14px;
       }
       .pie-card {
         grid-template-columns: 1fr;
@@ -1145,11 +1131,6 @@
   </style>
 </head>
 <body>
-  <header class="titlebar" aria-label="窗口栏">
-    <div class="traffic" aria-hidden="true"><span class="r"></span><span class="y"></span><span class="g"></span></div>
-    <div class="window-title">Stanley商学院成员分布</div>
-  </header>
-
   <header class="app-header">
     <h1>🌍 Stanley商学院成员分布</h1>
     <div class="header-center">
