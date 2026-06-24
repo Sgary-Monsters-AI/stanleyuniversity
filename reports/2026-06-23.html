@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年6月23日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">日报回看、成员地图、新人画像、线下连接与 Space 复盘。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年6月23日 星期二</span>
+          <span class="tag">Stanley商学院</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年6月23日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-06-23 00:00 至 2026-06-24 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>10:36:57 至 23:53:57</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 连接、复盘与长期沉淀</span></div>
+          </div>
+        </div>
+        <p class="lead">今天消息量不大，但几个基础设施开始被群友自然使用：日报、成员地图、城市登记、新人介绍和 Space 回放，逐渐变成大家回看、认识人和继续连接的入口。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>283</strong><span>条可见消息</span></div>
+      <div class="metric"><strong>106</strong><span>最终群成员</span></div>
+      <div class="metric"><strong>40</strong><span>可见发言成员</span></div>
+      <div class="metric"><strong>4</strong><span>新增成员</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>从日报回看到线下连接继续生长</h2>
+      </div>
+      <div class="summary">
+        <p>6 月 23 日，Stanley商学院全天可见消息 283 条，最终群成员 106 人，新增成员 4 人。今天不是高强度讨论日，更像一次“基础设施回流日”：昨天的日报链接、日报汇总、成员地图和城市登记入口被群友反复提到，也开始被建议放到更容易找到的位置。</p>
+        <p>上午，群里先问起昨晚 Space 是否有总结，随后 6 月 22 日日报链接发出。群友对日报和成员分布地图给出正反馈，提到“日报和成员分布的集成”“地图做得太棒了”。这说明日报已经不只是内容输出，也在变成新同学追上群聊、老成员回看重点的固定入口。</p>
+        <p>中午前后，群友建议把链接置顶或放到群公告，Gary 也补充了日报汇总入口和地图里的飞书城市登记问卷。这个细节很重要：当群人数超过 100 后，单靠爬楼已经不够，社群需要一套让人自己找到日报、地图、表单和成员信息的路径。</p>
+        <p>下午新增成员陆续出现。星司来自东北大学秦皇岛分校计算机科学与技术专业，用“奔赴星辰大海”完成自我介绍；与神同行来自江西，学国际贸易，正在做国画相关自媒体与电商，同时学习外贸和 AI。两个介绍都很快带出欢迎、追问和轻松互动。</p>
+        <p>与神同行的自我介绍把群聊带到一条更生活化的线：诗、国画、茶、写作和自媒体。群友让他分享诗，他发出《代号》；Punk 也聊到自己写歌词更多。随后大家又从熟普、白茶、漳平水仙聊到“茶其实是甜的”。这类内容不直接等于项目，但让社群里的人更立体。</p>
+        <p>傍晚，郑州线下连接继续发酵。目送问有没有郑州线下面基，群友接上“7 月初到郑州”“一起吃烩面”“胡辣汤”等话题。到了晚上，Space 以“谈亏钱经历。赚钱不一定能复制，亏钱避坑一定能帮到你”为主题开启。结束后大家讨论控场、主持、开学仪式和 100 位同学节点，社群开始从日常聊天继续走向更正式的共同场域。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>10 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event">
+          <div class="event-no">1</div>
+          <div>
+            <h3>昨晚 Space 总结被主动追问</h3>
+            <p>10:52，有群友问“昨晚的 Space 有总结嘛”。这说明 Space 已经不只是当晚热闹，群友开始期待回放、总结和可复盘资料。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">2</div>
+          <div>
+            <h3>6 月 22 日日报回流，日报和地图获得正反馈</h3>
+            <p>11:00，6 月 22 日日报链接发到群里。随后群友提到“还做了日报和成员分布的集成”“地图做得太棒了”，日报汇总和成员地图开始作为社群基础入口被看见。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">3</div>
+          <div>
+            <h3>群友建议把日报入口置顶或放进公告</h3>
+            <p>12:48，有同学建议把链接置顶或放到群公告里，避免后来的人反复爬楼。Punk 随后提醒大家可以自己保存书签，日报汇总入口也再次被发出。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">4</div>
+          <div>
+            <h3>城市登记入口继续被补充</h3>
+            <p>13:15 左右，群里提到成员地图里有飞书问卷可以登记城市。对于一个跨城市、跨学校的大学生社群来说，城市信息会直接影响线下见面、同校同城连接和资源匹配。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">5</div>
+          <div>
+            <h3>星司加入并完成自我介绍</h3>
+            <p>13:03，星司加入群聊。他来自东北大学秦皇岛分校，计算机科学与技术专业，大一。自我介绍里的“找到更多同路人，共同成长，奔赴星辰大海”也被群友接住并欢迎。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">6</div>
+          <div>
+            <h3>与神同行加入，带出诗、国画和自媒体线索</h3>
+            <p>13:14，与神同行加入；13:34 完成自我介绍。他来自江西，学国际贸易，从事国画行业，做自媒体与电商，也在学习外贸和 AI。这个画像让社群的成员背景继续变丰富。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">7</div>
+          <div>
+            <h3>诗歌、国画和茶成为下午的轻讨论</h3>
+            <p>15:47，与神同行分享自己写的诗《代号》，随后大家聊到歌词、国画、熟普、白茶和漳平水仙。今天的群聊因此多了一条文化和生活方式的线，而不只是工具和变现。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">8</div>
+          <div>
+            <h3>郑州线下连接继续发酵</h3>
+            <p>16 点后，目送发起郑州线下面基话题，群友接着聊到 7 月初回郑州、烩面、胡辣汤和具体约见。前几天由成员地图和城市信息引出的线下连接，今天继续自然发生。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">9</div>
+          <div>
+            <h3>晚间 Space 主题转向“亏钱避坑”</h3>
+            <p>21:03，晚间 Space 链接发出，主题是“谈亏钱经历。赚钱不一定能复制，亏钱避坑一定能帮到你”。群里也提醒讨论边界，敏感话题及时收住。</p>
+          </div>
+        </article>
+
+        <article class="event">
+          <div class="event-no">10</div>
+          <div>
+            <h3>Space 后续讨论落到控场和开学仪式</h3>
+            <p>Space 后，群友评价“很有收获”，也夸蜗牛控场能力强。随后大家聊到开学仪式，Punk 提到预计在满 100 位同学时进行，社群的仪式感开始被明确提出。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>活跃、扩容和讨论峰值</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>消息总数：283 条</li>
+            <li>可见记录：10:36:57 至 23:53:57</li>
+            <li>可见发言成员：40 人</li>
+            <li>最终群成员：106 人</li>
+            <li>新增成员：4 人</li>
+            <li>统计区间：2026-06-23 00:00 至 2026-06-24 00:00</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>高峰时段</h3>
+          <ul>
+            <li>13:00 - 13:59：59 条，日报汇总、城市登记、新成员加入和自我介绍集中出现。</li>
+            <li>15:00 - 15:59：52 条，诗歌、国画、歌词和茶相关讨论活跃。</li>
+            <li>17:00 - 17:59：51 条，郑州线下面基、烩面和胡辣汤话题延续。</li>
+            <li>16:00 - 16:59：50 条，茶、年轻人画像、郑州连接和新成员加入交织。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>主题</th>
+              <th>口径</th>
+              <th>说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>基础设施</td><td>日报 + 地图 + 问卷</td><td>日报汇总、成员地图和城市登记入口开始被群友主动使用和建议优化。</td></tr>
+            <tr><td>新人画像</td><td>4 人加入</td><td>星司、与神同行、ʟᴇᴇ、狼哥加入；星司和与神同行补充了较完整画像。</td></tr>
+            <tr><td>生活化连接</td><td>诗 / 画 / 茶</td><td>成员兴趣从 AI 工具延伸到诗歌、国画、写作、茶和自媒体。</td></tr>
+            <tr><td>线下连接</td><td>郑州</td><td>郑州同学继续围绕面基、烩面、胡辣汤形成具体连接。</td></tr>
+            <tr><td>晚间 Space</td><td>亏钱避坑</td><td>主题从赚钱经验转向亏钱经历和避坑复盘，结束后继续讨论主持与仪式感。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天最值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic">
+          <h3>1. 日报和地图成为公共入口</h3>
+          <p>当群友开始主动找日报、夸成员地图、建议把链接置顶时，说明这些工具已经不只是展示页面，而是在承担社群导航功能。</p>
+        </article>
+        <article class="topic">
+          <h3>2. 新人画像让群更立体</h3>
+          <p>星司代表计算机新同学，与神同行带来国画、自媒体、电商、外贸和 AI 的混合背景。成员画像越清楚，未来互相找到人的成本越低。</p>
+        </article>
+        <article class="topic">
+          <h3>3. 线下连接来自真实城市信息</h3>
+          <p>郑州话题连续几天发酵，不是偶然。成员地图、城市登记和群内自我介绍结合起来，才会让“附近有没有人”变成可行动的问题。</p>
+        </article>
+        <article class="topic">
+          <h3>4. Space 继续从热闹走向复盘</h3>
+          <p>今天的 Space 主题是亏钱和避坑，方向比单纯讲赚钱更务实。群友对控场、主持和回放也有反馈，说明 Space 正在形成自己的方法。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">行动建议</div>
+        <h2>明日可继续推进</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把日报汇总、成员地图和城市登记入口固定到群公告或欢迎语里，降低新成员爬楼成本。</div>
+        <div class="action">继续引导新成员按“城市 / 学校 / 专业 / 正在做什么 / 想连接什么人”补充自我介绍。</div>
+        <div class="action">把郑州线下面基做成轻量接龙，先确认时间段、地点和参与成员，不需要过度正式化。</div>
+        <div class="action">把“亏钱避坑”Space 做成回放索引或简短纪要，方便没听到的人补课。</div>
+        <div class="action">整理一版城市登记数据缺口，优先补城市为空或只有省份的成员。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，在低消息量里把入口和连接继续跑顺了。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight">
+          <h3>已经跑通</h3>
+          <ul>
+            <li>日报和成员地图被群友自然回看。</li>
+            <li>城市登记入口开始承接成员地图数据。</li>
+            <li>新成员画像继续补充，兴趣和背景更丰富。</li>
+            <li>郑州线下连接连续发酵。</li>
+            <li>Space 继续承载经验复盘和表达训练。</li>
+          </ul>
+        </div>
+        <div class="info-block rose">
+          <h3>继续补齐</h3>
+          <ul>
+            <li>把关键入口固定到群公告或欢迎语。</li>
+            <li>补齐城市、学校、专业和自我介绍字段。</li>
+            <li>让 Space 回放和纪要更容易找到。</li>
+            <li>把线下连接从聊天推进到简单接龙。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-06-23 00:00 至 2026-06-24 00:00 的本地可见聊天记录；跨日记录仅计入 2026-06-23 23:59:59 之前内容。</p>
+    </footer>
+  </main>
+</body>
+</html>
