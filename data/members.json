@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-25T12:19:33.220Z",
-  "totalMembers": 86,
+  "updatedAt": "2026-06-25T15:39:17.496Z",
+  "totalMembers": 92,
   "locatedMembers": 58,
   "cityLocatedMembers": 58,
   "provinceLocatedMembers": 54,
@@ -8,8 +8,8 @@
   "mappedAddressCount": 60,
   "multiAddressMembers": 3,
   "provinceOnlyMembers": 2,
-  "unmappedMembers": 1,
-  "unrecordedMembers": 28,
+  "unmappedMembers": 2,
+  "unrecordedMembers": 33,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -2700,6 +2700,41 @@
       "wechatName": "zzzzz",
       "university": "",
       "major": ""
+    },
+    {
+      "name": "啊哦",
+      "registeredName": "啊哦",
+      "wechatName": "啊哦",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "云比云",
+      "registeredName": "云比云",
+      "wechatName": "云比云 @yunbiyun",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "Beverly_lan",
+      "registeredName": "Beverly_lan",
+      "wechatName": "Beverly_lan",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "pot",
+      "registeredName": "pot",
+      "wechatName": "pot",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "。",
+      "registeredName": "。",
+      "wechatName": "。",
+      "university": "",
+      "major": ""
     }
   ],
   "provinceOnlyStudents": [
@@ -2730,6 +2765,14 @@
       "university": "合肥工业大学宣城校区",
       "major": "环境工程",
       "city": "宣城"
+    },
+    {
+      "name": "刘嘉明",
+      "registeredName": "刘嘉明",
+      "wechatName": "冷情🌸（商学院）",
+      "university": "内蒙古农业大学",
+      "major": "软件工程专业",
+      "city": "呼和浩特"
     }
   ],
   "excludedDualCityStudents": [],
@@ -3978,6 +4021,68 @@
       "city": "",
       "locations": [],
       "unmappedLocations": []
+    },
+    {
+      "name": "啊哦",
+      "registeredName": "啊哦",
+      "wechatName": "啊哦",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "云比云",
+      "registeredName": "云比云",
+      "wechatName": "云比云 @yunbiyun",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "Beverly_lan",
+      "registeredName": "Beverly_lan",
+      "wechatName": "Beverly_lan",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "pot",
+      "registeredName": "pot",
+      "wechatName": "pot",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "。",
+      "registeredName": "。",
+      "wechatName": "。",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "刘嘉明",
+      "registeredName": "刘嘉明",
+      "wechatName": "冷情🌸（商学院）",
+      "university": "内蒙古农业大学",
+      "major": "软件工程专业",
+      "city": "呼和浩特",
+      "locations": [],
+      "unmappedLocations": [
+        "呼和浩特"
+      ]
     }
   ]
 }
