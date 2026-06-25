@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-25T15:39:17.496Z",
-  "totalMembers": 92,
-  "locatedMembers": 58,
-  "cityLocatedMembers": 58,
-  "provinceLocatedMembers": 54,
+  "updatedAt": "2026-06-25T16:27:45.151Z",
+  "totalMembers": 90,
+  "locatedMembers": 61,
+  "cityLocatedMembers": 61,
+  "provinceLocatedMembers": 56,
   "filledCityRecords": 57,
-  "mappedAddressCount": 60,
-  "multiAddressMembers": 3,
+  "mappedAddressCount": 63,
+  "multiAddressMembers": 4,
   "provinceOnlyMembers": 2,
   "unmappedMembers": 2,
-  "unrecordedMembers": 33,
+  "unrecordedMembers": 31,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -178,6 +178,46 @@
       ]
     },
     {
+      "label": "广州",
+      "provinceLabel": "广东",
+      "note": "广州市",
+      "lng": 113.280637,
+      "lat": 23.125178,
+      "chinaNames": [
+        "广州市"
+      ],
+      "count": 3,
+      "students": [
+        {
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
+          "city": "广州",
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+        },
+        {
+          "name": "康康",
+          "registeredName": "康康",
+          "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
+          "city": "广州",
+          "sourceCity": "广州"
+        },
+        {
+          "name": "Felix",
+          "registeredName": "Felix",
+          "wechatName": "Felix",
+          "university": "暨南大学",
+          "major": "金融工程",
+          "city": "广州",
+          "sourceCity": "广州"
+        }
+      ]
+    },
+    {
       "label": "杭州",
       "provinceLabel": "浙江",
       "note": "杭州市",
@@ -281,7 +321,7 @@
           "university": "新南威尔士大学",
           "major": "生物医学工程（方向：生信和数据科学，大三）",
           "city": "悉尼",
-          "sourceCity": "悉尼"
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
         },
         {
           "name": "Sophie",
@@ -295,33 +335,42 @@
       ]
     },
     {
-      "label": "广州",
-      "provinceLabel": "广东",
-      "note": "广州市",
-      "lng": 113.280637,
-      "lat": 23.125178,
+      "label": "郑州",
+      "provinceLabel": "河南",
+      "note": "郑州市",
+      "lng": 113.665412,
+      "lat": 34.757975,
       "chinaNames": [
-        "广州市"
+        "郑州市"
       ],
-      "count": 2,
+      "count": 3,
       "students": [
         {
-          "name": "康康",
-          "registeredName": "康康",
-          "wechatName": "sloth",
-          "university": "",
-          "major": "师范专业",
-          "city": "广州",
-          "sourceCity": "广州"
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
+          "city": "郑州",
+          "sourceCity": "郑州"
         },
         {
-          "name": "Felix",
-          "registeredName": "Felix",
-          "wechatName": "Felix",
-          "university": "暨南大学",
-          "major": "金融工程",
-          "city": "广州",
-          "sourceCity": "广州"
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
+          "city": "郑州",
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+        },
+        {
+          "name": "狐狸",
+          "registeredName": "狐狸",
+          "wechatName": "Ver",
+          "university": "河南大学",
+          "major": "计科",
+          "city": "郑州",
+          "sourceCity": "郑州"
         }
       ]
     },
@@ -388,33 +437,30 @@
       ]
     },
     {
-      "label": "郑州",
-      "provinceLabel": "河南",
-      "note": "郑州市",
-      "lng": 113.665412,
-      "lat": 34.757975,
-      "chinaNames": [
-        "郑州市"
-      ],
+      "label": "新加坡",
+      "note": "海外市级行政边界",
+      "lng": 103.8198,
+      "lat": 1.3521,
+      "overseasId": "singapore",
       "count": 2,
       "students": [
         {
-          "name": "张锦阳",
-          "registeredName": "张锦阳",
-          "wechatName": "Orion 常青de绵阳",
-          "university": "河南财经政法大学",
-          "major": "软件工程（大一）",
-          "city": "郑州",
-          "sourceCity": "郑州"
+          "name": "愚任杰",
+          "registeredName": "愚任杰",
+          "wechatName": "愚任杰",
+          "university": "新加坡国立大学",
+          "major": "工业系统工程（研究生）",
+          "city": "新加坡",
+          "sourceCity": "新加坡"
         },
         {
-          "name": "狐狸",
-          "registeredName": "狐狸",
-          "wechatName": "Ver",
-          "university": "河南大学",
-          "major": "计科",
-          "city": "郑州",
-          "sourceCity": "郑州"
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
+          "city": "新加坡",
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
         }
       ]
     },
@@ -870,25 +916,6 @@
           "major": "",
           "city": "香港",
           "sourceCity": "香港"
-        }
-      ]
-    },
-    {
-      "label": "新加坡",
-      "note": "海外市级行政边界",
-      "lng": 103.8198,
-      "lat": 1.3521,
-      "overseasId": "singapore",
-      "count": 1,
-      "students": [
-        {
-          "name": "愚任杰",
-          "registeredName": "愚任杰",
-          "wechatName": "愚任杰",
-          "university": "新加坡国立大学",
-          "major": "工业系统工程（研究生）",
-          "city": "新加坡",
-          "sourceCity": "新加坡"
         }
       ]
     },
@@ -1586,6 +1613,208 @@
       ]
     },
     {
+      "label": "广东",
+      "name": "广东省",
+      "adcode": 440000,
+      "lng": 113.2668,
+      "lat": 23.1322,
+      "note": "广东省",
+      "count": 4,
+      "cityCount": 4,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "张淇博",
+          "registeredName": "张淇博",
+          "wechatName": "keve",
+          "university": "深圳技术大学",
+          "major": "集成电路",
+          "city": "深圳",
+          "sourceCity": "深圳"
+        },
+        {
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
+          "city": "广州",
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+        },
+        {
+          "name": "康康",
+          "registeredName": "康康",
+          "wechatName": "sloth",
+          "university": "",
+          "major": "师范专业",
+          "city": "广州",
+          "sourceCity": "广州"
+        },
+        {
+          "name": "Felix",
+          "registeredName": "Felix",
+          "wechatName": "Felix",
+          "university": "暨南大学",
+          "major": "金融工程",
+          "city": "广州",
+          "sourceCity": "广州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "广州",
+          "count": 3,
+          "note": "广州市",
+          "students": [
+            {
+              "name": "蟑螂",
+              "registeredName": "蟑螂",
+              "wechatName": "ㅤ蟑螂",
+              "university": "新南威尔士大学",
+              "major": "生物医学工程（方向：生信和数据科学，大三）",
+              "city": "广州",
+              "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+            },
+            {
+              "name": "康康",
+              "registeredName": "康康",
+              "wechatName": "sloth",
+              "university": "",
+              "major": "师范专业",
+              "city": "广州",
+              "sourceCity": "广州"
+            },
+            {
+              "name": "Felix",
+              "registeredName": "Felix",
+              "wechatName": "Felix",
+              "university": "暨南大学",
+              "major": "金融工程",
+              "city": "广州",
+              "sourceCity": "广州"
+            }
+          ]
+        },
+        {
+          "label": "深圳",
+          "count": 1,
+          "note": "深圳市",
+          "students": [
+            {
+              "name": "张淇博",
+              "registeredName": "张淇博",
+              "wechatName": "keve",
+              "university": "深圳技术大学",
+              "major": "集成电路",
+              "city": "深圳",
+              "sourceCity": "深圳"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "河南",
+      "name": "河南省",
+      "adcode": 410000,
+      "lng": 113.7536,
+      "lat": 34.7657,
+      "note": "河南省",
+      "count": 4,
+      "cityCount": 4,
+      "provinceOnlyCount": 0,
+      "students": [
+        {
+          "name": "张锦阳",
+          "registeredName": "张锦阳",
+          "wechatName": "Orion 常青de绵阳",
+          "university": "河南财经政法大学",
+          "major": "软件工程（大一）",
+          "city": "郑州",
+          "sourceCity": "郑州"
+        },
+        {
+          "name": "蟑螂",
+          "registeredName": "蟑螂",
+          "wechatName": "ㅤ蟑螂",
+          "university": "新南威尔士大学",
+          "major": "生物医学工程（方向：生信和数据科学，大三）",
+          "city": "郑州",
+          "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+        },
+        {
+          "name": "徐亚博",
+          "registeredName": "徐亚博",
+          "wechatName": "火火",
+          "university": "信阳师范大学",
+          "major": "护理学",
+          "city": "信阳市",
+          "sourceCity": "信阳市"
+        },
+        {
+          "name": "狐狸",
+          "registeredName": "狐狸",
+          "wechatName": "Ver",
+          "university": "河南大学",
+          "major": "计科",
+          "city": "郑州",
+          "sourceCity": "郑州"
+        }
+      ],
+      "cities": [
+        {
+          "label": "郑州",
+          "count": 3,
+          "note": "郑州市",
+          "students": [
+            {
+              "name": "张锦阳",
+              "registeredName": "张锦阳",
+              "wechatName": "Orion 常青de绵阳",
+              "university": "河南财经政法大学",
+              "major": "软件工程（大一）",
+              "city": "郑州",
+              "sourceCity": "郑州"
+            },
+            {
+              "name": "蟑螂",
+              "registeredName": "蟑螂",
+              "wechatName": "ㅤ蟑螂",
+              "university": "新南威尔士大学",
+              "major": "生物医学工程（方向：生信和数据科学，大三）",
+              "city": "郑州",
+              "sourceCity": "郑州 / 新加坡 / 悉尼 / 广州"
+            },
+            {
+              "name": "狐狸",
+              "registeredName": "狐狸",
+              "wechatName": "Ver",
+              "university": "河南大学",
+              "major": "计科",
+              "city": "郑州",
+              "sourceCity": "郑州"
+            }
+          ]
+        },
+        {
+          "label": "信阳市",
+          "count": 1,
+          "note": "信阳市",
+          "students": [
+            {
+              "name": "徐亚博",
+              "registeredName": "徐亚博",
+              "wechatName": "火火",
+              "university": "信阳师范大学",
+              "major": "护理学",
+              "city": "信阳市",
+              "sourceCity": "信阳市"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "上海",
       "name": "上海市",
       "adcode": 310000,
@@ -1756,89 +1985,6 @@
       ]
     },
     {
-      "label": "广东",
-      "name": "广东省",
-      "adcode": 440000,
-      "lng": 113.2668,
-      "lat": 23.1322,
-      "note": "广东省",
-      "count": 3,
-      "cityCount": 3,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "张淇博",
-          "registeredName": "张淇博",
-          "wechatName": "keve",
-          "university": "深圳技术大学",
-          "major": "集成电路",
-          "city": "深圳",
-          "sourceCity": "深圳"
-        },
-        {
-          "name": "康康",
-          "registeredName": "康康",
-          "wechatName": "sloth",
-          "university": "",
-          "major": "师范专业",
-          "city": "广州",
-          "sourceCity": "广州"
-        },
-        {
-          "name": "Felix",
-          "registeredName": "Felix",
-          "wechatName": "Felix",
-          "university": "暨南大学",
-          "major": "金融工程",
-          "city": "广州",
-          "sourceCity": "广州"
-        }
-      ],
-      "cities": [
-        {
-          "label": "广州",
-          "count": 2,
-          "note": "广州市",
-          "students": [
-            {
-              "name": "康康",
-              "registeredName": "康康",
-              "wechatName": "sloth",
-              "university": "",
-              "major": "师范专业",
-              "city": "广州",
-              "sourceCity": "广州"
-            },
-            {
-              "name": "Felix",
-              "registeredName": "Felix",
-              "wechatName": "Felix",
-              "university": "暨南大学",
-              "major": "金融工程",
-              "city": "广州",
-              "sourceCity": "广州"
-            }
-          ]
-        },
-        {
-          "label": "深圳",
-          "count": 1,
-          "note": "深圳市",
-          "students": [
-            {
-              "name": "张淇博",
-              "registeredName": "张淇博",
-              "wechatName": "keve",
-              "university": "深圳技术大学",
-              "major": "集成电路",
-              "city": "深圳",
-              "sourceCity": "深圳"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "河北",
       "name": "河北省",
       "adcode": 130000,
@@ -1916,89 +2062,6 @@
               "major": "建环专业",
               "city": "石家庄市",
               "sourceCity": "石家庄市"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "河南",
-      "name": "河南省",
-      "adcode": 410000,
-      "lng": 113.7536,
-      "lat": 34.7657,
-      "note": "河南省",
-      "count": 3,
-      "cityCount": 3,
-      "provinceOnlyCount": 0,
-      "students": [
-        {
-          "name": "张锦阳",
-          "registeredName": "张锦阳",
-          "wechatName": "Orion 常青de绵阳",
-          "university": "河南财经政法大学",
-          "major": "软件工程（大一）",
-          "city": "郑州",
-          "sourceCity": "郑州"
-        },
-        {
-          "name": "徐亚博",
-          "registeredName": "徐亚博",
-          "wechatName": "火火",
-          "university": "信阳师范大学",
-          "major": "护理学",
-          "city": "信阳市",
-          "sourceCity": "信阳市"
-        },
-        {
-          "name": "狐狸",
-          "registeredName": "狐狸",
-          "wechatName": "Ver",
-          "university": "河南大学",
-          "major": "计科",
-          "city": "郑州",
-          "sourceCity": "郑州"
-        }
-      ],
-      "cities": [
-        {
-          "label": "郑州",
-          "count": 2,
-          "note": "郑州市",
-          "students": [
-            {
-              "name": "张锦阳",
-              "registeredName": "张锦阳",
-              "wechatName": "Orion 常青de绵阳",
-              "university": "河南财经政法大学",
-              "major": "软件工程（大一）",
-              "city": "郑州",
-              "sourceCity": "郑州"
-            },
-            {
-              "name": "狐狸",
-              "registeredName": "狐狸",
-              "wechatName": "Ver",
-              "university": "河南大学",
-              "major": "计科",
-              "city": "郑州",
-              "sourceCity": "郑州"
-            }
-          ]
-        },
-        {
-          "label": "信阳市",
-          "count": 1,
-          "note": "信阳市",
-          "students": [
-            {
-              "name": "徐亚博",
-              "registeredName": "徐亚博",
-              "wechatName": "火火",
-              "university": "信阳师范大学",
-              "major": "护理学",
-              "city": "信阳市",
-              "sourceCity": "信阳市"
             }
           ]
         }
@@ -2681,13 +2744,6 @@
       "major": ""
     },
     {
-      "name": "狼哥",
-      "registeredName": "狼哥",
-      "wechatName": "狼哥",
-      "university": "",
-      "major": ""
-    },
-    {
       "name": "XiuG",
       "registeredName": "XiuG",
       "wechatName": "XiuG",
@@ -2705,13 +2761,6 @@
       "name": "啊哦",
       "registeredName": "啊哦",
       "wechatName": "啊哦",
-      "university": "",
-      "major": ""
-    },
-    {
-      "name": "云比云",
-      "registeredName": "云比云",
-      "wechatName": "云比云 @yunbiyun",
       "university": "",
       "major": ""
     },
@@ -2792,6 +2841,14 @@
       "university": "北京中医药大学",
       "major": "",
       "city": "常州/北京"
+    },
+    {
+      "name": "蟑螂",
+      "registeredName": "蟑螂",
+      "wechatName": "ㅤ蟑螂",
+      "university": "新南威尔士大学",
+      "major": "生物医学工程（方向：生信和数据科学，大三）",
+      "city": "郑州 / 新加坡 / 悉尼 / 广州"
     },
     {
       "name": "姜永健",
@@ -3441,11 +3498,26 @@
       "wechatName": "ㅤ蟑螂",
       "university": "新南威尔士大学",
       "major": "生物医学工程（方向：生信和数据科学，大三）",
-      "city": "悉尼",
+      "city": "郑州 / 新加坡 / 悉尼 / 广州",
       "locations": [
+        {
+          "label": "郑州",
+          "note": "郑州市",
+          "type": "city"
+        },
+        {
+          "label": "新加坡",
+          "note": "海外市级行政边界",
+          "type": "city"
+        },
         {
           "label": "悉尼",
           "note": "海外都会区边界",
+          "type": "city"
+        },
+        {
+          "label": "广州",
+          "note": "广州市",
           "type": "city"
         }
       ],
@@ -3993,16 +4065,6 @@
       "unmappedLocations": []
     },
     {
-      "name": "狼哥",
-      "registeredName": "狼哥",
-      "wechatName": "狼哥",
-      "university": "",
-      "major": "",
-      "city": "",
-      "locations": [],
-      "unmappedLocations": []
-    },
-    {
       "name": "XiuG",
       "registeredName": "XiuG",
       "wechatName": "XiuG",
@@ -4026,16 +4088,6 @@
       "name": "啊哦",
       "registeredName": "啊哦",
       "wechatName": "啊哦",
-      "university": "",
-      "major": "",
-      "city": "",
-      "locations": [],
-      "unmappedLocations": []
-    },
-    {
-      "name": "云比云",
-      "registeredName": "云比云",
-      "wechatName": "云比云 @yunbiyun",
       "university": "",
       "major": "",
       "city": "",
