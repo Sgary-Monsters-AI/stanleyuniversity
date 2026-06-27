@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-06-27T02:56:25.164Z",
-  "totalMembers": 90,
-  "locatedMembers": 61,
-  "cityLocatedMembers": 61,
-  "provinceLocatedMembers": 56,
-  "filledCityRecords": 57,
-  "mappedAddressCount": 63,
+  "updatedAt": "2026-06-27T06:30:49.657Z",
+  "totalMembers": 93,
+  "locatedMembers": 62,
+  "cityLocatedMembers": 62,
+  "provinceLocatedMembers": 57,
+  "filledCityRecords": 58,
+  "mappedAddressCount": 64,
   "multiAddressMembers": 4,
   "provinceOnlyMembers": 2,
   "unmappedMembers": 2,
-  "unrecordedMembers": 31,
+  "unrecordedMembers": 33,
   "excludedDualCityMembers": 0,
   "placeRows": [
     {
@@ -406,6 +406,37 @@
       ]
     },
     {
+      "label": "青岛",
+      "provinceLabel": "山东",
+      "note": "青岛市",
+      "lng": 120.355173,
+      "lat": 36.082982,
+      "chinaNames": [
+        "青岛市"
+      ],
+      "count": 2,
+      "students": [
+        {
+          "name": "郑杨守都",
+          "registeredName": "郑杨守都",
+          "wechatName": "Luxorion",
+          "university": "青岛科技大学",
+          "major": "人工智能专业在读",
+          "city": "青岛",
+          "sourceCity": "青岛"
+        },
+        {
+          "name": "何玉亮",
+          "registeredName": "何玉亮",
+          "wechatName": "亮Leo",
+          "university": "青岛理工大学",
+          "major": "机器人专业",
+          "city": "青岛",
+          "sourceCity": "青岛"
+        }
+      ]
+    },
+    {
       "label": "厦门",
       "provinceLabel": "福建",
       "note": "厦门市",
@@ -741,28 +772,6 @@
           "major": "",
           "city": "连云港",
           "sourceCity": "连云港"
-        }
-      ]
-    },
-    {
-      "label": "青岛",
-      "provinceLabel": "山东",
-      "note": "青岛市",
-      "lng": 120.355173,
-      "lat": 36.082982,
-      "chinaNames": [
-        "青岛市"
-      ],
-      "count": 1,
-      "students": [
-        {
-          "name": "郑杨守都",
-          "registeredName": "郑杨守都",
-          "wechatName": "Luxorion",
-          "university": "青岛科技大学",
-          "major": "人工智能专业在读",
-          "city": "青岛",
-          "sourceCity": "青岛"
         }
       ]
     },
@@ -1356,6 +1365,148 @@
       ]
     },
     {
+      "label": "山东",
+      "name": "山东省",
+      "adcode": 370000,
+      "lng": 117.0207,
+      "lat": 36.6702,
+      "note": "山东省",
+      "count": 6,
+      "cityCount": 5,
+      "provinceOnlyCount": 1,
+      "students": [
+        {
+          "name": "张校菘",
+          "registeredName": "张校菘",
+          "wechatName": "向箔",
+          "university": "烟台大学",
+          "major": "AI应用方向",
+          "city": "烟台",
+          "sourceCity": "山东烟台"
+        },
+        {
+          "name": "janus",
+          "registeredName": "janus",
+          "wechatName": "陆小果",
+          "university": "",
+          "major": "导演 / 艺术生",
+          "city": "济南",
+          "sourceCity": "长春 / 济南"
+        },
+        {
+          "name": "舒奕萌",
+          "registeredName": "舒奕萌",
+          "wechatName": "🐟",
+          "university": "",
+          "major": "应届高考生",
+          "city": "山东",
+          "sourceCity": "山东"
+        },
+        {
+          "name": "Glory",
+          "registeredName": "Glory",
+          "wechatName": "Glory",
+          "university": "山东理工大学",
+          "major": "地信专业 / 大二",
+          "city": "淄博",
+          "sourceCity": "淄博"
+        },
+        {
+          "name": "郑杨守都",
+          "registeredName": "郑杨守都",
+          "wechatName": "Luxorion",
+          "university": "青岛科技大学",
+          "major": "人工智能专业在读",
+          "city": "青岛",
+          "sourceCity": "青岛"
+        },
+        {
+          "name": "何玉亮",
+          "registeredName": "何玉亮",
+          "wechatName": "亮Leo",
+          "university": "青岛理工大学",
+          "major": "机器人专业",
+          "city": "青岛",
+          "sourceCity": "青岛"
+        }
+      ],
+      "cities": [
+        {
+          "label": "青岛",
+          "count": 2,
+          "note": "青岛市",
+          "students": [
+            {
+              "name": "郑杨守都",
+              "registeredName": "郑杨守都",
+              "wechatName": "Luxorion",
+              "university": "青岛科技大学",
+              "major": "人工智能专业在读",
+              "city": "青岛",
+              "sourceCity": "青岛"
+            },
+            {
+              "name": "何玉亮",
+              "registeredName": "何玉亮",
+              "wechatName": "亮Leo",
+              "university": "青岛理工大学",
+              "major": "机器人专业",
+              "city": "青岛",
+              "sourceCity": "青岛"
+            }
+          ]
+        },
+        {
+          "label": "济南",
+          "count": 1,
+          "note": "济南市",
+          "students": [
+            {
+              "name": "janus",
+              "registeredName": "janus",
+              "wechatName": "陆小果",
+              "university": "",
+              "major": "导演 / 艺术生",
+              "city": "济南",
+              "sourceCity": "长春 / 济南"
+            }
+          ]
+        },
+        {
+          "label": "烟台",
+          "count": 1,
+          "note": "烟台市",
+          "students": [
+            {
+              "name": "张校菘",
+              "registeredName": "张校菘",
+              "wechatName": "向箔",
+              "university": "烟台大学",
+              "major": "AI应用方向",
+              "city": "烟台",
+              "sourceCity": "山东烟台"
+            }
+          ]
+        },
+        {
+          "label": "淄博",
+          "count": 1,
+          "note": "淄博市",
+          "students": [
+            {
+              "name": "Glory",
+              "registeredName": "Glory",
+              "wechatName": "Glory",
+              "university": "山东理工大学",
+              "major": "地信专业 / 大二",
+              "city": "淄博",
+              "sourceCity": "淄博"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "福建",
       "name": "福建省",
       "adcode": 350000,
@@ -1483,130 +1634,6 @@
               "major": "广播电视编导大三 / 摄影摄像",
               "city": "漳州",
               "sourceCity": "漳州"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "山东",
-      "name": "山东省",
-      "adcode": 370000,
-      "lng": 117.0207,
-      "lat": 36.6702,
-      "note": "山东省",
-      "count": 5,
-      "cityCount": 4,
-      "provinceOnlyCount": 1,
-      "students": [
-        {
-          "name": "张校菘",
-          "registeredName": "张校菘",
-          "wechatName": "向箔",
-          "university": "烟台大学",
-          "major": "AI应用方向",
-          "city": "烟台",
-          "sourceCity": "山东烟台"
-        },
-        {
-          "name": "janus",
-          "registeredName": "janus",
-          "wechatName": "陆小果",
-          "university": "",
-          "major": "导演 / 艺术生",
-          "city": "济南",
-          "sourceCity": "长春 / 济南"
-        },
-        {
-          "name": "舒奕萌",
-          "registeredName": "舒奕萌",
-          "wechatName": "🐟",
-          "university": "",
-          "major": "应届高考生",
-          "city": "山东",
-          "sourceCity": "山东"
-        },
-        {
-          "name": "Glory",
-          "registeredName": "Glory",
-          "wechatName": "Glory",
-          "university": "山东理工大学",
-          "major": "地信专业 / 大二",
-          "city": "淄博",
-          "sourceCity": "淄博"
-        },
-        {
-          "name": "郑杨守都",
-          "registeredName": "郑杨守都",
-          "wechatName": "Luxorion",
-          "university": "青岛科技大学",
-          "major": "人工智能专业在读",
-          "city": "青岛",
-          "sourceCity": "青岛"
-        }
-      ],
-      "cities": [
-        {
-          "label": "济南",
-          "count": 1,
-          "note": "济南市",
-          "students": [
-            {
-              "name": "janus",
-              "registeredName": "janus",
-              "wechatName": "陆小果",
-              "university": "",
-              "major": "导演 / 艺术生",
-              "city": "济南",
-              "sourceCity": "长春 / 济南"
-            }
-          ]
-        },
-        {
-          "label": "青岛",
-          "count": 1,
-          "note": "青岛市",
-          "students": [
-            {
-              "name": "郑杨守都",
-              "registeredName": "郑杨守都",
-              "wechatName": "Luxorion",
-              "university": "青岛科技大学",
-              "major": "人工智能专业在读",
-              "city": "青岛",
-              "sourceCity": "青岛"
-            }
-          ]
-        },
-        {
-          "label": "烟台",
-          "count": 1,
-          "note": "烟台市",
-          "students": [
-            {
-              "name": "张校菘",
-              "registeredName": "张校菘",
-              "wechatName": "向箔",
-              "university": "烟台大学",
-              "major": "AI应用方向",
-              "city": "烟台",
-              "sourceCity": "山东烟台"
-            }
-          ]
-        },
-        {
-          "label": "淄博",
-          "count": 1,
-          "note": "淄博市",
-          "students": [
-            {
-              "name": "Glory",
-              "registeredName": "Glory",
-              "wechatName": "Glory",
-              "university": "山东理工大学",
-              "major": "地信专业 / 大二",
-              "city": "淄博",
-              "sourceCity": "淄博"
             }
           ]
         }
@@ -2782,6 +2809,20 @@
       "name": "。",
       "registeredName": "。",
       "wechatName": "。",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "今天有更喜欢小盒吗",
+      "registeredName": "今天有更喜欢小盒吗",
+      "wechatName": "今天有更喜欢小盒吗",
+      "university": "",
+      "major": ""
+    },
+    {
+      "name": "霂霖",
+      "registeredName": "霂霖",
+      "wechatName": "霂霖",
       "university": "",
       "major": ""
     }
@@ -4135,6 +4176,42 @@
       "unmappedLocations": [
         "呼和浩特"
       ]
+    },
+    {
+      "name": "今天有更喜欢小盒吗",
+      "registeredName": "今天有更喜欢小盒吗",
+      "wechatName": "今天有更喜欢小盒吗",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
+    },
+    {
+      "name": "何玉亮",
+      "registeredName": "何玉亮",
+      "wechatName": "亮Leo",
+      "university": "青岛理工大学",
+      "major": "机器人专业",
+      "city": "青岛",
+      "locations": [
+        {
+          "label": "青岛",
+          "note": "青岛市",
+          "type": "city"
+        }
+      ],
+      "unmappedLocations": []
+    },
+    {
+      "name": "霂霖",
+      "registeredName": "霂霖",
+      "wechatName": "霂霖",
+      "university": "",
+      "major": "",
+      "city": "",
+      "locations": [],
+      "unmappedLocations": []
     }
   ]
 }
