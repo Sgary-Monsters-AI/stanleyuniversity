@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年6月27日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">培训接龙、线下会面、河南 AI 场景、版权风险和高考话题。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年6月27日 星期六</span>
+          <span class="tag">Stanley商学院</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年6月27日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-06-27 00:00 至 2026-06-28 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>02:00:36 至 22:57:34</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 线下活动、行业观察与行动连接</span></div>
+          </div>
+        </div>
+        <p class="lead">今天消息量不高，但延续了昨天的线下动员：深圳福田培训接龙继续更新，重庆线下会面已经有人先到场，同时群里也聊到河南 AI 应用场景、素材版权风险和高考后的选择。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>66</strong><span>条可见消息</span></div>
+      <div class="metric"><strong>117</strong><span>最终群成员</span></div>
+      <div class="metric"><strong>20</strong><span>可见发言成员</span></div>
+      <div class="metric"><strong>0</strong><span>新增成员</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>从培训接龙到线下会面的延续日</h2>
+      </div>
+      <div class="summary">
+        <p>6 月 27 日，Stanley商学院全天可见消息 66 条，最终群成员 117 人，新增成员 0 人。今天不是高强度刷屏日，更像昨天线下活动动员后的自然延续：深圳福田培训接龙继续更新，部分同学因为期末考试调整报名，也有人继续补位；到了晚上，已经有同学到线下和团队会面。</p>
+        <p>早上，深圳（福田）培训报名接龙先更新到 25 位，亮Leo 出现在名单里。随后有人发现和期末考试时间冲突，主动说明无法参加并让出位置。这个细节很重要：接龙不是热闹数字，而是在逐渐变成真实可执行的出行和学习安排。</p>
+        <p>上午另一个讨论点来自素材和版权风险。群友看到疑似视觉中国相关的素材/图片场景后，讨论“这种是骗子吗”“可能会有套路”，并提醒可能存在拿走版权、再通过维权赚钱的模式。对做内容、设计、AI 图片和短视频的同学来说，这类风险意识很实用。</p>
+        <p>同一时间，群里也聊到河南 AI 短剧和应用场景。有人提到河南签约了 30 家企业的 AI 赋能合同，也有人感叹“河南市场这么好吗”。这延续了 6 月 26 日的线索：机会不只在一线城市，关键是能不能找到真实企业需求和可落地场景。</p>
+        <p>下午，话题转到 AI 时代的内容形式和地区连接。群友认为平面设计需求会越来越低，短视频可能更难被替代；随后又聊到江门、五邑、户口和高考降分等地域信息。这些看似日常，却在帮助群友认识彼此所在城市、学校和资源环境。</p>
+        <p>晚上，Stanley 和他的朋友们开启“高考成绩没那么重要，它只是人生的开始”的自由麦。到 22 点后，群里确认已经有同学来和团队会面，并提醒明天到现场的同学直接联系 Punk 和 Ali。今天的价值就在这里：前一天的转发和接龙，已经开始落到见面和现场参与。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>10 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>深夜延续“高单价服务”话题</h3><p>02:00，群里出现“2w 一本书”的讨论尾声，延续了前一天关于老年回忆录、内容服务和高客单价机会的思路。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>深圳福田培训接龙更新到 25 位</h3><p>08:25，深圳（福田）培训报名接龙更新，名单来到 25 位，亮Leo 也出现在接龙里。线下培训继续从意向变成名单。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>素材版权和维权套路被提醒</h3><p>10:23 后，群友围绕一组图片和视频讨论是否有套路，提醒可能存在拿走版权、再通过维权赚钱的模式。这个话题对内容创作者尤其重要。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>河南 AI 短剧和企业应用场景被提起</h3><p>10:25 后，群友聊到河南 AI 短剧、AI 应用场景和 30 家企业 AI 赋能合同。讨论从“哪里有机会”继续落到具体地方和企业场景。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>群友提到 GPT 新版本相关信息</h3><p>11:04，有群友提到 OpenAI 上出现 GPT 5.6 相关信息，并讨论普通用户什么时候能用上。群里对工具更新仍保持敏感。</p></div></article>
+        <article class="event"><div class="event-no">6</div><div><h3>期末考试影响线下报名</h3><p>12:14，有同学说明自己填完接龙后发现和期末考试冲突，无法参加并主动让出位置。报名开始进入真实时间安排的校验阶段。</p></div></article>
+        <article class="event"><div class="event-no">7</div><div><h3>郑州烩面线继续轻松发酵</h3><p>12 点后，群里继续围绕“烩面王”、大蒜、甜蒜和荆芥开玩笑。郑州线下连接虽然不是当天主线，但仍保留了群里的生活感。</p></div></article>
+        <article class="event"><div class="event-no">8</div><div><h3>AI 时代的设计和短视频价值被讨论</h3><p>15:53，有群友提到 AI 时代平面设计需求可能下降，短视频领域更难被替代。随后话题转到个性化推荐和城市学校信息。</p></div></article>
+        <article class="event"><div class="event-no">9</div><div><h3>福田培训接龙继续补位到 27 位</h3><p>17:59 和 18:24，接龙继续更新，pot 和 。加入报名名单。虽然中间有人因考试退出，但名单仍在持续补位。</p></div></article>
+        <article class="event"><div class="event-no">10</div><div><h3>晚间确认已有同学到线下会面</h3><p>22:51，群里确认商学院已有同学来和团队会面，并提醒明天到现场的同学直接联系 Punk 和 Ali。线下活动已经从接龙进入现场连接。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>低消息量里的线下推进</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>消息总数：66 条</li>
+            <li>可见记录：02:00:36 至 22:57:34</li>
+            <li>可见发言成员：20 人</li>
+            <li>最终群成员：117 人</li>
+            <li>新增成员：0 人</li>
+            <li>统计区间：2026-06-27 00:00 至 2026-06-28 00:00</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>高峰时段</h3>
+          <ul>
+            <li>10:00 - 10:59：15 条，素材版权风险、河南 AI 短剧和企业应用场景集中出现。</li>
+            <li>15:00 - 15:59：11 条，AI 时代设计需求、短视频价值、江门和五邑相关讨论展开。</li>
+            <li>12:00 - 12:59：10 条，培训接龙、期末考试冲突和郑州烩面轻讨论交织。</li>
+            <li>16:00 - 16:59：7 条，线下企业交流会图片和现场操作相关内容出现。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>主题</th><th>口径</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>线下活动</td><td>福田培训 / 重庆会面</td><td>报名接龙继续更新，晚间已有同学到线下和团队会面。</td></tr>
+            <tr><td>报名状态</td><td>接龙 25 到 27 位</td><td>有人因期末考试让出位置，也有人继续补位，接龙开始反映真实参与情况。</td></tr>
+            <tr><td>风险意识</td><td>素材版权 / 维权套路</td><td>群友提醒内容创作者注意图片、版权和平台维权相关风险。</td></tr>
+            <tr><td>应用场景</td><td>河南 AI / 企业赋能</td><td>河南 AI 短剧、AI 应用场景和企业赋能合同被提起，延续了行业落地讨论。</td></tr>
+            <tr><td>Space 主题</td><td>高考不是终点</td><td>晚间自由麦把高考成绩和人生选择放到更长周期里讨论。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天最值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 接龙要经得起现实时间表校验</h3><p>报名只是第一步。期末考试、出行时间、到场联系人和现场安排都会影响最终参与，今天的接龙已经开始进入真实执行阶段。</p></article>
+        <article class="topic"><h3>2. 内容创作者要补版权风险意识</h3><p>AI 图片、素材网站、短视频和设计内容都可能涉及授权和维权问题。越是想做内容，越需要先弄清楚素材来源和使用边界。</p></article>
+        <article class="topic"><h3>3. AI 应用机会不只在一线城市</h3><p>河南 AI 短剧和企业赋能合同让大家看到，地方市场也有应用场景。关键不是城市标签，而是有没有真实企业需求。</p></article>
+        <article class="topic"><h3>4. 线下会面是社群信任的加速器</h3><p>从接龙到有人先到现场，社群关系会被现实见面重新加固。线下交流不是线上聊天的附属，而是项目和信任进一步发生的地方。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把福田培训和重庆线下活动的实际到场名单确认清楚，避免接龙和现场人数不一致。</div>
+        <div class="action">到场同学可以在活动后补一句收获，形成群里可回看的简短复盘。</div>
+        <div class="action">继续整理河南 AI 应用场景线索，优先记录真实企业需求和已签约案例。</div>
+        <div class="action">针对素材版权和维权风险，沉淀一份内容创作者使用素材前的检查清单。</div>
+        <div class="action">晚间高考主题 Space 可以补一个回看入口，方便新同学和刚出成绩的同学回听。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，在低消息量里把线下活动继续往现场推进。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight">
+          <h3>已经跑通</h3>
+          <ul>
+            <li>深圳福田培训接龙继续更新。</li>
+            <li>有人因期末冲突主动让出名额，报名更接近真实人数。</li>
+            <li>河南 AI 应用场景被继续讨论。</li>
+            <li>内容素材版权风险被群友提醒。</li>
+            <li>已有同学到线下和团队会面。</li>
+          </ul>
+        </div>
+        <div class="info-block rose">
+          <h3>继续补齐</h3>
+          <ul>
+            <li>确认线下活动最终到场名单。</li>
+            <li>补活动后的群友复盘和现场照片说明。</li>
+            <li>整理素材版权风险的基础注意事项。</li>
+            <li>把地方 AI 应用场景继续落到真实案例。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-06-27 00:00 至 2026-06-28 00:00 的本地可见聊天记录；跨日记录仅计入 2026-06-27 23:59:59 之前内容。</p>
+    </footer>
+  </main>
+</body>
+</html>
