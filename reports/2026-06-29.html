@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年6月29日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">美术生实习、珠三角岗位、作品集、深圳试错和公开求职。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年6月29日 星期一</span>
+          <span class="tag">Stanley商学院</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年6月29日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-06-29 00:00 至 2026-06-30 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>15:19:54 至 15:39:22</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 连接、复盘与长期沉淀</span></div>
+          </div>
+        </div>
+        <p class="lead">今天消息集中在一个很具体的问题：美术生暑期实习怎么找。群友围绕珠三角岗位、UI/UX、视频、AI 动效、作品集和去深圳试错给出建议。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>21</strong><span>条可见消息</span></div>
+      <div class="metric"><strong>117</strong><span>最终群成员</span></div>
+      <div class="metric"><strong>4</strong><span>可见发言成员</span></div>
+      <div class="metric"><strong>0</strong><span>新增成员</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>从美术生实习到作品集试错</h2>
+      </div>
+      <div class="summary">
+        <p>6 月 29 日，Stanley商学院全天可见消息 21 条，最终群成员 117 人，新增成员 0 人。今天只有一个核心话题：美术生如何找暑期实习，以及作品集该如何被拿出来接受反馈。</p>
+        <p>15:19，群友问“群里还有找实习的美术生吗”，希望有人能交流经验。随后讨论很快落到珠三角岗位：当前招聘需求更集中在 UI/UX、视频和 AI 动效，高门槛方向则是建模、游戏特效等。</p>
+        <p>这个判断对美术生很实用。传统平面设计、物料设计岗位变少，而与视频、交互、AI 动效相关的岗位更容易被提起。这延续了前几天关于 AI 时代平面设计和短视频价值的讨论。</p>
+        <p>当被问到暑期实习是否容易面到时，群友给出的建议很直接：先把作品集甩出来。因为作品集是美术生求职的核心入口，只有拿出来，别人才知道怎么帮你改、怎么推荐、怎么判断方向。</p>
+        <p>后续又聊到暑假去深圳参加 Stanley 的会议，并在当地待几天试错。也有人建议把作品集往小红书、X 上发，甚至直接“发推求职”。这让求职不再只是投简历，而是公开展示、社群反馈和线下试错的组合。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>5 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>美术生实习问题被提出</h3><p>15:19，群友问群里是否还有找实习的美术生，希望有人交流经验。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>珠三角岗位方向被拆开</h3><p>群友提到当前招聘需求主要集中在 UI/UX、视频、AI 动效，高门槛方向包括建模和游戏特效。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>传统平面设计岗位变少</h3><p>讨论中提到基本的平面设计、物料设计岗位不太招人了，提醒大家关注岗位结构变化。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>作品集成为求职第一入口</h3><p>当有人担心暑期实习不好面时，群友建议先把作品集发出来，让大家先看再给反馈。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>深圳试错和公开展示被建议</h3><p>有人计划暑假去深圳参加 Stanley 会议并停留试错，也有人建议把作品集发到小红书和 X 上，直接公开求职。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>低消息量里的有效信息</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>消息总数：21 条</li>
+            <li>可见记录：15:19:54 至 15:39:22</li>
+            <li>可见发言成员：4 人</li>
+            <li>最终群成员：117 人</li>
+            <li>新增成员：0 人</li>
+            <li>统计区间：2026-06-29 00:00 至 2026-06-30 00:00</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>高峰时段</h3>
+          <ul>
+            <li>15:00 - 15:59：21 条，全部围绕美术生找实习、珠三角岗位、作品集和公开求职建议。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>主题</th><th>口径</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>实习求助</td><td>美术生 / 珠三角</td><td>群友询问是否有找实习的美术生，并希望交流经验。</td></tr>
+            <tr><td>岗位方向</td><td>UI/UX / 视频 / AI 动效</td><td>当前招聘需求被概括为 UI/UX、视频、AI 动效，高门槛方向包括建模和游戏特效。</td></tr>
+            <tr><td>作品集</td><td>先发出来再改</td><td>群友建议先把作品集甩出来，接受反馈，再继续修改和投递。</td></tr>
+            <tr><td>试错路径</td><td>深圳 / 小红书 / X</td><td>计划暑假去深圳参加会议并停留试错，也被建议在小红书和 X 上公开展示。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天最值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 美术生求职要看岗位结构变化</h3><p>UI/UX、视频、AI 动效被频繁提起，说明岗位需求正在从纯平面向交互、动态和 AI 相关方向转。</p></article>
+        <article class="topic"><h3>2. 作品集比口头描述更重要</h3><p>求职讨论很快回到作品集，因为它决定别人能否判断能力、给出建议或帮忙连接机会。</p></article>
+        <article class="topic"><h3>3. 线下试错能放大反馈速度</h3><p>去深圳参加会议并多待几天，不只是找实习，也是在更密集的环境里接触人、看岗位、改作品集。</p></article>
+        <article class="topic"><h3>4. 公开展示也是求职动作</h3><p>把作品集发到小红书、X 等平台，本质上是在让更多人看到自己，而不是只等招聘网站回复。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">找实习的同学先整理一版作品集链接，方便群友集中反馈。</div>
+        <div class="action">如果目标是珠三角，可以把城市、岗位、可到岗时间和作品集放在一条消息里。</div>
+        <div class="action">美术/设计方向可单独沉淀一份岗位观察：UI/UX、视频、AI 动效、建模、游戏特效分别需要什么作品。</div>
+        <div class="action">去深圳试错的同学可以记录面试、交流和作品集修改反馈，回群里给后来者参考。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，把“找实习”落到了作品集、岗位方向和线下试错。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>美术生实习问题被明确提出。</li>
+            <li>珠三角岗位方向被拆分。</li>
+            <li>作品集被放到求职核心位置。</li>
+            <li>深圳会议和线下试错被接上。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>补一版可公开的作品集链接。</li>
+            <li>明确目标岗位和可到岗城市。</li>
+            <li>把设计实习经验沉淀给后续同学。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-06-29 00:00 至 2026-06-30 00:00 的本地可见聊天记录；跨日记录仅计入 2026-06-29 23:59:59 之前内容。</p>
+    </footer>
+  </main>
+</body>
+</html>
