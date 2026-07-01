@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stanley商学院日报 - 2026年6月30日</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #687386;
+      --paper: #fbfaf6;
+      --line: #ded8cd;
+      --panel: #ffffff;
+      --navy: #102a43;
+      --green: #2f6b5f;
+      --gold: #b8872c;
+      --rose: #ad4f5f;
+      --blue: #2f5f9f;
+      --soft-green: #e8f1ee;
+      --soft-gold: #f7ecd4;
+      --soft-rose: #f5e5e8;
+      --soft-blue: #e8eef8;
+      --shadow: 0 18px 45px rgba(16, 42, 67, .08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(16,42,67,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(16,42,67,.035) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.78;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 720;
+    }
+
+    .topbar a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar a:hover {
+      color: var(--green);
+    }
+
+    .topbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 28px;
+      align-items: stretch;
+      min-height: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border: 1px solid var(--line);
+      background: var(--navy);
+      color: #fff;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -120px;
+      width: 320px;
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(184,135,44,.9), rgba(173,79,95,.65));
+      transform: rotate(18deg);
+      opacity: .72;
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.74);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 76px 0 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: .98;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      color: rgba(255,255,255,.84);
+    }
+
+    .hero-footer {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 44px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 12px;
+      border: 1px solid rgba(255,255,255,.28);
+      color: rgba(255,255,255,.88);
+      background: rgba(255,255,255,.08);
+      font-size: 14px;
+    }
+
+    .meta-panel {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.86);
+      box-shadow: var(--shadow);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .meta-title {
+      margin: 0 0 16px;
+      font-size: 18px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-row span:first-child {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta-row span:last-child {
+      font-weight: 720;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 20px;
+      min-height: 126px;
+      box-shadow: 0 12px 30px rgba(31,41,51,.05);
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      margin-top: 34px;
+      padding: 34px 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+
+    .section-kicker {
+      color: var(--green);
+      font-weight: 850;
+      font-size: 14px;
+      text-align: left;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head h2 {
+      grid-column: 1 / -1;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .section-head.stacked {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .section-head.stacked .section-kicker {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .section-head.stacked h2 {
+      grid-column: 1;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: 19px;
+      color: #2d3748;
+    }
+
+    .summary {
+      columns: 2 360px;
+      column-gap: 34px;
+      font-size: 17px;
+    }
+
+    .summary p {
+      break-inside: avoid;
+      margin: 0 0 18px;
+    }
+
+    .events {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 18px;
+      padding: 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 26px rgba(31,41,51,.04);
+    }
+
+    .event-no {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green);
+      font-size: 22px;
+      font-weight: 850;
+    }
+
+    .event:nth-child(3n+2) .event-no {
+      background: var(--blue);
+    }
+
+    .event:nth-child(3n) .event-no {
+      background: var(--gold);
+    }
+
+    .event h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .event p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .info-block {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .info-block h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .info-block ul,
+    .info-block ol {
+      margin: 0;
+      padding-left: 21px;
+    }
+
+    .info-block li {
+      margin: 7px 0;
+    }
+
+    .highlight {
+      background: var(--soft-gold);
+      border-color: #e2c77c;
+    }
+
+    .blue {
+      background: var(--soft-blue);
+      border-color: #b8c9e6;
+    }
+
+    .green {
+      background: var(--soft-green);
+      border-color: #abc9c0;
+    }
+
+    .rose {
+      background: var(--soft-rose);
+      border-color: #d7acb5;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
+    td {
+      font-size: 15px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .topic {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .topic h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 22px;
+    }
+
+    .topic p {
+      margin: 0;
+      color: #344054;
+    }
+
+    .actions {
+      counter-reset: action;
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      counter-increment: action;
+      position: relative;
+      padding: 18px 20px 18px 62px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .action::before {
+      content: counter(action);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--rose);
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 46px;
+      padding: 22px 0 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 22px 14px 42px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .topbar-links {
+        justify-content: flex-start;
+      }
+
+      header,
+      .section-head,
+      .grid-two,
+      .topics,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        min-height: auto;
+      }
+
+      .hero {
+        min-height: 460px;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-top: 62px;
+      }
+
+      .event {
+        grid-template-columns: 1fr;
+      }
+
+      .event-no {
+        width: 44px;
+        height: 44px;
+      }
+
+      .section-head h2 {
+        grid-column: auto;
+        text-align: left;
+      }
+
+      .section-kicker {
+        grid-column: auto;
+        text-align: left;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .hero,
+      .meta-panel,
+      .metric,
+      .event,
+      .info-block,
+      .topic,
+      .action {
+        box-shadow: none;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="站点导航">
+      <a href="https://stanleyuniversity.garylau.ai/reports/">Stanley商学院</a>
+      <div class="topbar-links">
+        <a href="https://stanleyuniversity.garylau.ai/reports/">日报汇总</a>
+        <a href="https://stanleyuniversity.garylau.ai/map/">成员地图</a>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Daily Intelligence Report</div>
+          <h1>Stanley商学院日报</h1>
+          <p class="subtitle">活动与实习机会、重庆复盘、录音豆团购、飞书 AI 总结和个人 IP 讨论。</p>
+        </div>
+        <div class="hero-footer">
+          <span class="tag">2026年6月30日 星期二</span>
+          <span class="tag">Stanley商学院</span>
+          <span class="tag">群聊精华日报</span>
+        </div>
+      </div>
+
+      <aside class="meta-panel">
+        <div>
+          <p class="meta-title">日报元信息</p>
+          <div class="meta-list">
+            <div class="meta-row"><span>日期</span><span>2026年6月30日</span></div>
+            <div class="meta-row"><span>统计区间</span><span>2026-06-30 00:00 至 2026-07-01 00:00</span></div>
+            <div class="meta-row"><span>可见记录</span><span>10:48:50 至 19:32:40</span></div>
+            <div class="meta-row"><span>群名称</span><span>Stanley商学院</span></div>
+            <div class="meta-row"><span>定位</span><span>大学生 AI 社群 · 活动机会、工具实践与内容变现</span></div>
+          </div>
+        </div>
+        <p class="lead">今天的群聊从近期活动和实习机会开始，随后集中讨论录音豆、会议记录、飞书 AI 总结、X 上连接老板和个人 IP/UGC 变现，整体更偏工具和实践方法。</p>
+      </aside>
+    </header>
+
+    <div class="metrics">
+      <div class="metric"><strong>88</strong><span>条可见消息</span></div>
+      <div class="metric"><strong>117</strong><span>最终群成员</span></div>
+      <div class="metric"><strong>24</strong><span>可见发言成员</span></div>
+      <div class="metric"><strong>0</strong><span>新增成员</span></div>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日总结</div>
+        <h2>从活动机会到 AI 记录工具实践</h2>
+      </div>
+      <div class="summary">
+        <p>6 月 30 日，Stanley商学院全天可见消息 88 条，最终群成员 117 人，新增成员 0 人。今天的主线很实用：近期会组织活动并提供实习机会，重庆之行准备开腾讯会议复盘，随后群里围绕 Anker 录音豆、飞书 AI 总结、客户访谈和会议记录展开了较长讨论。</p>
+        <p>上午一开始，群里先提到“这几天会组织一些活动，然后会提供实习机会给大家”，同时想了解大家有多少人考虑考研或留学。这延续了前一天的实习讨论，但方向更宽：不只是某个同学找实习，而是把活动、实习、考研和留学都纳入社群后续支持。</p>
+        <p>随后，重庆之行的收获被提出来。有人表示“重庆之行的收获是巨大的”，近期会开一个腾讯会议和大家分享。这说明线下活动的价值并没有停在现场，而是在准备通过线上会议继续扩散给没到场的同学。</p>
+        <p>当天最密集的讨论集中在 Anker 录音豆。大家询问是否有人想要、它是什么、能不能录音转文字、AI 分析总结是否需要会员。Punk 解释它适合客户访谈、面试、会议、灵感记录和直播录音，录完后可以总结并同步到飞书文档。</p>
+        <p>这个话题之所以重要，是因为它把“AI 工具”从聊天软件里的问答，推进到真实工作流：录音、转写、总结、同步文档，再由智能体读取、分析、生成报告。对做采访、会议、内容复盘和项目记录的同学来说，这是很具体的生产力场景。</p>
+        <p>中午后，群里又聊到 X 上有很多初创和各行业老板，大家可以发推试试；还讨论了个人 IP 操盘手、代运营、KOC、UGC、小红书合作码以及漫剧类账号变现。今天的共同点很清楚：不是只讨论工具，而是在问这些工具和渠道怎么服务求职、内容、转化和收入。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">今日大事件</div>
+        <h2>8 个关键节点</h2>
+      </div>
+      <div class="events">
+        <article class="event"><div class="event-no">1</div><div><h3>近期活动和实习机会被提前预告</h3><p>10:48，群里提到这几天会组织一些活动，并提供实习机会给大家。这个信息把前一天的个人求职话题接到了社群层面的机会供给。</p></div></article>
+        <article class="event"><div class="event-no">2</div><div><h3>考研和留学意向被顺带摸底</h3><p>10:49，群里也问到大家有多少人想考研或留学。社群后续支持不只围绕就业，也开始覆盖升学路径。</p></div></article>
+        <article class="event"><div class="event-no">3</div><div><h3>重庆之行准备做线上复盘</h3><p>11:04，有群友提到重庆之行收获巨大，近期会开腾讯会议和大家分享。线下活动开始通过线上会议继续扩散。</p></div></article>
+        <article class="event"><div class="event-no">4</div><div><h3>Anker 录音豆团购意向被提出</h3><p>11:16 后，群里询问有多少人想要 Anker 录音豆，并说明准备再开一个低于市场价的团。多位群友很快用“报名”和“+1”响应。</p></div></article>
+        <article class="event"><div class="event-no">5</div><div><h3>录音豆的工作流被讲清楚</h3><p>11:22，Punk 解释录音豆适合客户访谈、面试、会议、灵感记录和直播录音，之后可以总结、AI 分析，并同步到飞书文档。</p></div></article>
+        <article class="event"><div class="event-no">6</div><div><h3>工具选择进入会员和生态比较</h3><p>中午，群友继续问录音转文字、AI 总结是否需要会员；有人对比 get 录音卡，并提到飞书生态更适合自动读取、分析和生成报告。</p></div></article>
+        <article class="event"><div class="event-no">7</div><div><h3>X 被再次作为求职和连接入口提出</h3><p>11:52，群里提到推上有很多初创和各行业老板，大家可以发推试试。这延续了前几天“公开展示”和“发推求职”的建议。</p></div></article>
+        <article class="event"><div class="event-no">8</div><div><h3>个人 IP、UGC 和漫剧变现被讨论</h3><p>12 点后，群里聊到个人 IP 操盘手、代运营、KOC、国外 UGC、小红书合作码，以及晚间漫剧类账号如何变现。内容变现继续成为实践话题。</p></div></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">数据概览</div>
+        <h2>午间集中讨论，晚间少量延续</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block green">
+          <h3>聊天数据</h3>
+          <ul>
+            <li>消息总数：88 条</li>
+            <li>可见记录：10:48:50 至 19:32:40</li>
+            <li>可见发言成员：24 人</li>
+            <li>最终群成员：117 人</li>
+            <li>新增成员：0 人</li>
+            <li>统计区间：2026-06-30 00:00 至 2026-07-01 00:00</li>
+          </ul>
+        </div>
+        <div class="info-block blue">
+          <h3>高峰时段</h3>
+          <ul>
+            <li>11:00 - 11:59：46 条，活动机会、重庆复盘、录音豆团购和飞书 AI 总结讨论最集中。</li>
+            <li>12:00 - 12:59：28 条，录音豆会员、个人 IP、代运营、KOC 和 UGC 继续展开。</li>
+            <li>18:00 - 19:59：6 条，租房内容、技术平权文章、漫剧号和播放量变现零散出现。</li>
+            <li>13:00 - 13:59：4 条，群友询问晚上是否有 Space。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px; overflow-x: auto;">
+        <table>
+          <thead><tr><th>主题</th><th>口径</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>活动机会</td><td>活动 + 实习</td><td>群里预告近期会组织活动，并提供实习机会给大家。</td></tr>
+            <tr><td>线下复盘</td><td>重庆之行</td><td>重庆之行收获准备通过腾讯会议分享给更多同学。</td></tr>
+            <tr><td>工具实践</td><td>Anker 录音豆</td><td>录音、转写、AI 总结、同步飞书文档和智能体分析构成完整工作流。</td></tr>
+            <tr><td>求职连接</td><td>X / 初创 / 老板</td><td>群里再次建议大家通过 X 公开展示，直接连接初创和行业老板。</td></tr>
+            <tr><td>内容变现</td><td>个人 IP / UGC / 漫剧</td><td>讨论从代运营、KOC 延伸到国外 UGC、小红书合作码和漫剧播放量。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">主题精华</div>
+        <h2>今天最值得沉淀的 4 条线</h2>
+      </div>
+      <div class="topics">
+        <article class="topic"><h3>1. 活动要继续接到实习机会</h3><p>前几天的线下活动和接龙已经证明大家愿意参与，下一步更重要的是把活动资源转成具体实习、项目和长期连接。</p></article>
+        <article class="topic"><h3>2. 会议记录是 AI 工作流入口</h3><p>录音豆讨论的价值不只是买硬件，而是把客户访谈、会议和灵感记录自动转写、总结、入库，让后续复盘更轻。</p></article>
+        <article class="topic"><h3>3. 飞书生态被用到具体场景</h3><p>录音内容同步到飞书文档，再由智能体读取和分析，说明工具链开始从“好用”走向“可持续沉淀”。</p></article>
+        <article class="topic"><h3>4. 内容和求职都需要公开展示</h3><p>无论是 X 上找初创老板，还是 UGC、小红书合作码，核心都是把自己和作品放到外部平台，让机会主动靠近。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-kicker">明天继续</div>
+        <h2>可以自然接上的几件事</h2>
+      </div>
+      <div class="actions">
+        <div class="action">把近期活动和实习机会整理成清单，写清楚适合对象、城市、时间和报名方式。</div>
+        <div class="action">重庆之行复盘会议确定时间后，在群里发出议程和参与入口。</div>
+        <div class="action">录音豆团购需要确认价格、名额、会员权益、到货方式和售后边界。</div>
+        <div class="action">把“录音豆 + 飞书文档 + 智能体分析”的工作流做成一条示例，方便群友判断是否适合自己。</div>
+        <div class="action">继续鼓励求职和内容方向同学在 X、小红书等平台公开展示作品与需求。</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head stacked">
+        <div class="section-kicker">一句话复盘</div>
+        <h2>今天的 Stanley商学院，把活动机会、记录工具和公开展示接到了具体工作流里。</h2>
+      </div>
+      <div class="grid-two">
+        <div class="info-block highlight"><h3>已经跑通</h3><ul>
+            <li>近期活动和实习机会被提前释放。</li>
+            <li>重庆之行准备做线上复盘。</li>
+            <li>录音豆团购意向被快速收集。</li>
+            <li>录音、AI 总结和飞书沉淀的工具链被讲清楚。</li>
+            <li>X、UGC 和个人 IP 继续作为求职与变现入口被讨论。</li>
+          </ul></div>
+        <div class="info-block rose"><h3>继续补齐</h3><ul>
+            <li>活动和实习机会需要清单化。</li>
+            <li>录音豆团购要明确价格和会员权益。</li>
+            <li>重庆复盘会需要确定时间和议程。</li>
+            <li>个人 IP/UGC 讨论可以继续落到案例和试错路径。</li>
+          </ul></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>本日报统计口径为 2026-06-30 00:00 至 2026-07-01 00:00 的本地可见聊天记录；跨日记录仅计入 2026-06-30 23:59:59 之前内容。</p>
+    </footer>
+  </main>
+</body>
+</html>
